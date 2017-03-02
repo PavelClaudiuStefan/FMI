@@ -46,11 +46,13 @@ where e.commission_pct is not null and commission_pct > 0;
 
 
 --Ex 11  Să se afişeze numele și denumirea jobului actual pentru angajații care au avut funcția de 'Stock Clerk'.
-select e.last_name, e.first_name, j.job_title
+select distinct e.last_name, e.first_name, j.job_title
 from employees e join jobs j
-    on (e.job_id = j.job_id and job_title = 'Stock Clerk')
+    on (e.job_id = j.job_id)
 join job_history h
-    on j.job_id = h.job_id;
+    on j.job_id = h.job_id
+where j.job_title = 'Stock Clerk';
+--Da de 2 ori acelasi nume :(
     
 
 --Sa se afiseze numele fiecarui angajat si numele sefului direct
@@ -59,7 +61,24 @@ from employees e join employees m
     on e.manager_id = m.employee_id;
 
 
+--Sa se afiseze angajatii care castiga cu cel mult 10000 mai putin decat managerul companiei
+select a.last_name nume, m.last_name nume_manager
+from employees a join employees m
+on (m.manager_id is null and a.salary >= m.salary - 10000);
 
+--Persoane care au salariul in intervale
+select e.last_name, e.salary, jg.*
+from employees e join job_grades jg
+on (e.salary between jg.lowest_sal and jg.highest_sal);
+
+
+--Sa se afiseze angajatii si departamentele in care lucreaza inclusiv angajatii pentru care nu e cunoscut departamentul
+select e.last_name, d.department_name
+from employees e left join departments d
+on e.department_id = d.department_id;
+select e.last_name, d.department_id
+from employees e, departments d
+where e.department_id = d.department_id(+);
   
 --Testing commands
 select *
