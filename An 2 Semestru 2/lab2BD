@@ -14,3 +14,37 @@ select last_name, department_id
 from employees
 --where where department_id not in(null, 10, 20, 30) -> Gresit pentru ca nu compara cu null cum trebuie
 where department_id not in(10, 20, 30) and department_id is not null;
+
+
+--Versiunea 1
+select employee_id, last_name, department_name
+from employees, departments
+where employees.department_id = departments.department_id;
+
+--Versiune 2 imbunatatita
+select employee_id, last_name, department_name
+from employees JOIN departments
+    on (employees.department_id = departments.department_id);
+    
+    
+--Ex 8
+select e.last_name, e.job_id, j.job_title, e.department_id
+from employees e join jobs j
+    on e.job_id = j.job_id
+join departments d
+    on e.department_id = d.department_id;
+
+
+
+
+
+
+--Testing commands  
+select *
+from employees;
+
+select *
+from jobs;
+
+select *
+from departments;
