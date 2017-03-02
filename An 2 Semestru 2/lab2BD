@@ -1,0 +1,16 @@
+select last_name,salary,
+       decode(commission_pct, null, 0, commission_pct) comision
+       --decode(x, val11, val12, val21, val22, default
+       --x modificam valorile campului x; val11 devine val12 etc
+from employees;
+
+
+select last_name, first_name, salary, nvl(commission_pct, 0) comision
+from employees
+order by decode(manager_id, null, 0, 1), comision;
+
+
+select last_name, department_id
+from employees
+--where where department_id not in(null, 10, 20, 30) -> Gresit pentru ca nu compara cu null cum trebuie
+where department_id not in(10, 20, 30) and department_id is not null;
