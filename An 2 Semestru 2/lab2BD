@@ -32,16 +32,39 @@ select e.last_name, e.job_id, j.job_title, e.department_id
 from employees e join jobs j
     on e.job_id = j.job_id
 join departments d
-    on e.department_id = d.department_id;
+    on e.department_id = d.department_id and e.department_id = 30;
+
+-- Ex 9 Să se afişeze numele angajatului, numele departamentului şi orașul pentru toţi angajaţii care câştigă comision.
+select e.last_name, e.first_name, d.department_name, c.country_name
+from employees e join departments d
+    on(e.department_id = d.department_id)
+join locations l
+    on(d.location_id = l.location_id)
+join countries c
+    on(l.country_id = c.country_id)
+where e.commission_pct is not null and commission_pct > 0;
+
+
+--Ex 11  Să se afişeze numele și denumirea jobului actual pentru angajații care au avut funcția de 'Stock Clerk'.
+select e.last_name, e.first_name, j.job_title
+from employees e join jobs j
+    on (e.job_id = j.job_id and job_title = 'Stock Clerk')
+join job_history h
+    on j.job_id = h.job_id;
+    
+
+--Sa se afiseze numele fiecarui angajat si numele sefului direct
+select e.last_name, e.first_name, m.last_name nume_sef, m.first_name prenume_sef
+from employees e join employees m
+    on e.manager_id = m.employee_id;
 
 
 
-
-
-
---Testing commands  
+  
+--Testing commands
 select *
-from employees;
+from employees
+
 
 select *
 from jobs;
