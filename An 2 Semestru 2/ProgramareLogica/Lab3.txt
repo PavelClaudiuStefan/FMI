@@ -146,4 +146,24 @@ travelx(X, Y, go(X, Z, N, T)):- trx(X, Z, N), travelx(Z, Y, T).
 
 
 
+%**************************************
+
+% Crossword puzzle
+
+word(abalone,a,b,a,l,o,n,e).
+word(abandon,a,b,a,n,d,o,n).
+word(enhance,e,n,h,a,n,c,e).
+word(anagram,a,n,a,g,r,a,m).
+word(connect,c,o,n,n,e,c,t).
+word(elegant,e,l,e,g,a,n,t).
+
+crosswd(A, B, C, D, E, F) :- word(A, _, A2, _, A4, _, A6, _), 
+    						 word(B, _, B2, _, B4, _, B6, _),
+                           	 word(C, _, C2, _, C4, _, C6, _),
+                           	 word(D, _, D2, _, D4, _, D6, _),
+                           	 word(E, _, E2, _, E4, _, E6, _),
+                             word(F, _, F2, _, F4, _, F6, _),
+    						 A2 = D2, B2 = D4, C2 = D6,
+    						 A4 = E2, B4 = E4, C4 = E6,
+    						 A6 = F2, B6 = F4, C6 = F6.
 
