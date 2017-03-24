@@ -1,0 +1,87 @@
+***Maude
+
+fmod MYNAT-SIMPLE is
+
+    sort Nat .
+
+    op 0 : -> Nat .
+
+    op s_ : Nat -> Nat .
+
+    op _+_ : Nat Nat -> Nat .
+
+    vars N M : Nat .
+
+    eq 0 + M = M .
+
+    eq (s N) + M = s (N + M) .
+
+endfm
+
+
+fmod MYNAT-SIMPLE* is
+
+    including MYNAT-SIMPLE .
+
+    op _*_ : Nat Nat -> Nat .
+
+    vars M N : Nat .
+
+    eq 0 * M = 0 .
+
+    eq (s N) * M = (N * M) + M .
+
+endfm
+
+***set trace on .
+***set print with parentheses on .
+
+
+fmod MYINT is
+
+  sort Int .
+
+  op 0 : -> Int .
+
+  op s_ : Int -> Int .
+
+  op p_ : Int -> Int .
+
+  op _+_ : Int Int -> Int .
+
+  op _-_ : Int Int -> Int .
+
+  op _*_ : Int Int -> Int .
+  
+  vars N M : Int .
+
+  
+  eq p s M = M .
+  
+  eq s p M = M .
+  
+  
+  eq 0 + M = M .
+
+  eq (s N) + M = s (N + M) .
+  
+  eq (p N) + M = p (N + M) .
+  
+  
+  eq M - 0 = M .
+  
+  eq M - (s N) = p(M - N) .
+   
+  eq M - (p N) = s(M - N) .
+  
+
+  eq 0 * M = 0 .
+
+  eq (s N) * M = (N * M) + M .
+  
+  eq (p N) * M = (N * M) - M .
+
+
+endfm
+
+red (s s 0 - p s 0) * (s s p 0).
