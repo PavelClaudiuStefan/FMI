@@ -1,0 +1,111 @@
+Ex 2
+
+fmod MYNAT is
+
+sorts Zero NzNat Nat .
+
+subsort Zero NzNat < Nat .
+
+op 0 : -> Zero .
+
+op s_ : Nat -> NzNat .
+
+op p_ : Nat -> NzNat .
+
+op _+_ : Nat Nat -> Nat .
+  
+op _-_ : Nat Nat -> Nat .
+
+op _*_ : Nat Nat -> Nat .
+
+vars N M : Nat .
+
+eq 0 + M = M .
+
+eq s(N) + M = s(N + M) .
+
+eq 0 * M = 0 .
+
+eq s(N) * M = (N * M) + M .
+  
+eq p s M = M .
+  
+eq s p M = M . 
+  
+  
+eq M - 0 = M .
+  
+eq M - (s N) = p(M - N) .
+   
+eq M - (p N) = s(M - N) . 
+  
+  
+op _<_ : Nat Nat -> Bool .
+
+op _>_ : Nat Nat -> Bool .
+
+op _<=_ : Nat Nat -> Bool .
+  
+op _>=_ : Nat Nat -> Bool .
+
+op max : Nat Nat -> Nat .
+  
+op min : Nat Nat -> Nat .
+  
+op par_ : Nat -> Bool .
+  
+op impar_ : Nat -> Bool .
+  
+op cmmdc : Nat Nat -> Nat .
+  
+  
+
+eq 0 < 0 = false .
+
+eq 0 < (s N) = true .
+  
+eq (s N) < 0 = false .
+ 
+eq (s N) < (s M) = N < M .
+
+ 
+eq N > M  = M < N .
+
+eq N <= M = N < M or N == M .
+  
+eq N >= M = N > M or N == M .
+  
+ 
+ceq max(M, N) = M if (M > N) .
+
+ceq max(M, N) = N if (N > M) .
+  
+ceq min(M, N) = M if (M < N) .
+  
+ceq min(M, N) = N if (N < M) .
+
+
+eq par 0 = true .
+  
+eq par s 0 = false .
+
+eq par s s N = par N .
+  
+eq impar 0 = false .
+  
+eq impar s 0 = true .
+ 
+eq impar s s N = impar N . 
+  
+ 
+eq cmmdc(0, M) = M .
+
+eq cmmdc(M, 0) = M .
+
+eq cmmdc(N, N) = N .
+  
+ceq cmmdc(N, M) = cmmdc(N - M , M) if N > M .
+  
+ceq cmmdc(N, M) = cmmdc(N, M - N) if M > N .
+  
+endfm
