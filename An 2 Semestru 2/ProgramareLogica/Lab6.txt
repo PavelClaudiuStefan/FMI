@@ -139,3 +139,41 @@ endfm
 
 ***show module INT .
 red c(1, 2) * c(2, 3) .
+
+
+
+Ex 4: 
+
+fmod DATA-CALENDARISTICA is
+  including NAT .
+  sort Data .
+  
+  vars Z L A : Nat .
+  
+  op d : Nat Nat Nat -> Data .
+  
+  op valid : Data -> Bool .
+  
+  op add : Nat Data -> Data .
+  
+  ceq valid(d(Z, L, A)) = true if L == 2 and Z > 0 and Z <= 28 .
+  
+  ceq valid(d(Z, L, A)) = true if L == 2 and Z > 0 and Z <= 29 and 4 divides A .
+  
+  ceq valid(d(Z, L, A)) = true if L > 0 and L < 8 and 2 divides L + 1 and Z > 0 and Z <= 31 .
+  
+  ceq valid(d(Z, L, A)) = true if L > 7 and L < 13 and 2 divides L and Z > 0 and Z <= 31 .
+  
+  ceq valid(d(Z, L, A)) = true if L > 3 and L < 7 and 2 divides L and Z > 0 and Z <= 30 .
+  
+  ceq valid(d(Z, L, A)) = true if L > 6 and L < 12 and 2 divides L + 1 and Z > 0 and Z <= 30 .
+  
+  ceq valid(d(Z, L, A)) = false .
+  
+  
+  
+  
+endfm
+
+
+***red valid(d(28, 2, 2012)) .
