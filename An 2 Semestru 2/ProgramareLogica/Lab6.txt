@@ -109,3 +109,33 @@ ceq cmmdc(N, M) = cmmdc(N - M , M) if N > M .
 ceq cmmdc(N, M) = cmmdc(N, M - N) if M > N .
   
 endfm
+
+
+
+
+eX 3
+
+
+fmod COMPLEX is
+  
+  including INT .
+
+  sort Compl .
+  
+  op c : Int Int -> Compl .
+
+  vars A B C D : Int .
+  
+  op _+_ : Compl Compl -> Compl .
+  
+  op _*_ : Compl Compl -> Compl .
+
+  eq c(A, B) + c(C, D) = c(A + C, B + D) .
+  
+  eq c(A, B) * c(C, D) = c((A * C) - (B * D), (A * D) + (B * C)) .
+  
+  
+endfm
+
+***show module INT .
+red c(1, 2) * c(2, 3) .
