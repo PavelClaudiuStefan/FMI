@@ -1,0 +1,3 @@
+X = [0 1];
+T = [0, 0];
+[W, b] = antreneaza(X, T, nrMaxEp)

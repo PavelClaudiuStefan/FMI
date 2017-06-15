@@ -1,0 +1,7 @@
+m = [10, 50, 100, 250, 500]
+deplasare = [0.5 0.3 0.1 -0.1 -0.3]
+for i= 1: numel(m)
+    figure
+    for j = 1:numel(deplasare)
+        (X, T) = genereaza(m(i), deplasare(j))
+        W
