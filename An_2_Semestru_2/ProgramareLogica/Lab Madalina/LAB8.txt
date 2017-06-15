@@ -1,0 +1,102 @@
+fmod LIST-INT1 is
+
+protecting INT .
+
+sorts NList List .
+
+subsort NList < List .
+
+op nil : -> List .
+
+op _ _ : Int List -> NList .
+
+op append : List List -> List .
+  
+var O : Int .
+
+var L : List .
+
+var U : List .
+  
+eq append( nil , L ) = L .
+
+eq append( O U , L  ) = O append( U , L ) .
+
+endfm
+
+
+
+fmod TREE is
+
+protecting INT .
+
+protecting LIST-INT1 . 
+
+sort Tree .
+
+op empty : -> Tree .
+
+op _ _ _ : Tree Int Tree -> Tree .
+  
+op search : Int Tree -> Bool .
+  
+op depth : Tree -> Int .
+  
+op SRD : Tree -> List .
+  
+op RSD : Tree -> List .
+  
+op SDR : Tree -> List . 
+  
+op bt-insert : NList Tree -> Tree .
+  
+op int-insert : Int Tree -> Tree . 
+  
+op btsort : NList -> NList . 
+  
+var I J K :  Int . 
+
+var T L   : Tree . 
+  
+var M : List . 
+  
+eq depth ( empty) = 0 . 
+  
+eq depth ( L J T ) = max( depth ( L ) , depth ( T ) ) + 1 . 
+  
+eq search( I, empty) = false .
+  
+eq search( I, L J T) =  if ( I == J) then true else search ( I, T) or search( I, L ) fi .  
+
+eq RSD( empty) = nil .
+  
+eq RSD( L J T ) = J append( SRD(L ) , SRD (T ) ). 
+  
+eq SRD( empty) = nil .
+  
+eq SRD ( L J T ) =  append(   SRD(L ) , J  SRD (T ) ). 
+  
+eq SDR( empty) = nil .
+  
+eq SDR( L J T ) =  append( append( SDR(L ) ,  SDR (T ) ), ( J nil) ). 
+  
+eq int-insert( I, empty) = (empty I empty ) . 
+  
+eq int-insert( I, L J T ) = if ( I < J ) then int-insert( I, L) J T else L J int-insert( I, T)  fi .
+
+eq bt-insert ( nil, T) = T . 
+  
+eq bt-insert ( I M , T ) =  bt-insert( M, int-insert( I, T ) ) .
+
+eq btsort( M) = SRD( bt-insert ( M , empty) ) .
+
+  
+endfm
+
+***red search( 3, (empty 2 ( empty 3 empty) )) .
+***red depth  (empty 2 ( empty 3 empty) ) . 
+
+***red RSD( empty 1 ( empty 2 (empty 3 ( empty 4 ( empty 5 ( empty 6 empty)  ) ) ) ) ) .
+
+***red bt-insert( 7 6 9 22 nil , empty) .
+red btsort( 6 9 2 9 11 nil ) .

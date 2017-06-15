@@ -1,0 +1,190 @@
+fmod MYNAT is
+
+sorts Zero NzNat Nat .
+
+subsort Zero NzNat < Nat .
+
+op 0 : -> Zero .
+
+op s_ : Nat -> NzNat .
+
+op _+_ : Nat Nat -> Nat [assoc comm prec 33] .
+
+op _*_ : Nat Nat -> Nat [assoc comm prec 31] .
+  
+op _-_ : Nat Nat -> Nat .
+  
+op _>_ : Nat Nat -> Bool .
+  
+op _>=_ : Nat Nat -> Bool .
+
+op _<=_ : Nat Nat -> Bool .
+
+op _<_ : Nat Nat -> Bool .
+  
+op min : Nat Nat -> Nat .
+ 
+op max : Nat Nat -> Nat .
+  
+op cmmdc : Nat Nat -> Nat . 
+  
+op par : Nat -> Bool .
+  
+op impar : Nat -> Bool . 
+
+vars N M : Nat .
+ 
+eq 0 - 0 = 0 .
+  
+eq 0 - ( s N ) = 0 .
+  
+eq ( s N ) - 0 =  ( s N ) .
+  
+eq ( s N ) - ( s M ) = N - M .
+  
+
+eq 0 < 0 = false .
+
+eq 0 < ( s N ) = true . 
+  
+eq ( s N ) < 0 = false . 
+  
+eq ( s N ) < ( s M ) = N < M . 
+   
+eq M <= N = M < ( s N ) .
+  
+eq N > M = M < N .
+  
+eq N >= M = M < ( s N ) .
+
+ceq max( M, N) = M if (N < M) or (M == N) .
+  
+ceq max( M, N ) = N if ( M < N ) .
+  
+ceq min( M , N ) = M if ( M < N) or ( M == N) .
+  
+ceq min ( M, N) = N if ( N < M ) .
+
+eq 0 + M = M .
+
+eq s(N) + M = s(N + M) .
+
+eq 0 * M = 0 .
+
+eq s(N) * M = (N * M) + M .
+  
+eq par  ( 0 ) = true .
+  
+eq  impar ( 0 ) = false .
+  
+eq  par ( s N ) =  impar ( N ) .
+  
+eq  impar ( s N ) =  par ( N ) .
+  
+eq cmmdc( M, M ) = M . 
+  
+eq cmmdc( M , N ) = cmmdc( min( M, N) , max( N, M ) - min( N, M ) ) . 
+
+endfm
+
+red cmmdc( s s s s s s  0 , s s s s s s s s s 0 ) .
+
+
+
+
+ex 2: 
+
+
+
+fmod COMPLEX is
+  
+including INT .
+  
+sort Complex .
+  
+op Complex : Int Int -> Complex . 
+  
+op _+_ : Complex Complex -> Complex . 
+  
+op _*_ : Complex Complex -> Complex . 
+  
+vars A1 A2 B1 B2 : Int . 
+  
+eq Complex( A1, A2 ) + Complex( B1, B2 ) = Complex ( A1 + B1 , A2 + B2 ) .
+  
+eq Complex( A1, A2 ) * Complex( B1, B2 ) = Complex ( A1 * B1 - A2 * B2 , A2 * B1 + A1 * B2) .
+  
+  
+endfm
+
+red Complex( 2,3) * Complex ( 3,4) .
+
+
+
+ex3 / 3:
+
+
+fmod DATA is
+  
+including NAT .
+  
+sort Data .
+  
+op Data : Nat Nat Nat -> Data . 
+  
+op valid_ : Data -> Bool . 
+  
+  
+vars A1 A2 A3 : Nat .
+  
+ceq valid( Data(A1, A2, A3 ))  = true if (( ( A1 == 1) or ( A1 == 3 ) or (A1 == 5) or( A1 == 7 ) or ( A1 == 8) or ( A1 == 10) or ( A1 == 12) ) and ( A2 <= 31) )) or ( (( A1 == 4) or ( A1 == 6 ) or (A1 == 9) or( A1 == 11)) and (A2 <= 30) ) or ( (A2 == 2) and ( A3 rem 4 == 0 ) and (A1 < = 29) ) or ( (A2 == 2) and ( A3 rem 4 > 0 ) and (A1 < = 28) ) .
+  
+
+
+endfm
+ 
+
+red valid ( Data( 13,11, 1978)) .
+
+
+
+
+
+
+
+
+
+fmod DATA-CAL is
+protecting INT .
+
+sort Data .
+
+op d : Int Int Int -> Data .
+op bisect : Int -> Bool .
+op valid _ : Data -> Bool .
+op succ _ : Data -> Data .
+op add : Int Data -> Data .
+
+
+var X Y Z : Int .
+var D : Data .
+
+eq bisect(X) = (400 divides X) or ((4 divides X) and not (100 divides X)) .
+
+
+ceq valid d(X,Y,Z) = 1 <= X and X <= 31 if Y == 1 or Y == 3 or Y == 5 or Y == 7 or Y == 8 or Y == 10 or Y == 12 .
+ceq valid d(X,Y,Z) = 1 <= X and X <= 30 if Y == 4 or Y == 6 or Y == 9 or Y == 11 .
+ceq valid d(X,Y,Z) = 1 <= X and X <= 29 if Y == 2 and bisect(Z) .
+ceq valid d(X,Y,Z) = 1 <= X and X <= 28 if Y == 2 and not bisect(Z) .
+ceq valid d(X,Y,Z) = false if Y < 1 or Y > 12 .
+
+ceq succ d(X,Y,Z) = d(X + 1,Y,Z) if valid d(X + 1,Y,Z) .
+ceq succ d(X,Y,Z) = d(1,Y + 1,Z) if (not valid d(X + 1,Y,Z)) and valid d(1,Y + 1,Z) .
+eq succ d(31,12,Z) = d(1,1,Z + 1) .
+
+
+eq add(0,D) = D .
+ceq add(X,D) = succ add(X - 1,D) if X > 0 .
+
+
+endfm

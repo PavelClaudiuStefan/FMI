@@ -1,0 +1,13 @@
+sits_right_of(tywin,petyr).
+sits_right_of(petyr,varys).
+sits_right_of(varys,pycelle).
+sits_right_of(pycelle,tyrion).
+sits_right_of(tyrion,slynt).
+sits_right_of(slynt,tyrion).
+sits_right_of(cersei, slynt).
+sits_right_of(tywin, cersei).
+sits_left_of(X,Y):- sits_right_of(Y,X).
+are_neighbors_of(X,Z,Y):- sits_left_of(Y,Z), sits_right_of(X,Z).
+next_to_each_other(X,Y):- sits_right_of(X,Y).
+next_to_each_other(X,Y):- sits_left_of(X,Y).
+doua_scaune_dreapta(X,Y):- sits_right_of(X,Z), sits_right_of(Z,Y).

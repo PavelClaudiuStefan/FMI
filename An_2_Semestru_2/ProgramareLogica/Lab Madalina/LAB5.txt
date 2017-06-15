@@ -1,0 +1,74 @@
+fmod MYNAT-SIMPLE is
+  sort Nat .
+  op 0 : -> Nat .
+  op s : Nat -> Nat .
+  op _+_ : Nat Nat -> Nat  [assoc comm prec 20] .
+  op _*_ : Nat Nat -> Nat  [assoc comm prec 10] .
+  *** cu cat prec e mai mic cu atat op e  mai puternca
+  *** assoc= asociativa comm= comutativa 
+  vars N M : Nat .
+  eq (0 + M) = M .
+  eq (s(N) + M) = s(N + M) .
+  eq (0 * M) = 0 .
+  eq (s(N) * M) = (N * M ) + M .
+  
+endfm
+red s(0) + s (0)  * s( s ( 0 ) ).
+
+
+
+ex3:
+
+
+
+
+
+fmod MYINT is
+
+sort Int .
+
+op 0 : -> Int .
+
+op s_ : Int -> Int .
+
+op p_ : Int -> Int .
+
+op _+_ : Int Int -> Int .
+
+op _-_ : Int Int -> Int .
+
+op _*_ : Int Int -> Int .
+
+vars M N  : Int .
+
+eq ( s  p N ) = N .
+
+eq ( p s N) = N .
+
+eq 0 + M = M .
+  
+eq (s N) + M = s (N + M) .
+
+eq (p N) + M = p ( N + M) .
+
+eq M - 0 = M .
+
+eq N - ( s M)  = p ( N - M) .
+
+eq N - (p M) = s ( N - M ) .
+  
+eq M * 0 = 0 .
+
+eq M * ( s N) = (M * N) + M .
+
+eq M * ( p N ) = (M * N) - M .
+
+endfm
+
+
+red s s 0 + s s 0 - s 0 .
+
+
+
+
+

@@ -1,0 +1,40 @@
+ex1:
+
+trans_a_b([],[]).
+trans_a_b([a|X],[b|Y]):-trans_a_b(X,Y).
+
+ex2:
+
+element_of(X,[Y_]):-X=Y.
+element_of(X,[_|T]):-element_of(X,T).
+
+ex3:
+
+all_a([]).
+all_a([a|T]):-all_a(T).
+
+ex4:
+
+all_a([]).
+all_a([a|T]):-all_a(T).
+list_length([],0).
+list_length([_|T],Y):-list_length(T,Z), Y is Z+1.
+
+scalarMult(_,[],[]).
+scalarMult(X,[T|Y],[A|B]):- scalarMult(X,Y,B), A is T*X.
+
+dot([],[],0).
+dot([A|X],[B|Y],R):- dot(X,Y,RE), R is A*B+RE.
+
+max([],0).
+max([X],X).
+max([A|X],M):-max(X,M), A<M.
+max([A|X],A):-max(X,M), A>=M.
+
+palindrome([]).
+palindrome([_]).
+palindrome([A|X]):-el_ultim(X,A),taie(X,V),palindrome(V).
+el_ultim([X],X).
+el_ultim([_|X],B):-el_ultim(X,B).
+taie([_],[]).
+taie([A|X],[A|V]):-taie(X,V).

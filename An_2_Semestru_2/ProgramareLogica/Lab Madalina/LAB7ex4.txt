@@ -1,0 +1,73 @@
+fmod LIST-INT1 is
+
+protecting INT .
+
+sorts NList List .
+
+subsort NList < List .
+
+op nil : -> List .
+
+op _ _ : Int List -> NList .
+
+op _in_ : Int NList -> Bool .
+
+op rev : List -> List .
+
+op replace : Int Int List -> List . 
+
+op add : Int List -> List .
+
+op append : List List -> List .
+
+op length : List -> Nat .
+
+op inserare : Int List -> List . 
+
+op sort : List -> List .
+
+var I U K : Int .
+
+var N : Int .
+
+var L : List .
+
+var P : List .
+
+eq length( nil) = 0 .
+
+eq length( I L) = 1 + length(L) .
+
+eq I in nil = false .
+
+eq I in ( N L ) = ( I == N ) or I in L .
+
+eq append( nil , L ) = L .
+
+eq append( I P , L  ) = I append( P , L ) .
+
+eq rev ( nil)= nil .
+
+eq rev ( I L )= append( rev(L), (I nil)) .
+
+eq sort ( nil )= nil .
+
+eq sort (I L )= inserare( I , sort( L )) .
+
+eq inserare( I, nil ) = ( I nil) .
+
+ceq inserare ( I, ( N L )) = N inserare( I, L) if (I > N) .  
+ 
+ceq inserare ( I, ( N L ) ) = I N L  if( I <= N ) . 
+
+eq replace ( I, N, nil)= nil .
+
+eq replace ( I , N , (U L ))=  if I == U then N replace( I, N, L) else U replace( I, N, L ) fi .
+
+eq add( I, nil ) = ( nil ) .
+
+eq add( I, ( U L ) ) = U I add ( I, L ) .
+
+endfm
+
+red add(2, ( 3 3 3 3 nil )) .
