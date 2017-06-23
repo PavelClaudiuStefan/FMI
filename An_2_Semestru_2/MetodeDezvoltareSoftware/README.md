@@ -101,6 +101,7 @@
 - Resurse:
   - [Site rezumat](https://www.vladionescu.me/mds.html)
   - [MarkDown file rezumat](Extra/Rezumat.md)
+  - [Cheat Sheet](Extra/CheatSheet.pdf)
 
 ## Recapitulare pentru examen (30.06.2017)
 
@@ -200,3 +201,4 @@ Punctare:
 
 13. sabloane
   - Sabloane - design patterns -> descrieri, scop, tipuri, sa stim ce face fiecare, comparatie.
+
