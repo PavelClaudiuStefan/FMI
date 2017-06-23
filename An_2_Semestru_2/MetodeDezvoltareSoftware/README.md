@@ -89,3 +89,15 @@
 - Design patterns (sabloane de proiectare)
 - Resurse:
   - [Design patterns](Curs_13/sabloane.pdf)
+
+# Curs 14
+- Poze curs:
+  - [Poza 1](Curs_14/1.jpeg)
+  - [Poza 2](Curs_14/2.jpeg)
+  - [Poza 3](Curs_14/3.jpeg)
+
+# Extra
+- Rezumat
+- Resurse:
+  - [Site rezumat](https://www.vladionescu.me/mds.html)
+  - [MarkDown file rezumat](Extra/Rezumat.md)
