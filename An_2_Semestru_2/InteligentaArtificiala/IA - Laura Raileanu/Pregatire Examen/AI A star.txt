@@ -1,0 +1,83 @@
+Algoritmul A*
+
+1.Creeaza un graf de cautare G, constand numai din nodul initial n(indice)0 .Plaseaza n0 intr-o lista numita OPEN.
+2.Creeaza o lista numita CLOSED,care initial este vida.
+3.Daca lista OPEN este vida, EXIT cu esec.
+4.Selecteaa primul nod din lista OPEN, inlatura-l din OPEN siplaseaza-l in lista CLOSED,Numeste acest nod n.
+5.Daca n este un nod-scop,opreste executia cu succes. Returneaza solutia obtinuta urmand un drum de-a lungul pointerilor de la n la n0 in G.(Pointerii definesc un arbore de cautare si sunt stabiliti la pasul 7).
+6.Extinde nodul n,generand o multime, M, de succesori ai lui care nu sunt deja stramosi ai lui n in G.Instaleaza acesti membrii ai lui M ca succesori ai lui n in G.
+7.Stabileste un pointer catre n de la fiecare dintre membrii lui M care nu se gaseau deja in G (adica nu se aflau deja nici in OPEN, nici in CLOSED). Adauga acesti membrii ai lui M listei OPEN.
+Pentru fiecare membru, m, ai lui M, care se afla deja in OPEN sau in CLOSED, redirectioneaza pointerul sau catre n, daca cel mai bun drum la m gasit pana in acel moment trece prin n.Pentru fiecare membru al lui M care se afla deja in lista CLOSED,
+redirectioneaza pointerii fiecaruia dintre descendentii sai in G astfel incat acestia sa tinteasca inapoi dea lungul celor mai bune drumuri pana la acesti descendenti, gasite pana in acel moment.
+8.Reordoneaza lista OPEN in ordinea valorilor crescatoare ale functiei f-caciula(f cu ^ deasupra).Eventualele legaturi intre valori minimale ale lui f-caciula sunt rezolvate in favoarea nodului din arborele de cautare aflat la cea mai mare adancime.
+9.Mergi la pasul 3.
+
+Admisibilitatea Algoritmului A*
+
+Exista anumite conditii asupra grafului si a lui h-caciula care garanteaza ca algoritmul A*, aplica acestor grafuri, gaseste intotdeauna drumuri de cost minim.Conditiile asupra grafului sunt:
+1.Orice nod al grafului, daca admite succesori, are un numar finit de succesori.
+2.Toate arcele din graf au costuri mai mari decat o cantitate pozitiva Epsilon
+
+Conditia asupra lui h-caciula este:
+3.Pentru toate nodurile n din graful de cautare,h-caciula(n)<=h(n).Cu alte cuvinte h-caciula nu supraestimeaza niciodata valoarea efectiva h.O asemenea functie h-caciula este uneori numita un estimator optimist.
+
+Cu cele trei conditii formulate anterior, algoritmul A* garanteaza gasirea unui drum optim la un scop, in cazul in care exita un drum la scop.
+
+Optimalitatea Algoritmului A*
+
+	Fie G o stare-scop optimala cu un cost al drumului notat f*.Fie G2 o a doua stare-scop,suboptimala,care este o stare-scop cu un cost al drumului g(G2)>f*
+	Presupunem ca A* selecteaza din coada,pentru extindere, pe G2.Intrucat G2 este o stare-scop,aceasta alegere ar incheia cautarea cu o solutie suboptimala.Vom arata ca acest lucru nu este posibil.
+	Fie un nod n,care este, la pasul curent, un nod frunza pe un drum optim la G.(un asemenea nod trebuia sa existe, in cazul in care drumul a fost complet extins, caz in care algoritmul ar fi returnat G).Pentru acest nod n, intrucat h este admisibila,trebuie sa avem
+			f*>=f(n) (1)
+	Mai mult, daca n nu este ales pentru extindere in favoarea lui G2,trebuie sa avem:
+			f(n)>=f(G2) (2)
+	Combinand (1) cu (2) obtinem:
+			f*>=f(G2) (3)
+	Dar, deoarece G2 este o stare-scop, avem h(G2)=0.Prin urmare,
+			f(G2)=g(G2) (4)
+	Cu presupunerile facute,conform (3) si (4) am aratat ca
+			f*>=g(G2)
+Aceasta concluzie contrazice faptul ca G2 este suboptimal,Ea arata ca A* nu selecteaza niciodata pentru extindere un scop suboptimal. A* intoarce o solutie numai dupa ce a selectat-o pentru extindere, de aici rezultand faptul ca A* este un algoritm optim.
+
+=======
+Algoritmul A*
+
+1.Creeaza un graf de cautare G, constand numai din nodul initial n(indice)0 .Plaseaza n0 intr-o lista numita OPEN.
+2.Creeaza o lista numita CLOSED,care initial este vida.
+3.Daca lista OPEN este vida, EXIT cu esec.
+4.Selecteaa primul nod din lista OPEN, inlatura-l din OPEN siplaseaza-l in lista CLOSED,Numeste acest nod n.
+5.Daca n este un nod-scop,opreste executia cu succes. Returneaza solutia obtinuta urmand un drum de-a lungul pointerilor de la n la n0 in G.(Pointerii definesc un arbore de cautare si sunt stabiliti la pasul 7).
+6.Extinde nodul n,generand o multime, M, de succesori ai lui care nu sunt deja stramosi ai lui n in G.Instaleaza acesti membrii ai lui M ca succesori ai lui n in G.
+7.Stabileste un pointer catre n de la fiecare dintre membrii lui M care nu se gaseau deja in G (adica nu se aflau deja nici in OPEN, nici in CLOSED). Adauga acesti membrii ai lui M listei OPEN.
+Pentru fiecare membru, m, ai lui M, care se afla deja in OPEN sau in CLOSED, redirectioneaza pointerul sau catre n, daca cel mai bun drum la m gasit pana in acel moment trece prin n.Pentru fiecare membru al lui M care se afla deja in lista CLOSED,
+redirectioneaza pointerii fiecaruia dintre descendentii sai in G astfel incat acestia sa tinteasca inapoi dea lungul celor mai bune drumuri pana la acesti descendenti, gasite pana in acel moment.
+8.Reordoneaza lista OPEN in ordinea valorilor crescatoare ale functiei f-caciula(f cu ^ deasupra).Eventualele legaturi intre valori minimale ale lui f-caciula sunt rezolvate in favoarea nodului din arborele de cautare aflat la cea mai mare adancime.
+9.Mergi la pasul 3.
+
+Admisibilitatea Algoritmului A*
+
+Exista anumite conditii asupra grafului si a lui h-caciula care garanteaza ca algoritmul A*, aplica acestor grafuri, gaseste intotdeauna drumuri de cost minim.Conditiile asupra grafului sunt:
+1.Orice nod al grafului, daca admite succesori, are un numar finit de succesori.
+2.Toate arcele din graf au costuri mai mari decat o cantitate pozitiva Epsilon
+
+Conditia asupra lui h-caciula este:
+3.Pentru toate nodurile n din graful de cautare,h-caciula(n)<=h(n).Cu alte cuvinte h-caciula nu supraestimeaza niciodata valoarea efectiva h.O asemenea functie h-caciula este uneori numita un estimator optimist.
+
+Cu cele trei conditii formulate anterior, algoritmul A* garanteaza gasirea unui drum optim la un scop, in cazul in care exita un drum la scop.
+
+Optimalitatea Algoritmului A*
+
+	Fie G o stare-scop optimala cu un cost al drumului notat f*.Fie G2 o a doua stare-scop,suboptimala,care este o stare-scop cu un cost al drumului g(G2)>f*
+	Presupunem ca A* selecteaza din coada,pentru extindere, pe G2.Intrucat G2 este o stare-scop,aceasta alegere ar incheia cautarea cu o solutie suboptimala.Vom arata ca acest lucru nu este posibil.
+	Fie un nod n,care este, la pasul curent, un nod frunza pe un drum optim la G.(un asemenea nod trebuia sa existe, in cazul in care drumul a fost complet extins, caz in care algoritmul ar fi returnat G).Pentru acest nod n, intrucat h este admisibila,trebuie sa avem
+			f*>=f(n) (1)
+	Mai mult, daca n nu este ales pentru extindere in favoarea lui G2,trebuie sa avem:
+			f(n)>=f(G2) (2)
+	Combinand (1) cu (2) obtinem:
+			f*>=f(G2) (3)
+	Dar, deoarece G2 este o stare-scop, avem h(G2)=0.Prin urmare,
+			f(G2)=g(G2) (4)
+	Cu presupunerile facute,conform (3) si (4) am aratat ca
+			f*>=g(G2)
+Aceasta concluzie contrazice faptul ca G2 este suboptimal,Ea arata ca A* nu selecteaza niciodata pentru extindere un scop suboptimal. A* intoarce o solutie numai dupa ce a selectat-o pentru extindere, de aici rezultand faptul ca A* este un algoritm optim.
+	

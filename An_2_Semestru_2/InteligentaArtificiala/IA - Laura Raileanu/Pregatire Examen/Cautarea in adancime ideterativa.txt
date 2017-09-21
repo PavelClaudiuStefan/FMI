@@ -1,0 +1,15 @@
+Cautarea in adancime iterativa - prezentare generala si implementare in Prolog
+Cautarea in adancime iterativa este o strategie care evita chestiunea stabilirii unei adancimi optime la care trebuie cautata solutia, prin testarea tuturor limitelor de adancime posibile- mai intai adancimea 0, apoi 1, apoi 2 samd. Acest tip de cautare combina beneficiile cautarii BF si DF, dupa cum urmeaza
+-este optima si completa ca si cautarea BF
+-consuma numai cantitatea mica de memorie necesara cautarii DF
+Ordinea extinderii starilor este similara cu cea de la cautarea de timp BF, numai ca anumite stari sunt extinse de mai multe ori.
+Aceasta strategie garanteaza gasirea nodului scop de la adancimea minima, daca un scop poate fi gasit.
+Desi anumite noduri sunt extinse de mai multe ori, nr. total de noduri extinse nu este mult mai mare decat cel dintr-o cautare de tip BF.
+Pentru a calcula numarul nodurilor extinse de cautarea in adancime iterativa, avem nevoie de nr. nodurilor extinse de o cautare de tip DF completa pana la nivelul j, este:
+Ndf = b^(j+1)-1/b-1
+
+Pentru implementarea in prolog a cautarii in adancime iterative vom folosi predicatul care, de forma:cale(Nod1, Nod2, Drum). care este adevarat daca Drum repr o cale aciclica intre nodurile Nod1 si Nod2 in spatiul starilor. Aceasta cale va fi reprezentata ca o lista de noduri date in ordine inversa. Corespunzator nodului de start dat, predicatul cale, genereaza toate drumurile aciclice pesobile de lungime care creste cu cate o unitate. Drumurile sunt generate pana cand se genereaza o cale care se termina cu un nod-scop.
+
+cale(Nod,Nod,[Nod]).
+cale(PrimNod, UltimNod, [UltimNod|Drum]):-cale(PrimNod, PenultimNod, Drum), s(PenultimNod, UltimNod), \+(membru(UltimNod, Drum)).
+depth_first_iterative_deepeing(Nod, Sol):- cale(Nod, NodScop, Sol), scop(NodScop), !.

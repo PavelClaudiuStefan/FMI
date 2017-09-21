@@ -1,0 +1,124 @@
+Alpha-Beta
+
+Aceasta tehnica aplicata algoritmului Minmax, va intoarce aceleasi rezultare, dar intr-un timp mult mai scurt, deoarece acesta taie anumite ramuri care nu pot influenta decizia finala.
+Algoritmul consta in a considera un nod oarecare n, astfel incat jucatorul poate ajunge sa faca o mutare la el.Daca un jucator poate face o alegere mai buna,m, fie la nivelul lui n fie in orice alt punct in arbore aflat mai sus, nodul n nu va fi atins niciodata si va fi inlaturat.De asemenea, se folosesc doua limite:alpha si beta.
+Alpha este valoarea minima pe care este deja garantat ca o va obtine Max, iar beta este valoarea maxima pe care Max poate spera sa o atinga.Pentru Min,beta este valoarea nefavorabila.Deci, valoarea efectiva va fi intre alpha si beta.Alpha este scorul pe care il poate obtine Max, presupunand ca Min joaca perfect.
+Cautarea se opreste atunci cand: dedesubtul oricarui nod de tip Min care are o valoare beta mai mica sau egala cu valoarea alpha a oricarui dintre stramosii sai de tip Max sau cand dedesubtul oricarui nod de tip Max care are o valoare alpha mai mare sau egala cu valoarea beta a oricaruia dintre stramosii sai de tip Min.	
+
+Exemplu: vezi Poza_1.png
+	
+Alpha-Beta Implementare Prolog
+
+Predicatul principal: alphabeta(Poz,Alpha,Beta,PozBuna,Val)
+
+unde PozBuna reprezinta un succesor "suficient de bun" al lui Poz,astfel incat valoarea sa, Val, satisface cerintele:
+	Val=V(Poz,Alpha,Beta)
+
+Procedura limitarebuna(ListaPoz,Alpha,Beta,PozBuna,Val)
+gaseste in lista ListaPoz, o pozitie suficient de buna, PozBuna, astfel incat valoarea de tip minmax, Val, a lui PozBuna,reprezinta o aproximatie suficient de buna relativ la Alpha si Beta.
+	Intervalul alpha-beta se poate ingusta (dar niciodata largi) in timpul apelarilor recursive,de la o mai mare adancime, ale procedurii.
+	
+Relatia limitenoi(Alpha,Beta,Poz,Val,AlphaNou,BetaNou)
+defineste noul interval [AlphaNou,BetaNou].Acesta este intotdeauna mai ingust sau cel mult egal cu vechiul interval [Alpha,Beta].Ingustarea intervalului conduce la operatii suplimentare de retezare a arborelui.
+
+Algoritmul Alpha-Beta:
+
+alphabeta(Poz,Alpha,Beta,PozBuna,Val):-
+	mutari(Poz,ListaPoz),!,
+	limitarebuna(ListaPoz,Alpha,Beta,PozBuna,Val);
+	%valoare statica a lui Poz
+	staticval(Poz,Val).
+
+limitarebuna([Poz|ListaPoz],Alpha,Beta,PozBuna,ValBuna):-
+	alphabeta(Poz,Alpha,Beta,_,Val),
+	destuldebun(ListaPoz,Alpha,Beta,Poz,Val,PozBuna,ValBuna).
+%nu exista alt candidat
+destuldebun([],_,_,Poz,Val,Poz,Val):-!.
+destuldebun(_,Alpha,Beta,Poz,Val,Poz,Val):-
+	%atingere limita superioara
+	mutare_min(Poz),Val>Beta,!;
+	%atingere limita inferioara
+	mutare_max(Poz),Val<Alpha,!.
+destuldebun(ListaPoz,Alpha,Beta,Poz,Val,PozBuna,ValBuna):-
+	%rafinare limitenoi
+	limitenoi(Alpha,Beta,Poz,Val,AlphaNou,BetaNou),
+	limitarebuna(ListaPoz,AlphaNou,BetaNou,Poz1,Val1),
+	maibine(Poz,Val,Poz1,Val1,PozBuna,ValBuna).
+
+limitenoi(Alpha,Beta,Poz,Val,Val,Beta):-
+	%crestere limita inferioara
+	mutare_min(poz),Val > Alpha,!.
+limitenoi(Alpha,Beta,Poz,Val,Alpha,Val):-
+	%descrestere limita superioara
+	mutare_max(Poz),Val < Beta,!.
+%altfel,limitele nu se schimba
+limitenoi(Alpha,Beta,_,_,Alpha,Beta).
+
+%Poz mai buna ca Poz1
+maibine(Poz,Val,Poz1,Val1,Poz,Val):-
+	mutare_min(Poz),Val > Val1,!;
+	mutare_max(Poz),Val < Val1,!.
+%altfel,Poz1 mai buna
+=======
+Alpha-Beta
+
+	Aceasta tehnica aplicata algoritmului Minmax, va intoarce aceleasi rezultare, dar intr-un timp mult mai scurt, deoarece acesta taie anumite ramuri care nu pot influenta decizia finala.
+	Algoritmul consta in a considera un nod oarecare n, astfel incat jucatorul poate ajunge sa faca o mutare la el.Daca un jucator poate face o alegere mai buna,m, fie la nivelul lui n fie in orice alt punct in arbore aflat mai sus, nodul n nu va fi atins niciodata si va fi inlaturat.De asemenea, se folosesc doua limite:alpha si beta.
+	Alpha este valoarea minima pe care este deja garantat ca o va obtine Max, iar beta este valoarea maxima pe care Max poate spera sa o atinga.Pentru Min,beta este valoarea nefavorabila.Deci, valoarea efectiva va fi intre alpha si beta.Alpha este scorul pe care il poate obtine Max, presupunand ca Min joaca perfect.
+	Cautarea se opreste atunci cand: dedesubtul oricarui nod de tip Min care are o valoare beta mai mica sau egala cu valoarea alpha a oricarui dintre stramosii sai de tip Max sau cand dedesubtul oricarui nod de tip Max care are o valoare alpha mai mare sau egala cu valoarea beta a oricaruia dintre stramosii sai de tip Min.	
+
+Exemplu: vezi Poza_1.png
+	
+Alpha-Beta Implementare Prolog
+
+Predicatul principal: alphabeta(Poz,Alpha,Beta,PozBuna,Val)
+
+unde PozBuna reprezinta un succesor "suficient de bun" al lui Poz,astfel incat valoarea sa, Val, satisface cerintele:
+	Val=V(Poz,Alpha,Beta)
+
+Procedura limitarebuna(ListaPoz,Alpha,Beta,PozBuna,Val)
+gaseste in lista ListaPoz, o pozitie suficient de buna, PozBuna, astfel incat valoarea de tip minmax, Val, a lui PozBuna,reprezinta o aproximatie suficient de buna relativ la Alpha si Beta.
+	Intervalul alpha-beta se poate ingusta (dar niciodata largi) in timpul apelarilor recursive,de la o mai mare adancime, ale procedurii.
+	
+Relatia limitenoi(Alpha,Beta,Poz,Val,AlphaNou,BetaNou)
+defineste noul interval [AlphaNou,BetaNou].Acesta este intotdeauna mai ingust sau cel mult egal cu vechiul interval [Alpha,Beta].Ingustarea intervalului conduce la operatii suplimentare de retezare a arborelui.
+
+Algoritmul Alpha-Beta:
+
+alphabeta(Poz,Alpha,Beta,PozBuna,Val):-
+	mutari(Poz,ListaPoz),!,
+	limitarebuna(ListaPoz,Alpha,Beta,PozBuna,Val);
+	%valoare statica a lui Poz
+	staticval(Poz,Val).
+
+limitarebuna([Poz|ListaPoz],Alpha,Beta,PozBuna,ValBuna):-
+	alphabeta(Poz,Alpha,Beta,_,Val),
+	destuldebun(ListaPoz,Alpha,Beta,Poz,Val,PozBuna,ValBuna).
+%nu exista alt candidat
+destuldebun([],_,_,Poz,Val,Poz,Val):-!.
+destuldebun(_,Alpha,Beta,Poz,Val,Poz,Val):-
+	%atingere limita superioara
+	mutare_min(Poz),Val>Beta,!;
+	%atingere limita inferioara
+	mutare_max(Poz),Val<Alpha,!.
+destuldebun(ListaPoz,Alpha,Beta,Poz,Val,PozBuna,ValBuna):-
+	%rafinare limitenoi
+	limitenoi(Alpha,Beta,Poz,Val,AlphaNou,BetaNou),
+	limitarebuna(ListaPoz,AlphaNou,BetaNou,Poz1,Val1),
+	maibine(Poz,Val,Poz1,Val1,PozBuna,ValBuna).
+
+limitenoi(Alpha,Beta,Poz,Val,Val,Beta):-
+	%crestere limita inferioara
+	mutare_min(poz),Val > Alpha,!.
+limitenoi(Alpha,Beta,Poz,Val,Alpha,Val):-
+	%descrestere limita superioara
+	mutare_max(Poz),Val < Beta,!.
+%altfel,limitele nu se schimba
+limitenoi(Alpha,Beta,_,_,Alpha,Beta).
+
+%Poz mai buna ca Poz1
+maibine(Poz,Val,Poz1,Val1,Poz,Val):-
+	mutare_min(Poz),Val > Val1,!;
+	mutare_max(Poz),Val < Val1,!.
+%altfel,Poz1 mai buna
+maibine(_,_,Poz1,Val1,Poz1,Val1).

@@ -1,0 +1,1 @@
+Problema KNN ( k near neighbors ) si accuratetea comparand cu rezultatele adevarate.

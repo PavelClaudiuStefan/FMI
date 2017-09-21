@@ -1,0 +1,15 @@
+function [ wk1, bk1 ] = Test1( S, ro, wk, bk )
+%UNTITLED4 Summary of this function goes here
+%   Detailed explanation goes here
+
+    w = [wk bk];
+    [n m] = size(S);
+    X = S(1:n-1,:)
+    D = S(n,:)
+    y = hardlims(w * X);
+    
+    
+   % wnou = w + ro *
+
+end
+

@@ -1,0 +1,68 @@
+%%
+%punctul a
+nrPuncte = 40;
+p=rand(2,nrPuncte)*6-3;
+t=zeros(1,nrPuncte);
+ind=p(1,:)<p(2,:);
+t(ind)=1;
+S=[p;t];
+%save('S.mat','S');
+
+%%
+%punctul b
+ind = S(1,:) > 0;
+S1 = S(:,ind);
+ind = find(S(1,:) <= 0);
+S2 = S(:,ind);
+%save('S1.mat','S1');
+%save('S2.mat','S2');
+load('S.mat');
+load('S1.mat');
+load('S2.mat');
+
+%%
+%punctul c
+p = S1(1:2,:);
+t = S1(3,:);
+eticheta1 = find(t==1);
+eticheta0 = find(t==0);
+figure(1), hold on;
+plot(S1(1,eticheta1),S1(2,eticheta1),'+r');
+plot(S1(1,eticheta0),S1(2,eticheta0),'ob');
+axis([-3 3 -3 3]);
+%%
+% punctul d
+R=newp([-3 3; -3 3],1);
+R.trainParam.epochs=100;
+[R,tr,y]=train(R,p,t);
+%%
+% punctul e
+figure(1),plotpc(R.IW{1,1},R.b{1})
+%%
+%punctul f
+figure(2), plot(tr.perf);title('Performanta antrenarii');
+%%
+%punctul g
+clasa = sim(R,[1 1]')
+%%
+% punctul h
+eticheteGenerate = S2(3,:);
+etichetePrezise = sim(R,S2(1:2,:));
+disp('numarul de exemple misclasificate este:');
+sum(abs(eticheteGenerate - etichetePrezise))
+%ploteaza S1
+p = S1(1:2,:);
+t = S1(3,:);
+eticheta1 = find(t==1);
+eticheta0 = find(t==0);
+figure(3), hold on;
+plot(S1(1,eticheta1),S1(2,eticheta1),'+r');
+plot(S1(1,eticheta0),S1(2,eticheta0),'ob');
+%ploteaza S2
+p = S2(1:2,:);
+t = S2(3,:);
+eticheta1 = find(t==1);
+eticheta0 = find(t==0);
+plot(S2(1,eticheta1),S2(2,eticheta1),'+r');
+plot(S2(1,eticheta0),S2(2,eticheta0),'ob');
+plotpc(R.IW{1,1},R.b{1})

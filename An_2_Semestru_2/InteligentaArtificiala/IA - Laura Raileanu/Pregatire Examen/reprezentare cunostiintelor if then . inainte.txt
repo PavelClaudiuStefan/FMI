@@ -1,0 +1,44 @@
+ Reprezentatrea cunostintelor cu reguli if-then. Interpretor pt reguli in cazul inlantuirii inainte( implementarea in Prolog)
+
+  Regulile de tip if-then, numite si reguli de productie, constituie o forma naturala de exprimare a cunostintelor si au urmatoarele caracteristici suplimentare :
+ -MODULARITATE, fiecare regula defineste o cantitate de cunostinte relativ mica si independenta de celelalte.
+ -INCREMENTABILITATE, noi reguli pot fi adaugate bazei de cunostinte in mod relativ independent de celelalte reguli.
+ -MODIFICABILITATE(ca o consecinta a modularitatii) regulile vechi pot fi modificate relativ independent de celelalte reguli.
+ -sustin TRANSPARENTA sistemului.
+
+  Regulile de tip if-then adesea definesc relatii logice intre conceptele apartinand domeniului problemei. Relatiile pur logice pot fi caracterizate ca apartinand cunostintelor categorice.
+  if conditie A then concluzie B cu certitudinea F
+  ex: if hol ud si bucatarie uscat then scurgere in baie.
+
+  Inlantuirea inainte ("forward chaining")
+- nu incepe cu o ipoteza; face un rationament de la partea cu if la partea cu then ( in directia opusa)
+  reguli: if Conditie then Concluzie
+
+ Implementare  Prolog : 
+
+inainte:- 
+ fapta_noua_dedusa(P), % o noua fapta 
+ !, 
+ write(’Dedus:’),write(P),nl, 
+ assert(fapta (P)), 
+ inainte %continua 
+ ; 
+ write(’Nu mai exista fapte’). %Toate faptele au fost deduse 
+ 
+fapta_noua_dedusa(Concl):- 
+ if Cond then Concl, %o regula 
+ not fapta(Concl), %Concluzia regulii nu este inca o fapta 
+ fapta_compusa(Cond). %Conditia este adevarata? 
+ 
+fapta_compusa(Cond):- %fapta simpla 
+ fapta(Cond). 
+fapta_compusa(Cond1 and Cond2):- 
+ fapta_compusa(Cond1), fapta_compusa(Cond2).  %Ambii conjunctisunt adevarati 
+
+
+fapta_compusa(Cond1 or Cond2):- 
+ fapta_compusa(Cond1) 
+ ; 
+ fapta_compusa(Cond2). 
+
+  Inlantuirea inainte presupune cautare de la date inspre scopuri, fiind orientata catre date.

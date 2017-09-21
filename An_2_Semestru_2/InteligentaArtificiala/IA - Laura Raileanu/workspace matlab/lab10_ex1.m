@@ -1,0 +1,9 @@
+p = -1:.05:1;
+t = sin(2*pi*p)+0.1*randn(size(p));
+%net=newff(minmax(p),[20,1],{'tansig','purelin'},'trainbr');
+net=newff(minmax(p),[20,1],{'tansig','purelin'},'trainbfg');
+net.performFcn = 'msereg';
+net.trainParam.show = 10;
+net.trainParam.epochs = 50;
+net = init(net);
+[net,tr]=train(net,p,t);

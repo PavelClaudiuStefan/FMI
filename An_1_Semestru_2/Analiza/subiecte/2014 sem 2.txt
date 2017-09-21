@@ -1,0 +1,10 @@
+NR 1:
+punct de maxim local al functiei, f: R^k->R^p derivabila 
+suma riemann 
+weierstrass pt siruri de functii la NR 1 si crit. lui weierstrass pt serii de functii la NR 2
+
+
+Isi aminteste cineva rezolvarea ex3? Nu conteaza ce numar. Ma intereseaza a doua integrala de la ex3. Multumesc anticipat
+Pai, functia din interiorul celei de-a doua integrale, sa ii zicem g, este mai mica decat functia din interiorul primei integrale, sa ii zicem f. Integrala din f e convergenta. g e mai mica decat f pe intervalul (1,infinit). Prima integrala o desparti in doua, de la 0 la 1 si de la 1 la infinit. Aia de la 0 la 1 e un numar real, si cum integrala initiala (din f) este egala cu astea doua adunate, atunci si integrala de la 1 la infinit din f e convergenta. g <= f pe (1, infinit), deci si integrala de la 1 la infinit din g e convergenta. Integrala de la 0 la infinit din g se scrie ca suma din integrala de la 0 la 1 si integrala de la 1 la infinit (ambele din g). Aia de la 0 la 1 e numar real, aia de la 1 la infinit tocmai am demonstrat ca e convergenta, deci si aia de la 0 la infinit e convergenta. Am folosit criteriul de comparatie cu inegalitati pentru integrale improprii. Sper ca intelegi ceva
+Si daca nu, a facut el in ultimul curs un astfel de exemplu, doar ca era cu e^x.
+am inteles. Reusisem sa arat pe intervalul (1,infinit). Nu stiam mai departe ce si cum. Ms mult

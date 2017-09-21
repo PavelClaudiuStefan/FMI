@@ -1,0 +1,42 @@
+ Reprezentatrea cunostintelor cu reguli if-then. Interpretor pt reguli in cazul inlantuirii inapoi( implementarea in Prolog)
+
+  Regulile de tip if-then, numite si reguli de productie, constituie o forma naturala de exprimare a cunostintelor si au urmatoarele caracteristici suplimentare :
+ -MODULARITATE, fiecare regula defineste o cantitate de cunostinte relativ mica si independenta de celelalte.
+ -INCREMENTABILITATE, noi reguli pot fi adaugate bazei de cunostinte in mod relativ independent de celelalte reguli.
+ -MODIFICABILITATE(ca o consecinta a modularitatii) regulile vechi pot fi modificate relativ independent de celelalte reguli.
+ -sustin TRANSPARENTA sistemului.
+
+  Regulile de tip if-then adesea definesc relatii logice intre conceptele apartinand domeniului problemei. Relatiile pur logice pot fi caracterizate ca apartinand cunostintelor categorice.
+  if conditie A then concluzie B cu certitudinea F
+  ex: if hol ud si bucatarie uscat then scurgere in baie.
+
+  Inlantuirea inapoi ("backword chaining")
+- pleaca de la o ipoteza; parcurge in sensul "inapoi" reteaua de inferenta.
+  
+
+ Implementare  Prolog : 
+
+:- op(800,fx,if). 
+ :- op(700,xfx,then). 
+ :- op(300,xfy,or). 
+ :- op(200,xfy,and). 
+ 
+ este_adevarat(P):- 
+ fapta(P). 
+ 
+ este_adevarat(P):- 
+ if Conditie then P, 
+ este_adevarat(Conditie). 
+ 
+ este_adevarat(P1 and P2):- 
+ este_adevarat(P1), 
+ este_adevarat(P2). 
+ 
+ este_adevarat(P1 or P2):- 
+ este_adevarat(P1) 
+ ; 
+ este_adevarat(P2). 
+ 
+ Se observa ca acest interpretor pentru reguli if-then de tip “înlantuire înapoi” continua sa lucreze înapoi în maniera depth-first. 
+
+Un dezavantaj al acestei implementari este acela ca baza de cunostinte nu se poate distinge de restul programului

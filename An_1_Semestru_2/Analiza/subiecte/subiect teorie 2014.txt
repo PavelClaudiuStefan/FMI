@@ -1,0 +1,23 @@
+NR 1
+definitii:
+suma darboux superioara
+sir de functii unif conv
+functie derivabila intr-un pct
+demonstratie:
+formula leibniz newton
+
+NR2
+def:
+serie de fctii unif conv
+diviziune & norma
+dem:
+orice fctie cont este integr riemann (+enuntat crit darboux de integr riemann)
+
+
+
+NR 1:
+punct de maxim local al functiei,
+f: R^k->R^p derivabila
+suma riemann
+
+weierstrass pt siruri de functii la NR 1 si crit. lui weierstrass pt serii de functii la NR 2

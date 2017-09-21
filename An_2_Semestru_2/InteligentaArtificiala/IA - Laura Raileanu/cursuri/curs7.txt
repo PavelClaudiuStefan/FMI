@@ -1,0 +1,130 @@
+=============================
+		The delta Rule
+=============================
+
+	-> Al 3-lea tip de perceptron este percepronul care invata dupa functia de transfer delta;
+	
+	-> Functia de transfer este continua si derivabila;
+	
+	-> functiile de transfer pot avea o semnificatie posibil biologica (asimptote orizontale => intensitatea semnalului transmis sa fie comparabila, ai sa poata fi asemanata cu celula neuronala naturala);
+	
+	-> datorita tangentei la graficul functiei, functia tansig poate aproxima functia signum;
+
+	-> implementarea in matlab presupune ca punctul de inflexiune este (0, 0);
+
+	-> un alt avantaj al acestei functii este faptul ca derivata se poate calcula foarte usor pornind de la valoarea functiei.
+
+	-> Aceeasi prop o are si functia logsig (si asimptota spre -inf egala cu y = 0, dar pct de inflexiune este (0, 1/2) );
+
+	--- Formalizare ---
+	-------------------
+
+		-> reprezentarea, pictograma si definitia perceptronului -> SUBIECT DE EXAMEN!! [dandu-se pictograma, care este def formala si invers]
+
+		Definitie: 
+			-> triplet din 2 fct si o multime finita. Multimea = parametrii ce tre determinati. Apoi funtia notata gW - numita fct de integrare [depinde de par w] - figurata cu sigma (pol de gradul 1 in n variabile). Ca atare rez acestei integrari se transcrie ca prod scalar dintre vectorul intrarii X si W, care are n+1 parametri. A 3 componenta este functia de transfer f(in cazul nostru este funtia tansig)
+
+		Iesirea: f(net), net = gW(x) <=> f(gW(x));
+
+		Pornind de la formalizare se poate raspunde la intrebarea: "care este spatiul ipotezelor in care percepronul cauta?". Perceptronul tre sa gaseasca o fct care sa aproximeze cat mai bn functia folosita de superviser ptr etichetarea exemplelor; 
+
+		In final, spunem ca perceptronul are la dispozitie un spatiu de functii dat, iar in fct de acest spatiu de functii, folosind un algoritm de invatare, cauta in acest spatiu un set de parametru care sa aproximeze functia folosita de profesor. Invatarea practic se reduce la cautarea unui set de parametri intr-un spatiu de functii parametrizare de w;
+
+		Spatiul de functii nu poate fi decat iesirea perceptronului scrisa formal f compus cu gW in punctul x;
+
+		Alt tip de intrebare: "Cum apreciez distanta intre raspunsul invatacelului si cel al superviserului? Care este functia de pierdere (lost function)". 
+			-> In fct de aceasta functie, alg de invatare au forme diferite. In acest caz, ca si in cazul ADALINE dar si in cazul anumitor variante ale alg Rosenblatt, este clasica diferenta dintre raspunsul profesorului si raspunsul masinii, ridicata la patrat, care duce suma patratelor erorilor;
+
+	    Alt exercitiu ptr examen: Cum ar arata o regula de invatare daca schimbam fct de cost?
+	    	-> norme Minkowski, etc, [vezi cursul anterior]
+
+	    Ultima intrebare legata de modelul perceptronului este cea care intreaba: "Cum caut in spatiul functiilor respective? Cum invat?"
+
+	    	-> in acest caz, cautarea este intradevar random ptr ca porneste de la un pct de start ales aleator, dar cautarea este determinista, folosind metoda gradientului descendent;
+
+	    	-> Ca atare, mai precis, nu cautam functii de structuri si tipuri diferite, ci cautam in acelasi tip(fel) de functii un anumit set de parametri care depinde de multimea de antrenare. 
+
+	    	-> daca folosim acest criteriu, suma patratelor erorilor depinde de parametrii w. Ca atare, cautarea se reduce la a gasi optimul unei functii care depinde multidimensional. Functia poate fi asimilata geometric cu o hipersuprafata, iar met gradientului se rezuma la a gasi un punct de minim global (sau local daca nu exista global);
+
+	    Calitatea de generalizare a unei astfel de invatari = din pdv geometric se refera la a gasi minimul global. in general gasim un minim local, cel care invata o anumita multime de antrenare. Ne intereseaza sa fim performanti pe toate multimile de antrenare(exemplele urmeaza o lege de distributie necunoscuta, etichetele urmeaza o functie conditionata, si ea necunoscuta);
+
+	    REGULA DELTA DE INVATARE:
+
+	    	-> figura 2.52 (pagina 38) [in pdf-ul cu regula delta]
+
+	    	etichetele multimii de antrenare sun -1, +1; De fapt, iesirea perceptronului acopera intervalul deschis (-1, 1);
+	    	Iesirea este o functie continua, in timp ce eticheta este o functie discreta. Ptr a trece de la o iesire continua la o iesire discreta exista 2 tipuri de implementari: Are loc o trunchiere - y > 0 => eticheta asignata +1, altfel -1;
+
+	    	in final aplicam metoda gradientului descendent 2.52 
+
+	    	-> ca atare 2.52 este transpusa in 2.53, care este regula de invatare interactiva (online);
+
+	    	-> daca admitem sa notam d-y/f' cu delta da numele alg de "Regula Delta"
+
+	    	-> f' al tangentei hiperbolice este  - f^2
+
+	    	-> derivata lui logsig f(1 - f);
+
+	    	Alg 2.53 fie online fine batch are o slabiciune, care daca este comparata cu celelalte 2 categorii, nu este intalnita. Este vorba de fenomenul de flax mode (intervine oboseala) - se dat faptului ca derivata are forma de clopot, centrata in origine, si tinde la 0 in +- infinit; Daca valorile sunt  net <-3 sau net > 3, atunci f'(net) -> 0 => dif intre wk si wk+1 este nesemnificativa;
+
+	    	O prima idee de evitare a acestei chestiuni: 
+	    			Initializarea valorilor w se face in jurul lui 0 [cat mai aproape] (Algoritmul Ng);
+
+	    	O alta idee:
+	    			vezi figura 2.54.
+	    			2.54 presupune o derivata perturbata cu epsilon > 0 (bias, deplasare);
+
+
+**********************************************************************************************************************************************
+**********************************************************************************************************************************************
+
+
+============================
+Performantele perceptronului
+         31.03.2014
+     Nu exista pe moodle
+============================
+
+	Dandu-se un individ sau o masina, care este problema cea mai grea pe care o poate rezolva, si reciproc, dandu-se o problema, care este masina sau individul care o pot rezolva?
+
+	Obiectul studiului  = percepronul;
+	Problemele pe care tre sa le invete sunt probleme legate de invatarea unei multimi (probleme de clasare), sau a unei functii (probleme de regresie);
+
+	1) Daca avem o multime de antrenare, poate fi ea invatata fara eroare de un perceptron? [problema de clasare]
+	2) Dandu-se toate multimile de antrenare care pot fi imaginate, cate dintre ele pot fi invatate fara eroare de perceptron? 
+
+	Sa consideram ca exemplele sunt etichetate cu +1, -1 si sa notam cu H+ multimea care pozitiveaza un hiperplan parametrizat de w si tau
+	si cu H- celalalt semiplan al carui puncte negativeaza hiperplanul;
+
+	-> in plan hiperplanul este o dreapta care inparte suprafata
+
+	Dandu-se o multime T finita cu n elemente(multime de antrenare), identificam S+ = multimea exemplelor cu eticheta 1, S- multimea etichetate cu -1;
+
+	S+ si S- sunt liniar separabile daca exista H acel hiperplan ai S+ inclus in semiplanul pozitiv fata de H, respectiv S- in partea negativa (pagina 42)
+
+	Asa incat raspunsul la prima intrebare este: *** orice perceptron poate invata fara eroare daca multimea de antrenare este liniar separabila *** ;
+
+	A doua intrebare (cate multimi sunt liniar separabile?). Demersul aici este urmatorul: daca avem n exemple, exista 2^n moduri de a eticheta aceste exemple. Asadar raspunsul la intrebarea 2 se traduce in a vedea cate din cele 2^n multimi sunt liniar separabile?
+
+	Notam cu L(S) numarul de dicotomii liniar separabile pe care le putem forma cu multimea de exemple S; 
+
+	L(S) [rond] este maximul dicotomiilor pentru multimile de exemple de cardinal n si care au o complexitate R^n; Tocmai am constatatat ca toate aceste multimi fie ca sunt liniar separabile, fie ca nu, sunt in nr de 2^n, are sens sa aplicam operatorul max in loc de operatorul supremum; Dandu-se o multime de exemplmple de card n, care este numarul maxim de exemple ce pot fi dicotomizate [L^ (L cu caciula)].
+
+	pagina 44 -> 2.3.2
+
+	Ideea este urmatoarea:  rezolvam sistemu;  2.3.2 cu conditiile de la 2.3.3.
+
+	Rezolvarea acestui sistem (se va face la seminar) -> tehnic, simpla, dar ca importanta este foarte utila, ptr ca de fapt ne ajuta sa rezolvam ecuatii diferentiale cu derivate partiale;
+
+	D(n, d) = D(n-1, d) + D(n, d-1)
+	Cand avem un singur punct, el poate fi etichetat liniar separabil in 2 moduri; => D(1, d) = nr maxim = 2;
+	A doua conditie initiala se refera la d = 1 (punctele sunt scalare). Pot obtine in acest caz 2n etichetari posibile liniar separabile; 
+
+	Tema: Demonstratia teoremei: Solutie unica a sistemululi de ec ecuatii 2.3.2 cu conditiile 2.3.3 este limita superioara ptr L(S) este data de formula 2.3.4 
+
+			D(n, d) = | 2sum(n-1 / i), daca n > d + 1;   2.3.4;
+			          | 2^n daca n < d + 1;
+
+    Care sunt cele 2 multimi care nu pot fi invatate de perceptron? n = 4 si d = 2;
+
+

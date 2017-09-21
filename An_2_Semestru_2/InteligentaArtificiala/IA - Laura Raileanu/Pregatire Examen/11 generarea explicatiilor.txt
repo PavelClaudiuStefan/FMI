@@ -1,0 +1,59 @@
+ Generarea explicatiilor si introducerea incertitudinii in sistemele expert
+
+  Generarea explicatiilor : Una dintre caracteristicile regulilor de productie care fac din acestea o modalitate naturala de exprimare a cunostintelor in cadrul sistemelor expert este faptul ca ele sustin transparenta sistemului. Prin transparenta sistemului se intelege abilitatea acestuia de a explica deciziile si solutiile sale. Regulile de productie faciliteaza generarea raspunsurilor pentru urmatoarele doua tipuri de intrebari: cum? si de ce?
+  Arborele de demonstratii al unei propozitii "cum?" (<= operator infixat) .
+  1. Daca P este o fapta, atunci arborele de demonstratie este P. 
+  2. Daca P a fost dedus folosing o regula de forma if Conditie then P atunci arborele de demonstratie este: P <= DemConditie (unde DemConditie este arbore de dem al lui Conditie)
+  3. Fie P1 si P2 propozitii ale caror arbori de demonstratie sunt Dem1 si Dem2.
+   Daca P este de forma P1 and P2  ==>(din arborele de dem) Dem1 and Dem2. 
+   Daca P este de forma P1 or P2 ==> Dem1 or Dem2.
+
+Implementare in Prolog :
+
+ %este_adevarat(P,Dem) daca Dem constituie o 
+%demonstratie a faptului ca P este adevarat 
+ 
+:-op(800,xfx,<=). 
+ 
+este_adevarat(P,P):- 
+ fapta(P). 
+este_adevarat(P,P<= DemCond):- 
+ if Cond then P, 
+ este_adevarat(Cond,DemCond). 
+este_adevarat(P1 and P2, Dem1 and Dem2):- 
+ este_adevarat(P1,Dem1), 
+ este_adevarat(P2,Dem2). 
+este_adevarat(P1 or P2, Dem):- 
+ este_adevarat(P1,Dem) 
+ ; 
+ este_adevarat(P2,Dem). 
+
+
+  Introducerea incertitudinii: Raspunsul la o intrebare este fie adevarat, fie fals, asadar un raspuns categorie. Totusi, majoritatea domeniilor expert nu sunt categorice. Incertitudinea poate fi modelata prin atribuirea unei codificari, alta decat adevarat sau fals.
+  Fiecarei propozitii i se va adauga un numar intre 0 si 1 ca factor de corectitudine. 
+  Sa presupunem ca avem 2 propozitii : P1 si P2 cu certitudinile c(P1) si c(P2).
+=> c(P1 and P2) = min(c(P1) , c(P2)).
+   c(P1 or P2) = max(c(P1) , c(P2)).
+  Daca exista regula : if P1 then P2: C => c(P2)=c(P1)*c
+
+
+Implementare Prolog : 
+
+% certitudine (Propozitie, Certitudine) 
+certutudine(P,Cert):- 
+ dat(P,Cert). 
+certitudine(Cond1 and Cond2, Cert):- 
+ certitudine(Cond1,Cert1), 
+ certitudine(Cond2,Cert2), 
+ minimum(Cert1,Cert2,Cert). 
+ 
+certitudine(Cond1 or Cond2, Cert):- 
+ certitudine(Cond1,Cert1), 
+ certitudine(Cond2,Cert2), 
+ maximum(Cert1,Cert2,Cert).  
+ 
+
+certitudine(P,Cert):- 
+ if Cond then P:C1, 
+ certitudine(Cond,C2), 
+ Cert is C1*C2. 

@@ -1,0 +1,39 @@
+===================
+==    CURS 12    ==
+==   12.05.2014  ==
+===================
+
+* <alpha> = vezi formula in caiet, alpha = nr formulei/ propozitiei
+
+CARACTERISTICE COMPUTATIONALE ARE RETELELOR 
+
+	curs 14 nu se face => urmeaza recapitulare azi si sapt viitoare
+
+	RECAPITULARE:
+		-> Ce situatii pot fi modelate de retele de perceptroni(la ce folosim asta);
+		-> Paradigma invatarii supervizate, in care pe o multime finita ai exemple si rez corecte poate fi folosita la modelari in care apare aceasta situatie (observatii cu adnotari);
+		-> Dezambiguizarea presupune texte adnotate;
+		-> La seminar au fost lucruri mai tehnice (etichete = tehnici de clasare) => clasator baesian;
+		-> Probleme de regresie, in care etichetele sunt continue;
+    
+    Am incheiat percepronul cu un curs (7) - in care erau studiate performantele perceptronului, iar concluziile nu erau incurajatoare, in sensul ca perceptronul recunoaste ca multimi doar multimile liniar separabile. Ceea ce este nu caz mult prea particular, iar din punct de vedere al functiilor boolene pe care le poate implementa(sinteza circuitelor), sunt mult mai putine;
+
+    Un argmument ptr studiul retelelor neuronale a fost constituit de incercarea de a depasi aceste impedimente. Retelele cu mai multe straturi pot recunoaste aproape orice multime. La back-propagation - fiecare perceptron recunoaste un semiplan, iar compunerea rezultatelor implica recunoasterea multimii.
+
+    In ceea ce priveste functiile booleene, => o retea cu 3 straturi poate recunoaste orice functie;
+
+    Cursul de azi vizeaza tehnica prin care se implementeaza aceste aspecte.
+
+    RECUNOASTEREA FUNCTIILOR BOOLEENE:
+    
+    	- Propozitia 0: 
+    		-> Clasa functiilor booleene de dimensiune d <formula 1> poate fi invatata de o RPN cu cel mult doua straturi functionale si cu functii de transfer identice cu functie heaviside cu pragul de activare 0;
+
+    	- Multimea functiilor booleene de complexitate d contine <formula 2> functii.
+
+    	- <propozitia 1>
+
+    	- Spre deosebire de caul general, in cazul functiilor booleene, multimea de antrenare trebuie sa fie exhaustiva(contine toate punctele din supp(f));
+
+    	- TEOREMA cu care demonstram propozitia 0 este o teorema constructiva;
+    		-> 

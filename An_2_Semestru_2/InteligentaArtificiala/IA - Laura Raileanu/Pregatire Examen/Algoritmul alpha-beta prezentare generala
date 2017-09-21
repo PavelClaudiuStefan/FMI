@@ -1,0 +1,7 @@
+Algoritmul alpha beta reprezinta o implementare eficienta a principiului minimax.
+Atunci cand este aplicata unui arbore de tip minimax standard, tehnica alpha-beta prunning("alphabeta retezare") va intoarce aceeasi mutare pa care ar furniza-o si Algoritmul Minimax, dar intr-un timp mai scurt, intrucat realizeaza o retezare a unor ramuri ale arborelui care nu pot influenta decizia finala.
+Principiul general al acestei tehnici consta in a considera un nod oarecare n al arborelui ai jucatorul poate alege sa faca o mutare la acel nod. Daca acelasi jucator dispune de o alegere mai avantajoasa, m, fie la nivelul nodului parinte al lui n, fie in orice punct de decizie aflat mai sus in arbore, atunci n nu va fi niciodata atins in timpul jocului. 
+prin urmare, de indata ce, in urma examinarii unora dintre descendentii nodului n, ajungem sa detinem suficienta informatie relativ la aceasta, il putem inlatura.
+Ideea tehnicii de alfa-beta retezare este aceea de a gasi o mutare suficient de buna pt a se lua decizia corecta.
+Aceasta idee poate fi formalizata prin introducerea a 2 limite, alfa si beta reprezentand limitari ale valorii de tip minimax coresp unui nod intern.
+Alfa este valoarea minima pe care este deja garantat ca o va obtine MAX, iar beta este valoarea maxima pe care MAX poate spera sa o atinga. Din punctul de vedere al jucatorului MIN, beta este valoarea cea mai nefavorabila pt MIN pe care acesta o va atinge. Prin urmare, valoarea efectiva care va fi gasita se afla intre alfa si beta.

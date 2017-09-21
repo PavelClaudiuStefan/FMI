@@ -1,0 +1,33 @@
+Cautarea de tip DF
+------------------
+
+Strategia de cautare de tip DF extinde intotdeauna unul dintre nodurile alfate la nivelul cel mai adanc din arbore. Cautarea si extinderea altor noduri se face numai daca se zareste un nod care nu mai poate fi extins si nu este nod scop.
+Este necesar sa se mentioneze un singur drum de la radacina la un nod-drunza, impreuna cu nodurile-frate neextinse
+Complexitatea in spatiu este b*m cu factor de ramificare b si adancime maxima m.
+Complexitatea de timp este o(b^m), si este acelasi si pentru cazul cel mai nefavorabil. Aceasta cautare este mai rapida decat BF deoarece sunt sanse mai mari sa fie gasita o solutie dupa ce exploreaza numai o mica portiune a arborelui.
+Dezavantajele sunt:
+-poate intra intr-un ciclu infinit fara a returna vreodata o solutie.
+-poate gasi un drum reprezentand o solutie, dar nu este optim.
+Avantajele sunt:
+-consumul redus de momorie.
+-posibilitatea gasirii unei solutii fara a traversa o mare parte din arbore.
+Strategia DF este:
+-daca N este un nod-scop atunci sol=[N] sau
+-daca exista un nod succesor, N1 al lui N, astfel incat sa existe un drum, Sol1, de la N1 la un nod-scop, atunci sol-[N/Sol1].
+
+Forma drumurilor este cea fireasca, de la nodul de start la nodul scop.
+Varianta imbunatatita a acestui algoritm este adaugarea de detectare a ciclurilor. Se va folosi argumentul Drum pentr a impiedica algoritmul sa ia in considerare acei succesori ai lui Nod care au fost deja intalniti, adica sa detecteze cicluri.
+
+Implementare Prolog a DF imbunatatit:
+rezolva1_d(N, Sol):- depthfisrt([], N, Sol).
+depthfirst(Drum, Nol, [Nod|Drum]):- scop(Nod).
+depthfirst(Drum, Nod, Sol):- s(Nod, Nod1), +\(membru(Nod1, Drum)).
+
+membru(H, [H|T]).
+membru(X, [H|T]):- membru(X, T).
+
+In predicatul depthfirst, Nod este starea de pornire, Drum o lista de noduri, intre nodul start si Nod, iar solutie este Drum extins prin Nod. Acest predicat este adevarat daca, extinzand calea Drum via Nod, se ajunge la un nod-scop.
+Predicatul +\membru() verifica daca anumite noduri au, fost deja vizitate, pentru a nu se realiza cicluri.
+Predicatul rezolva1_d(N, Sol) este adevarat daca Sol este un drum de la nodul de start N la nodul scop, in ordine inversa, obtinut prin DF.
+
+

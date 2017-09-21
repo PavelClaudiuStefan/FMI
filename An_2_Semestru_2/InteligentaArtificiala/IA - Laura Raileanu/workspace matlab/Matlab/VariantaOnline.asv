@@ -1,0 +1,16 @@
+function [ W ] = VariantaOnline( X,D,q,f )
+
+    [n m] = size(X);
+    X(n + 1, :) = ones(1, m);
+    W = rand(1, n+1);
+    
+    while sum(D ~= f(W * X)) ~= 0 
+        
+        y = f(W * (X/norm(X))); 
+        W = W + q *(D-y)*(X/norm(X))';
+    end
+    y = f(W*X);
+    y
+    D
+    y ~= D
+end

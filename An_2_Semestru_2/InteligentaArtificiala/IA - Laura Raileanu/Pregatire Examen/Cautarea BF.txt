@@ -1,0 +1,55 @@
+Cautarea BF
+-----------
+
+Strategia de cautare de tip BF extinde mai intai nodul radacina, apoi se extind toate nodurile generate de nodul radacina, apoi succesorii lor, si asa mai departe. Nodurile aflate la adancimea d in arbore sunt extinse inaintea nodurilor aflate la adancimea d+1.
+Cautarea BF este un tip de cautare neinformata, adica nu se cunosc pasii sau costul drumului de la astarea curenta la starea scop.
+In aceasta cautare se iau in considerare toate drumurile. Daca exista o solutie, este sigur ca va fi gasita, iar daca exista mai multe, se va gasi intotdeauna solutia cea mai putin adanca.
+Pentru a programa in Prolog aceasta strategie este nevoie de o multime de noduri candidate, care vor forma o multime de drumuri candidate. Aceasta multime va fi reprezentata ca o lista de drmuri, iar in fiecare drum va fi o lista de noduri inversa. Capul listei fiind nodul cel mai recent generat, iar ultimul element este nodul de unde s-a inceput cautarea.
+
+Strategia BF este:
+-daca primul drum contine un nod-scop pe post de cap, atunci aceasta este o solutie a problemei.
+-altfel, inlatura primul drum din multimea de candidati, si genereaza toate extensiile de un pas ale acestui drum, care se adauga la sfarsitul multimii pe care se va face cautarea BF.
+
+Cautarea in adancime este o strategie in care sunt tratate toate limitele de adancime posibile, adica adancimea l, apoi 1 etc.
+Avantaje:
+-este optima si completa
+-consuma putina memorie
+
+Anumite noduri sunt extinse de mai multe ore, insa numarul total de noduri extinse nu este mult mai mare decat cel dintr-o cautare BF.
+Complexitatea de timp O(b^d)
+Complexitatea de spatiu(b*d)
+
+Implementare prolog:
+membru(H, [H|T]).
+membru(X, [H|T]):- membru(X, T).
+cale(Nod, Nod, [Nod]).
+cale(PrimNod, UltimNod, [UltimulNod|Drum]):- cale(PrimNod, PenultimNod, Drum), s(PenultimNod, UltimNod), \+(membru(UltimNod, Drum)).
+dfid(Nod_sol):-cale(Nod, NodScop, Sol), scop(NodScop), !.
+
+Predicatul cale este adevarat daca Drum reprezinta o cale aciclica intre nodurile Nod1 si Nod2 in spatiul starilor. De la nodul de start sunt generate toate drumurile aciclice prosibile de lungime care creste cu cate o unitate, pana cand este ferit Nod-scop. Solutia va fi in ordinea inversa a parcurgerii drumului.
+
+Dezavantaj: recalcularea unor drumuri, care sunt extinse la o noua adancime.
+
+Codul in prolog:
+rezolva_b(Start, Sol):- breathFirst([[Start]], Sol).
+breadthfirst([[Nod|Drum]|_], [Nod|Drum]):-scop(Nod).
+breadthfirst([Drum|Drumuri], Sol):- extinde(Drum, DrumuriNoi), concat(Drumuri, DrumuriNoi, Drumuri1), breadthfirst(Drumuri1, Sol).
+extinde([Nod|Drum], DrumuriNoi):-bagof([NodNou, Nod|Drum], s(Nod, NodNou), +\(membru(NodNou, [Nod|Drum])), DrumuriNoi), !.
+extinde(_,[]).
+concat([], L, L).
+concat([H|T], L, [H|T1]):-concat(T, L, T1).
+membru(H, [H|T]).
+membru(X, [H|T]):- membru(X,T).
+
+Predicatul rezolva)b este adevarat daca SOl este un drum de la nodul initial la o stare-scop, in oridine inversa, drum obtinut prin BF.
+Predicatul breadthfirst este adevarat daca un drum din multimea de drumuri candidate Drumuri poate fi extins la o stare scop, devenind Sol.
+Predicatul extinde este adevarat daca prin extinderea multimii de noduri Drum, obtinem multimea numita DrumuriNoi, el generand multimea tuturor extensiilor acestui drum. 
+Predicatul concat este adevarat daca atunci cand concatenam lista de noduri Drumuri cu lista de noduri DrumuriNoi se obtine Drumuri1.
+Predicatul membru este adevarat dca nodul numit NodNou apartine listei de noduri [Nod|Drum].
+Faptul scop(Nod) arata ca Nod este Nod-scop.
+
+Prin s(Nod, NodNou) se realizeaza funcia de succesiune si desemneaza faptul ca NodNou este nodul succesor al lui Nod.
+In fiecare stare poate fi extinsa pentru a genera b stari noi. Factorul de ramificare este b. Numarul maxim de extensie inaintea gasirii solutiei:
+1+b+b^2+...+b^d unde d este lungimea drumului pana la starea scop. 
+=>complexitate de timp: O(b^d)
+=>complexitate spatiu: este aceeasi cu complexitatea timpului.

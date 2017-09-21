@@ -1,0 +1,20 @@
+function [ w ] = algR( x, d )
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+   w = rand(1,3);
+   for j=1:1:50
+     for i=1:1:4
+        n = w * x(:,i);
+        if(n>0)
+            y=1;
+        else
+            y=-1;
+        end
+        if(y~=d(i))
+            w = w + d(i)* x(:,i)';
+        end
+     end
+   end
+
+end
+

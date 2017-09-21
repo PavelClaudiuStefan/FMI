@@ -1,0 +1,117 @@
+%Rentea Andreea Mihaela 242, 29.05.2014  
+
+%Definim relatia de succesiune
+
+%Predicatul st(S1,S2) este adevarat daca exista un arc intre S1 si S2 in spatiul starilor
+
+s(st(B,NMB,NCB,NMis,NCan,M,N),st(B1,NMisB1,NCanB1,NMis1,NCan1,M,N)):-
+			maluri_opuse(B,B1),  % se ia malul opus barcii B1
+			intre(K1,0,M),
+			%determinam numarul de misionari care trec cu barca
+			intre(K2,0,M),
+			%determinam numarul de canibali care trec cu barca
+			K1+K2=<M, K1+K2>0,
+			%astfel incat sa fie cineva in barca dar sa nu fie mai multi decat numarul de locuri
+			(K1=0;K1=\=0,K1>K2), %sa fie sau 0 misionari sau acestia sa fie mai multi decat canibalii
+			NMB>=K1,NCB>=K2,NMisB1 is NMis+K1,NCanB1 is NCan+K2,
+			NMis1 is NMB-K1, NCan1 is NCB-K2,in_regula(NMisB1,NCanB1),
+			in_regula(NMis1,NCan1).
+			%in_regula verifica sa fie pe ambele maluri ramasi mai multi misionari decat canibali
+			
+			
+membru(X,[X|_]).
+membru(X,[_|Y]):-membru(X,Y).
+
+intre(A,A,B):-A=<B.
+intre(X,A,B):-A<B,A1 is A+1, intre(X,A1,B).
+
+%In starea initiala toti se afa pe malul estic
+
+initial(st(est,N,N,0,0,M,N),M,N).
+
+%In starea finala toti se afla pe malul vestic
+
+scop(st(vest,N,N,0,0,_,N)).
+
+%Predicatul maluri_opuse(X,Y) este adevarat daca X si Y sunt malurile opuse.
+
+maluri_opuse(est,vest).
+maluri_opuse(vest,est).
+
+in_regula(0,_).
+in_regula(X,Y):-X>0,X>=Y.
+
+%Implementarea algoritmului breadth-first folosind reprezentarea listelor prin diferente
+
+extinde([Node|Path],NewPaths):-
+		findall_liste_dif([NewNode,Node|Path],
+		(s(Node,NewNode),
+		\+ (membru(NewNode,[Node|Path]))),
+		NewPaths).
+
+findall_liste_dif(X,Scop,L):-
+		call(Scop),assertz(elem(X)),fail;
+		assertz(elem(baza)),colectez(L).
+		
+colectez(L):-retract(elem(X)),!,
+			(X==baza,!,L=Z-Z;
+			colectez(Rest),concat_liste_dif(Rest,[X|A]-A,L)).
+			
+concat_liste_dif(A1-Z1,Z1-Z2,A1-Z2).
+
+rezolva_bf_dif(Nod_initial,Solutie):-
+		breadthfirst_dif([[Nod_initial]|Z]-Z,
+						  Solutie).
+						  
+breadthfirst_dif([[Nod|Drum]|_]-_,[Nod|Drum]):-
+			scop(Nod).
+breadthfirst_dif([Drum|Drumuri]-Z1,Solutie):-
+			extinde(Drum,LL),
+			concat_liste_dif(Drumuri-Z1,LL,A2-Z2),
+			A2\==Z2,
+			breadthfirst_dif(A2-Z2,Solutie).
+			
+%Utilizarea algoritmului breadth-first pentru rezolvarea problemei
+
+solutie(N,M):-
+	tell('C:\\Users\\Arceus\\Desktop\\canib_rez.txt'),
+	initial(Start,M,N),   %configuratie initiala(mal,nr mis,nr can, nr mis mal opus, nr c m o, locuri in barca,nr)
+	%cauta solutia prin bf
+	(rezolva_bf_dif(Start,Solutie),lung(Solutie,N1),!,
+	NN is N1-1,afisare(Solutie),nl,nl,
+	write('Nr mutari: '),write(NN);
+	nl,write('Problema nu are solutie')), told.
+	
+scrie(st(B,MX,CX,MY,CY,_,_)):-
+	write('Barca se afla pe malul de '), write(B),
+	write('.'),nl,maluri_opuse(B,B1),
+	(B=est, write('Pe malul de '),write(B),
+	write(' se afla '),write(MX),scrie_nr(MX,m),
+	write(' si '), write(CX), scrie_nr(CX,c),
+	write('.'),nl,write('Pe malul de '),write(B1),
+	write(' se afla '),write(MY),scrie_nr(MY,m),
+	write(' si '),write(CY),scrie_nr(CY,c);
+	B=vest, write('Pe malul de '),write(B1),
+	write(' se afla '),write(MY),scrie_nr(MY,m),
+	write(' si '),write(CY),scrie_nr(CY,c),
+	write('.'),nl,write('Pe malul de '),write(B),
+	write(' se afla '),write(MX),scrie_nr(MX,m),
+	write(' si '), write(CX), scrie_nr(CX,c)),write('.').
+	
+scrie_nr(X,Y):-
+		Y==m, (X==1, write(' misionar');
+		X\==1,write(' misionari'));
+		Y==c, (X==1, write(' canibal');
+		X\==1, write(' canibali')).
+		
+afisare([]).
+afisare([H|T]):- afisare(T),scrie(H),nl,nl.
+
+lung([],0).
+lung([_|T],N):-lung(T,N1),N is N1+1.
+
+
+
+
+
+

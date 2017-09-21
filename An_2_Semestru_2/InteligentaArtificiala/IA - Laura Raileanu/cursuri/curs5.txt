@@ -1,0 +1,80 @@
+====== CURS 5 ======
+     17.03.2014
+====================
+
+-> daca rata de invatare este 1/2, atunci regula de invatare arata asa: 
+			| w1 arbitrar
+			| wk+1 = wk + zk, daca (z^k)^T * wk <= 0
+			| wk+1 = wk,  altfel
+
+-> conditia de misclasare: z^T * W
+2 problematici:
+		1) cand exista o solutie
+		2) convergenta algoritmului
+			-> Exista o solutie daca multimea este liniar separabila  (de poate duce un hiperplan prin multime)
+			in aceasta ipoteza, a doua problema este daca intradevar algoritmul acesta converge si gaseste un astfel de fiperplan notat w*.
+			
+			Demonstratia convergentei are ca idee evaluarea expresieiL w(k+1) - alfa*w* = w(k) - alfa*w* + z(k);
+				Evaluam aceasta expresie pentru ca w, conform algoritmulului, este upgradat doar daca exemplul il miscalisfica.
+				-> Trecem la evaluarea normei euclidiene a acestei diferente facand produsul scalar cu ea insasi => ||w(k+1) - alfa*w*||^2 = ||w(k+1) - alfa*w*||^2 + 2(z(k)^T)(x(k) - alfa*w*)+||z(k)||^2  [A se vedea si demonstratia in curs]
+				->w* este astfel ales ai sa nu miscasificeniciun exemplu => gamma > 0 si beta > 0
+				-> daca alfa = beta^2 / gama [2.12 in curs]
+				-> iterand intr-un numar finit de pasi, in final vom ajunge la inegalitatea 2.13 [curs].
+				-> k-ul nu poate sa aiba orice valoare, ptr ca de fapt toata chestiunea de la 2.13 poate fi cel mult 0. Asadar, nr acesta k de iteratii, cand de fiecare data vom gasi un hiperplan care misclaseaza un exemplu, va fi finit, presupunand ca diferenta este egala cu 0;
+				-> presupunem punctul de start = 0 (w = 0), atunci k0 se scrie asa [2.15];
+				-> in final ajungem la formula 2.15 [a doua fractie];
+				-> 2.15 reprezinta faptul ca daca exista o sulutie, aceasta este gasita in cel mult k0 iteratii
+				Aceasta formula este foarte intersanta deoarece ea ne spune de fapt care sunt piedicile ce pot aparea intr-o invatare. Paradoxal, exista o asemanare intre piedicile intalnite de perceptron si piedicile pe care le intalnim noi ca indivizi biologici, in invatare.
+
+		-> k0 poate fi micsorat daca marim numaratorul. Punctele foarte imprastiate ingreuneaza invatarea. Ele se numesc "posibil aberante". exista un alg care incearca reducerea influentei acestor puncte prin scalarea multimii de antrenare.
+		-> in lumea reala situatia in care numaratorul este foarte mare corespunde situatiei in care avem de invatat notiuni disparate.
+
+		-> numitorul relatiei este distanta solutiei de la w* la punctele din multimea de antrenare. Daca acest minim este foarte mic (aprox=0) 
+		= > k0 se duce catre infinit. In viata reala coresp situatiei in avem de invatat notinuni foarte apropiate ca si continut si care ne poate induce in eroare (copii - copii[xerox]). Exista un alg in care incearca sa se limiteze influenta acestei chestiuni, cerandu-se exemplelor sa se apropie nu mai mult de o constanta data;
+
+------- NOI VARIATII DE ALGORITMI -------
+alg ce incearca sa depaseasca restrictia data de formula 2.15
+--------------------------------------------------------------
+
+	Ecuatia unui hiperplan: 
+		ce trece prin pct x0 si este normal pe un vector unitar u se poate scrie sub forma : (ux - x0) = u'(x - x0) = 0. Multimea punctelor ce satisfac aceasta conditie formeazza un hiperplan.
+
+		Dreapta ce trece printr-un punct dat z si ce este perpendiculara pe hiperplanul mau su este data de ecuatia: x - z0 = t*u
+
+		Dist de la un pct z0 la un hiperplan d(H, z0) = |u'(x0 - z0)|;
+
+	[de vazut eventual cursul sau anexele]
+
+	1) Generalizarea regulii de invatare ptr un perceptron (No man land generalization):
+	2) Un alt rezultat este legat de conditiile in care algoritmul converge. 
+	   
+	   -> Rata de invatare descrie "netezimea locala a terenului". Daca terenul este abrupt -> rata mica, teren plat -> rata mare;
+	      Daca notiunile pe care tre sa le invatam sunt aseamanatoare, atunci viteza de invatare este mai mare decat daca avem notiuni foarte diferite si au o densitate foarte mare;
+	   
+	   -> Vezi 2.16 (ro^k = rata de invatare la pasul k [in fct de dificultatea exemplelor ce trebuie invatate])
+
+	   -> Vezi 2.17. Seria tre sa fie divergenta, dar divergenta nu tre sa fie rapida. Altfel spus, suma partiala a seriei la patrat fata de suma la patrat a intregii serii, suma la patrat sa convearga mai repede la infinit fata de suma patratelor.
+	   -> aceste conditii sunt realizare impartind o data de invatare la numarul de iteratii, sau inmultind numarul de iteratii
+
+	   -> O alta forma a primului algoritm de invatare este forma "batch update" (2.18). ea spune ca upgradarea lui w se face in fct de toate exemplele care sunt misclasate de w la pasul k. (echivalent cu invatarea in sesune). O astfel de trstegie este mai performanta din punct de vedere a timpului, daca invatarea este aleatorie; Acest tip de invatare este biologic irealizabila. Totusi, doar in acest caz, 2.18 atingea solutia intr-un numar incomparabil mai mic de epoci fata de algoritmul online. In cazul unei parcurgeri date de un alg determinist, atunci diferentele ca viteza sunt nesemnificative;
+
+	   Alg lui Butz (2.19) propune sa corecteze misclasarea exemplului k. Butz propune sa "miste" putin acet exemplu (gamma positiv si subunitar). Cu toate ca w la pasul k clasifica bine exemplul de la pasul k, totusi, il misc putin pentru a evta propagarea erorii.
+
+	   -> Punerea problemei - gasirea functionalei ce minimizeaza
+	      rezolvare -> alg descendendent (gradient descendent)
+
+	In spatiul ipotezelor H = {h:R^2 -> R / h(x) = ax1 + bx2 + c, c = 0} unde trebuie sa gasim acea functionala care aproximeaza cel mai bine etichetele date de profesor, folosind principiu inductiv riscul empiric. Practic, Remp(h*) = argmin 1/m sum[l(xi, yi)], i = 1..n
+	Trebuie sa gasim acei parametri ai riscul empiric sa fie minim. Asadar l(u, v) = (u - v)^2;
+	Din punct de vedere geometric, a cauta w1 si w2 pornind dintr-un punct oarecare inseamna sa pornim dintr-un punct oarecare pe un paraboloid, ducem tangenta in punctul respectiv si mergem in jos (desenul dubios cu "paharul");
+
+	Deci, toti algoritmii pe care ii vom studia pentru perceptron si retele de perceptroni au in vedere ideea gradientului descendent, cu variante de imbunatatire(eventual) [caut ipoteza intr-un spatiu dat, si o gasesc cautand parametri mergand pe o suprafata]. Ne propunem sa aflam cum arata aceasta suprafata in cazul algoritmului lui Rosenblatt.
+
+	Regula Mays - > daca functionala nu e derivabila in toate puncete, schimbam functia de pierdere, si introducem suma patratelor ptr acei w care satisfac conditia misclasarii lor de catre w. Daca aplicam metoda gradientului descendent obtinem regula Mays.
+
+	Alte variante:
+		2.27, 2.28 
+
+	- Alg lui Mays forma batch si Online 2.29;
+
+
+

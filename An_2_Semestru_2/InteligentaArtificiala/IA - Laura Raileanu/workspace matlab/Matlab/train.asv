@@ -1,0 +1,13 @@
+function [ output_args ] = train( net, p, t )
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+    
+    net.trainParam.epochs = 1;
+    net = train(net, p,t)
+    plotpc(
+    while(sum(sim(net,p) ~= t) ~= 0)
+        
+    end
+
+end
+

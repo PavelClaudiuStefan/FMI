@@ -1,0 +1,13 @@
+p = -1: 0.1: 1;
+t = 2*p;
+tSize = size(t,2);
+r = -0.25 + 0.5*rand(1,tSize);
+t = t + r;
+net = newlin(p,t);
+net.trainParam.epochs = 100;
+net.trainParam.goal = 0.0001;
+[net tr y e] = train(net,p,t);
+%plotperf(tr, net.trainParam.goal);
+plot(p,t,'.r');
+hold on;
+plot(p,y);

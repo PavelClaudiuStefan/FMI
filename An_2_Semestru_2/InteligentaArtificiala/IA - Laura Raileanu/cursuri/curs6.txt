@@ -1,0 +1,79 @@
+============= Curs 6 =============
+==         24.03.2014           ==
+==================================
+
+-> Cursul vizeaza a doua categorie de perceptroni, si anume aceaaa ce au functie de transfer liniara
+
+   PERCEPTRONUL CU FUNCTE DE TRANSFER LINIARA
+
+   		<insert figura 2-3 - Adaptive liniar combiner element >
+
+   		-> Acest perceptron in spatiul ipotezelor, gaseste acea ipoteza, ai pe multimea functiei de antrenare, media functiei de cost sa fie minima;
+
+   		-> Algoritmul de antrenare ptr un astfel de perceptron a fost propus de catre Widrow si Hoff
+
+   		*** Algoritmul de Antrenare ***
+   		    <insert fig 2.30>
+        
+        A doua problema pentru a gasi proprietatile acestei reguli de invatare este problema gasirii functiei de pierdere. Formula 2.32 spune ca aceasta evaluare reprezinta suma patratelor erorilor modulo 1/2.
+
+        -> functie de cost reprez diferenta dintre respunsul corect si cel dat de perceptron;
+
+        -> daca aplicam metoda gradientului descendent folosind aceasta functie criteriu, observam ca reprezinta marja de incredere pentru acest model; (2.34)
+
+        -> formula 2.35 reprezinta aceeasi formula, doar ca in forma online(actualizarea are loc pas cu pas);
+
+        -> Rata de invatare depinde de exemplul k (2.36)
+
+        -> rezultatul dat de 2.37 raspunde la intrebarea : "in ce interval tre sa aleg rata de invatare pentru ca alg meu, daca are solutie, va converge. [voi gasi acei w care det dreapta ce separa multimea]". rata de invatare tre sa fie pozitiva
+
+        -> solutia catre care converege algoritmul este data de formula 2.38 ~~~> Formula analitica
+
+        -> Algoritmul acesta este singurul pentru care exista o solutie unica si analitica
+
+        *********** DEMONSTRATIA FORMULEI 2.38 ******************** [s-a insistat mult pe formula asta]
+
+        	-> X -> matricea exemplelor
+        	-> x -> vector nx1 - corespunde intrarilor perceptronului;
+        	-> X - matrice dreptunghiulara (mxn) -> nr de exemple este mai mare decat variabilele masurate asuptra exemplului x
+        	-> d reptrezinta un vector m*1 ce contine valorile reale (etichete);
+        	-> X' - inversa generalizata (X-ul cu semnul acela dubios);
+
+@@@ Truc care se retine dupa examen: Inversa unei matrice dreptunghiulare:
+					-> produsul intre  X si X^T (=> matrice patratica ptr care ne putem pune problema inversabilitatii)
+					-> matricea obtinuta este simetrica si elementele de pe diagonala principala sunt majorante (nu exista pe linia resp un element mai mare ca el) - deci foarte probabil inversabila [numeric inversabila]
+			
+			-> In continuarea demonstratiei se calculeaza punctele stationare ale functiei J(x) care se afla printre solutiile ecuatiei 2.39;
+
+			-> Se obtine prin derivare formula 2.40;
+
+			-> Din 2.40 se poate obtine 2.41
+
+			-> inmultim cu XX^T si obtinem formula 2.42.
+
+			-> pentru a incheia demonstratia trebuie sa spunem ce fel de punct este acest w* prin calcului derivatei a doua (hesiana) [vezi pag 1 din curs];
+
+			-> calculand efecticv derivata observam ca hessiana este negativa => "tine apa";
+
+			-> de remarcat ca w* exista indiferent daca mutimile sunt sau nu sunt liniar separabile. daca multimile sunt liniar separabile, atunci w* va determina un hiperplan care va separa punctele fara eroare. Altfel, hiperplanul se va det in asa vel in cat erarea sa fie minima;
+
+		Ne intereseaza sa comparam cele doua formulari ale algoritmului (batch si online) din punct de vedere al vitezei;
+		<insert fig 2.5 (grafic dubios) >
+
+		reprezentarea este in axe semi-logaritmice.
+
+		Conform graficului, daca alg respectiv este folosit in varianta Online, apare problema modului in care prezentam exemplele. In fig 2.5 exemplele au fost oferite random timp de o epoca; In cazul batch este firesc ca nu apare aceasta problema, deoare toate exemplele participa la upgradarea lui w. Se observa ca convergenta in cadrul batch este de ordinul sutelor de epoci, in schimb, convergenta este cel putin de 10 ori mai mare, si este aparent instabila;
+
+		Asadar concluzionam ca este mai bine sa invatam la final, cand s-a adunat toata materia;
+
+		Motivatia acestui decalaj este aceea a conditiilo de experiment. Vectorii de antrenare au fost prezentati aleator; 
+
+		Regula corelatiei :  in relatia 2.49 este J(w), nu J(x);
+		2.50 - regula Hebiana
+		Dupa regula de corelatie se sare la pagina 19 [distanta minchopski] - relatia 2.68;
+
+
+
+
+
+

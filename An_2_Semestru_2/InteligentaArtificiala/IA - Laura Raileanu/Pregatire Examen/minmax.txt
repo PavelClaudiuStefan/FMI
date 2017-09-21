@@ -1,0 +1,58 @@
+Algoritmul MinMax.
+==================
+
+Textul algoritmului:
+1. Genereaza intregul arbore de joc, pana la starile terminale.
+2. Aplica functia de utilitate fiecarei stari terminale pentru a obtine valoarea corespunzatoare.
+3. Deplaseaza-te inapoi in arbore, de la nodurile frunza spre nodurile starii radacina, determinand corespunzator fiecarui nivel al arborelui valorile care reprezinta utilitatea nodurilor afltae la acel nivel. Propagarea acestor valori la niveluri anterioare se face prin intermediul nodurilor parinte succesive, conform urmatoarelor reguli:
+  • daca starea-parinte este un nod de tip MAX, atribuim maximul dinte valorile avute de fii sai
+  • daca starea-parinte este un nod de tip MIN, atribuim minimul dintre valorile avute de fii sai
+4. dicizia minmax
+Ajuns in nodul-radacina, alege petru MAX acea mutare care conduce la valoarea maxima.
+
+Algoritmul minmax este conceput pentru a determina strategia optima corespunzatoare lui MAX si in acest fel pentru a decide care este cea mai buna miscare.
+Vom considera cazul general al uni joc cu doi jucatori, pe care ii vom numii MAX si MIN. MAX va face prima mutare, dupa care jucatorii for efectua mutari pe rand pana cand jocul ia sfarsit. La finalul jocurlui vor fi acordate puncte jucatorului castigator (sau vor fi acordate anumite penalizari ceui care a pierdut)
+
+Exemplu de arbore cu valori minime:
+      4          mutarea lui max
+     /  \
+   4      2      mutarea lui min
+  /\     / \
+ 4  7   2   1    mutarea lui max
+/\  /\  /\  /\
+2 4 5 7 2 1 1 1  valori statice
+
+Max trebuie sa gaseasca intotdeauna o strategie care sa duca la o stare finala cstigatare indiferent de actiunea lui min
+Aceasta strategie include mutarea curenta a lui Max corespunzatoare fiecarei mutari posibile a lui Min
+Algoritmul reprezinta o cautare de tip deapth-first
+
+Implementarea in Prolog:
+Un program  Prolog care calculeaza val minmax a unui nod intern dat va avea relatie principala pe minmax(Poz,SuccBun,Val) unde:
+  • Val - este valoarea minmax a unei pozitii Poz
+  • SuccBun - este cea mai buna pozitie succesor a lui Poz
+
+minmax(Poz,SuccBun,Val) :-
+  %mutarile legate de la Poz produc ListaPoz
+  mutari(Poz,ListaPoz), !,
+  celmaibun(ListaPoz,SuccBun,Val);
+  %poz nu are succesor si este evaluat in mod static
+  staticval(Poz,Val) .
+celmaibun([Poz],Poz,Val) :-
+  minmax(Poz, -, Val), !.
+celmaibun([Poz1|ListaPoz], Pozun, ValBuna) :-
+  minmax(Poz1, -, Val1),
+  celmaibun(ListaPoz,Poz2, Val2),
+  maibine(Poz1, Val1, Poz2, Val2, PozBun, ValBuna) .
+%Poz0 mai buna decat Poz1
+maibine(Poz0, Val0, Poza1, Val1, Poz0, Val0) :-
+  %Min face o mutare pe Poz0
+  %Max prefera valoarea maxima
+  mutare_min(Poz0),
+val0 > val1,!
+;
+%Max face o mutare la Poz0
+%Min prefera valoarea mai mica
+mutare_max(Poz0),
+val0 < val1, !.
+%Astfel Poz1 este mai buna decat Poz1
+maibine(Poz0, Val0, Poz1, Val1, Poz1, Val1) .

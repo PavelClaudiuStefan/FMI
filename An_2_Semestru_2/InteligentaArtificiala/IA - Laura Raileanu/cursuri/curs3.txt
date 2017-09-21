@@ -1,0 +1,114 @@
+****Curs 3******
+10.03.2014
+****************
+
+definitia key-concept
+	- Calitatea de a reproduce cunostinte se refera la indicele de performanta
+	- perf care se refera la criteriul relativ extern inseamna in contextul nostru capacitate de a rezolva o problema
+	- problema suprainvatarii (tocelii) - incercand sa maximizam indicele de preformanta, in final voim invata pe dinafara si eroarea pe multimea de antrenare va fi 0
+
+	- protocolul de invatare are doua aspecte:
+			1) batch sau protocolul online sau interactiv - invatam pas cu pas
+			2) tine de ce vreau sa invat: vrem sa stim ceva, nu ne intereseaza de ce anume(predictions task)  sau identification task - intelegem fenomenul
+			3)tine de poz masinii ca subiect care cunoaste fata de cunoastere in general:
+						- platoniciana - ascult si memorez si incerc sa inteleg si sa patrun cunostintele [pozitie pasiva] (percepron si retea de preceproni)
+						- learning by membership queries
+						- kantian - exista un apriorism -> active learning si ajunge pana la a organiza un experiment care ma ajuta sa verific un anumit fenomen
+	- noi vom studia varianta platonica in care o masina invata o multime de antrenare
+	- kant distince intre formularea, rezolvarea si demonstrarea unei probleme
+	  asadar: 
+	  	1) Identificam problema
+	  	2) rezolvam problema
+	  	3) demonstram corectitudinea rezolvarii
+	in principiu matematica demonstreaza doar corectitudinea rezolvarii
+	-> conform IA:
+	 		1) punerea problemei inseamna sa minimizam riscul real (se gaseste formula in curs)
+	 		    - eroarea in medie trebuie sa fie minima conform princ inductiv
+	 		2) rezolvarea impica doua directii:
+	 			A) proceduri de tip gradient
+	 					alfan = alnan-1 + gamman*grad(alfa) * riscul
+	 			B) tine de tirectia noua
+	 			   Vapnik si cerno...
+
+	 		3) DEMONSTRATII
+	 			Corectitudinea solutiei propuse la curs se baseasa pe estimarea stocastica
+
+    ===================================== 
+	INVATAREA SUPERVIZATA A PERCEPRONULUI	
+	=====================================
+
+	- modelul matematic al neuronului uman
+	- neuron = celula care are mai multe dendrite cu care comunica cu ceilalti neuroni, are un corp apoi o excrescenta mai groasa de-a lungul careia se transmite semnalul, numita axon.
+		      - atat pe dendrite cat si pe axon are sinapse, care sunt puncte de contact unde se realizeaza transmiterea de semnale electrice intre neuroni
+
+    - modelul matematic ar trebui sa surprinda o aproximatie a aspectelor biologice care sa surprinda structura fundamentala si care sa fie utila in a prognoza comportamentul acestuia
+    - perceptronul -> ar trebui aiba corp, dendritee = INPUT, axon si sinapse
+    			   -> are o singura iesire
+    			   -> sunt necesare intrari, corp, si axon
+    			   -> semnalul se transmite SUMATIV -> inputul este insumat, tinem cont de starea percepronului si apoi transferul are loc in functie de suma
+    			   -> in general inpulsul in cazul percepronului nu poate fi modelat ca durata si nici ca variatie a intensitatii(durata fixa si intensitate constanta)
+    			   -> percepronul nu are menorie.
+    
+    - formal, algebric se scrie astfel <insert here poza de la prof>
+      (W, P, Gw, f) -----> Perceptron
+      unde W = {w0, w1, ... wn} - multime finita cu ponderile w0... wn apartin lui R
+           Gw(p1, ... pd) = functei de integrare <insert here poza cu sumele alea multe>
+           					polinom de gradul k in d variabile
+           In tot cursul + matlab se presupune ca Gw este un polinom de d variabile de gradul 1 = wi + sum(wi * pi)
+           f --> se numeste functie de transfer
+           P --> functia parametrilor lui f
+             --> in Matlab P este multimea vida;
+      in concluzie percepronul este un triplet format din multimea ponderilor si doua functii
+                      Gw
+      x apartine R^d ----> R ----> R \ {0, 1} [de luat de undeva] -----> compunere de functii
+                      n
+
+      functia f presupune 3 categorii
+      	1) categoria functiilor care nu sunt continue si nu sunt derivabile in R
+      	   haviside si signum
+      	   Daca P nu era vida, atunci parametrul functiilor ar fi fost punctul de salt din P
+      	   functiie implementeaza caracteristica neuronului de a lasa sau nu semnalul sa treaca prin "axon"
+      	
+      	2) functiile liniare(P ar fi avut 2 parametri) - in cazul nostru este prima bisectoare
+      	   continua si derivabile si usor de implementat
+      	   din punct de vedere biologic nu este fezabila deoarece nu putem pp ca intensitatea unui semnal electric poate ajunge la infinit, dar matematic este destul de aplicabila;
+
+      	3) --> functiile sigmoidale (grafic ca un S) cu asimptote la + sau - infinit
+	      	   		A) log-sigmoid
+	      	   		B) Tan-Sigmoid
+      	   --> pot avea doi parametri: odata ptr punctul in care derivata isi schimba sensul si unul pentru panta; in curs + matlab nu se pune problema de asa ceva
+
+     ======================
+     ALGORITMUL DE INVATARE
+     ======================
+
+     	Regulile de invatare ale percepronului:
+     		
+     		1) Algoritmul PLR (rozanbawm)
+     		   		- se pot rezolva probleme de clasare
+     		   		- invatarea inseamna in acest caz ca pe o multime de antrenare sa det w ai media respectiva sa fie minima
+     		   		- formula pt R(x)
+     		   	      perceptronul are pe post de alfa vectorul w ap R^d, iar f este signul(w^t*x + w0)		 
+     		   	      multimea de antrenare da perechi de forma (xi, yi) trebuie determinati cei d+1 parametri astfel incat pe multimea aceasta riscul empiric, care in cazul unei invatari consistente aproximeaza riscul real, sa fie minim.
+
+     	            - a minimza inseamna sa gasim, daca exista, un w* care invata fara eroare multimea S [eticheteaza cu -1 / 1 exemplele din multimea de test] si care satisface conditiile de minimizare x^k(transpus) * w* > 0 daca d^k = -1
+
+     	            -pornind de la ac observatie apare regula lui Rosenblatt : | w^1  arbitrar
+     	                                                                       | w^k+1 = w^k + ro(d^k - y^k) [de completat]
+
+     	            - indexul intr-un alg de invatare se refera la de cate ori s-a parcurs multimea de antrenare nu la nr de iteratii [index = nr de epoci] 
+
+                    - ro = rata de invatare
+                    - daca ro = 0.5 at  [car de missClasare]
+                            | w1 arbitrar
+                            | wk+1 = wk + zk, daca 
+                            |
+
+                    ***********************************************
+                    DEMONSTRATIA CORECTITUDINII ALGORITMULUI PLR
+                    ***********************************************
+
+                    	<Va urma...>
+
+
+
