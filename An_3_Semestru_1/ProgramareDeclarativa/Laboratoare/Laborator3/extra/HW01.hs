@@ -16,7 +16,7 @@ dropLastDigit x = div x 10
 toRevDigits :: Integer -> [Integer]
 toRevDigits x
     | x <= 0 = []
-    | otherwise = (lastDigit x) : (toRevDigits (dropLastDigit x))
+    | otherwise = (lastDigit x) : toRevDigits (dropLastDigit x)
 
 -- Exercise 3 -----------------------------------------
 
@@ -29,7 +29,7 @@ doubleEveryOther list = [if even i then (list!!i) else (list!!i)*2 | i <- [0..(l
 
 -- Calculate the sum of all the digits in every Integer.
 sumDigits :: [Integer] -> Integer
-sumDigits list = sum [sum (toRevDigits (x)) | x <- list]
+sumDigits list = sum [sum (toRevDigits x) | x <- list]
 
 
 -- Exercise 5 -----------------------------------------
@@ -55,5 +55,5 @@ hanoi4 0 _ _ _ _ = []
 hanoi4 1 a _ _ d = [(a,d)]
 hanoi4 n a b c d = hanoi4 (n-2) a c d b ++ [(a,c)] ++ [(a,d)] ++ [(c,d)] ++ hanoi4 (n-2) b a c d
 
-count :: [Move] -> Integer
+count :: [Peg] -> Integer
 count list = sum [1 | _ <- list]
