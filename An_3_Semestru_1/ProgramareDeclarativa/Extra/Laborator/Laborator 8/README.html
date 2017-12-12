@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<title>Lab 8</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="https://www.dropbox.com/s/48bx1xvl42hr5gp/progdecl.css?dl=1">
+  <script type="text/javascript" src="https://www.dropbox.com/s/hk9x49z7vmznfp9/progdecl.js?dl=1">
+  </script>
+</head>
+
+<body>
+
+<h1> Input / Output </h1>
+
+<div class="entry-content">
+						<h2 id="functions">Functions</h2>
+<p>There are several important functions when dealing with interactive Haskell programs:</p>
+<h3 id="interact">interact</h3>
+<p><tt>interact</tt> takes a function of type <tt>String -&gt; String</tt>, and the entire input from stdin is passed to this function as its input, and the resulting string is output on stdout. Because of the nature of Haskell, the output will seem interactive as it gets evaluated bit by bit; but the function provided is written as if the whole input is specified at once. Remember to think of functional programming as not having a concept of time.</p>
+<h3 id="unlines">unlines</h3>
+<p><tt>unlines</tt> takes a list, and returns it interleaved with newlines, such as:</p>
+<pre><tt>Input: unlines ["aa","bb","cc","dd","ee"]
+Output: "aa\nbb\ncc\ndd\nee\n"</tt></pre>
+<h3 id="lines">lines</h3>
+<p><tt>lines</tt> is the reverse of unlines, essentially:</p>
+<pre><tt>Input: lines "aa\nbb\nbb"
+Output: ["aa","bb","bb"]</tt></pre>
+<h3 id="unlines">unwords</h3>
+<p><tt>unwords</tt> takes a list, and returns it interleaved with spaces, such as:</p>
+<pre><tt>Input: unwords ["aa","bb","cc","dd","ee"]
+Output: "aa bb cc dd ee"</tt></pre>
+<h3 id="lines">words</h3>
+<p><tt>words</tt> is the reverse of unwords, essentially:</p>
+<pre><tt>Input: words "aa bb bb"
+Output: ["aa","bb","bb"]</tt></pre>
+<h3 id="unlines">show</h3>
+<p><tt>show</tt> takes an element of a type instance of the <tt>Show</tt> typeclass and formats it as a string:</p>
+<pre><tt>Input: show 3.14
+Output: "3.14"</tt></pre>
+<h3 id="lines">read</h3>
+<p><tt>read</tt> is the reverse of <tt>show</tt>, essentially:</p>
+<pre><tt>Input: read "3.14" ::Float
+Output: 3.14</tt></pre>
+
+<h2 id="writing_interactive_programs">Writing interactive programs</h2>
+<p>Generally, interactive programs seem to be of the form:</p>
+<pre><tt>some_fun :: Show argument =&gt; [argument] -&gt; String -&gt; String
+some_fun xs = unlines . map doSomething . lines</tt></pre>
+<p>Though there are more complicated variations (the 2009 paper uses a mapState function which is a state machine).</p>
+<h2 id="why_does_this_work">Why does this work?</h2>
+<p>Haskell uses ‘Lazy Evaluation’ which is a strategy for program reduction. It works by not evaluating arguments to functions until they are needed, and even then only evaluating as much as is needed by the function. This is why infinite data structures can be used in Haskell. The following would be impossible with strict evaluation…</p>
+<pre><tt>numbers = numsFrom 0
+	where
+	numsFrom n = n : numsFrom (n+1)
+head numbers</tt></pre>
+<p>…because the programming language would try to evaluate the entire <tt>numbers</tt> list (which is infinite) just to return the first element. In Haskell, due to lazy evaluation, this will work.</p>
+<p>An interactive program can therefore be formulated as a lazily evaluated function from a list of the user’s inputs to a list of program’s outputs. The computation of the program’s output list always proceeds as far as possible when evaluating the user’s input list, suspending reduction only when the next item in the list is strictly needed.</p>
+											</div>
+
+
+<h1><strong>Arbori (binari) de căutare</strong></h1>
+
+
+<h1>Modulul Arbore</h1>
+
+Scrieți un modul Haskell numit <tt>Arbore</tt> care definește o colecție conținând un tip algebric de date <tt>Arbore a</tt> pentru reprezentarea arborilor binari de căutare cu date de tip <tt>a</tt>.
+
+<p>Modulul trebuie să exporte tipul de date <tt>Arbore</tt> si următoarele funcții:
+<ul>
+<li><tt>adauga</tt> - care dat fiind un element x si un arbore t adaugă elementul x în arborele t
+<li><tt>cauta</tt> - care dat fiind un element x si un arbore t spune dacă acesta se află în arbore.
+<li><tt>init</tt> - care dată fiind o listă de elemente creează un arbore binar de căutare care le conține
+<li><tt>parcurge</tt> - care dat fiind un arbore produce lista obținută prin parcurgerea în inordine (SRD) a arborelui.
+</ul>
+
+<h1>Programul principal</h1>
+
+Scrieți un modul <tt>Principal</tt>, executabil, care folosește funcțiile din modulul Arbore pentru a citi de la tastatură o listă de numere separate prin spațiu, aflate pe aceeași line, si afișează numerele citite, în ordine crescătoare, separate prin spațiu.
+
+<p> Compilați și executați programul</p>
+</body>
+</html>

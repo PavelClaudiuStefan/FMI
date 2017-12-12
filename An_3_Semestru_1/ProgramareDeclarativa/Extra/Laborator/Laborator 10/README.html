@@ -1,0 +1,454 @@
+<html>
+<head>
+<title>Lab 10</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="https://www.dropbox.com/s/48bx1xvl42hr5gp/progdecl.css?dl=1">
+  <script type="text/javascript" src="https://www.dropbox.com/s/hk9x49z7vmznfp9/progdecl.js?dl=1">
+  </script>
+  <style>
+  .exercise {background-color: #f0f0f0;padding: 1pt; padding-left: 10pt;}
+  </style>
+</head>
+<body>
+
+
+<h1><strong>Lab 10 - Monad-based language interpreters</strong>
+apud Philip Wadler</h1>
+
+<p>This tutorial explores the use of monads to structure functional programs.
+
+<p>Monads increase the ease with which programs may be modified. They can
+mimic the effect of impure features such as exceptions, state, and continuations;
+and also provide effects not easily achieved with such features. The types of a
+program reflect which effects occur.
+
+<p>
+As part of the tutorial, a simple interpreter is modified
+to support various extra features:
+error messages, state, output, and non-deterministic choice.
+
+<h1>Introduction: Shall I be pure or impure?</h1>
+
+Pure functional languages, such as Haskell, offer the power of lazy evaluation
+and the simplicity of equational reasoning.
+Impure functional languages, such as OCaml or Scheme, offer a tempting spread
+of features such as state, exception handling, or continuations.
+
+<p>One factor that should influence my choice is the ease with which a program can be modified.
+Pure languages ease change by making manifest the data upon which each
+ operation depends.
+But, sometimes, a seemingly small change may require a program in a pure
+ language to be extensively restructured, when judicious use of an impure
+ feature may obtain the same effect by altering a mere handful of lines.
+
+<p> Say I write an interpreter in a pure functional language.
+To add error handling to it, I need to modify the result type to include error
+ values, and at each recursive call to check for and handle errors
+ appropriately.
+Had I used an impure language with exceptions, no such restructuring would be
+ needed.
+
+<p> To add an execution count to it, I need to modify the the result type to
+  include such a count, and modify each recursive call to pass around such
+  counts appropriately.
+Had I used an impure language with a global variable that could be incremented,
+  no such restructuring would be needed.
+
+<p> To add an output instruction to it, I need to modify the result type to
+  include an output list, and to modify each recursive call to pass around this
+  list appropriately.
+  Had I used an impure language that performed output as a side effect, no such
+  restructuring would be needed.
+
+<p>Or I could use a monad.
+
+<p> This tutorial walks you through using monads to structure an interpreter so
+  that the changes mentioned above are simple to make.
+  In each case, all that is required is to redefine the monad and to make a few
+  local changes.
+  This programming style regains some of the flexibility provided by various
+  features of impure languages.
+  It also may apply when there is no corresponding impure feature.
+
+<p> Though this tutorial concentrates on the use of monads in a program tens of
+  lines long, it also sketches our experience using them in a program three
+  orders of magnitude larger.
+
+<h1> Basic (monadic) interpreter</h1>
+
+Let us start with a simple interpreter for lambda calculus.
+
+<h2> Abstract syntax </h2>
+
+<p> A term is either a variable, a constant, a sum, a lambda expression, or an
+  application.
+
+<pre>
+  type Name = String
+
+  data Term = Var Name
+            | Con Integer
+            | Term :+: Term
+            | Lam Name Term
+            | App Term Term
+    deriving (Show)
+</pre>
+
+<p> The interpreter has been kept small for ease of illustration.
+  It can easily been extended to deal with additional values, such as booleans,
+  pairs, and lists; and additional term  forms, such as conditional and
+  fixpoint.
+
+<p> The following will serve as test data.
+
+<pre>
+term0 = (App (Lam "x" (Var "x" :+: Var "x")) (Con 10 :+: Con 11))
+</pre>
+
+<p> In more conventional notation this would be written
+  <tt>((\ x -> x + x) (10 + 11))</tt>.
+  The value corresponding to the evaluation of <tt>term0</tt> is "42".
+
+<h2>Values</h2>
+
+<p>
+  A value is either <tt>Wrong</tt>, a number, or a function.
+  The value <tt>Wrong</tt> indicates an error, such as an unbound variable, an
+  attempt to add non-numbers, or an attempt to apply a non-function.
+
+<pre>
+  data Value = Num Integer
+             | Fun (Value -> M Value)
+             | Wrong
+
+  instance Show Value where
+    show (Num x) = show x
+    show (Fun _) = "<function>"
+    show Wrong   = "<wrong>"
+</pre>
+
+<h2>What is a monad?</h2>
+<p> For our purposes, a monad is a triple <tt>(M,return,>>=)</tt> consisting of
+  a type constructor <tt>M</tt> and a pair of polymorphic functions.
+
+<pre>
+return :: a -> M a
+(>>=) :: M a -> (a -> M b) -> M b
+</pre>
+
+<p>The basic idea in converting a program to monadic form is this:
+  a function of type <tt>a -> b</tt> is converted to one of type
+  <tt>a -> M b</tt>.
+  Thus, in the definition of <tt>Value</tt>, functions have type
+  <tt>Value -> M Value</tt> rather than <tt>Value -> Value</tt>, and
+  the interpreter function <tt>interp</tt> has type
+  <tt>Term -> Environment -> M Value</tt> rather than type
+  <tt>Term -> Environment -> Value</tt>.
+
+<p>Similarly for the auxiliary functions <tt>lookupEnv</tt>, <tt>add</tt>, and
+  <tt>apply</tt>.
+
+<pre>
+  type Environment = [(Name, Value)]
+
+  interp :: Term -> Environment -> M Value
+  interp (Var x) env = lookupM x env
+  interp (Con i) _ = return (Num i)
+  interp (t1 :+: t2) env = do
+    v1 <- interp t1 env
+    v2 <- interp t2 env
+    add v1 v2
+  interp (Lam x e) env = return $ Fun $ \ v -> interp e ((x,v):env)
+  interp (App t1 t2) env = do
+    f <- interp t1 env
+    v <- interp t2 env
+    apply f v
+
+  lookupM :: Name -> Environment -> M Value
+  lookupM x env = case lookup x env of
+    Just v  -> return v
+    Nothing -> return Wrong
+
+  add :: Value -> Value -> M Value
+  add (Num i) (Num j) = return (Num (i + j))
+  add _ _             = return Wrong
+
+  apply :: Value -> Value -> M Value
+  apply (Fun k) v = k v
+  apply _ _       = return Wrong
+
+  test :: Term -> String
+  test t = showM $ interp t []
+
+</pre>
+
+<p>The identity function has type <tt>a -> a</tt>.
+  The corresponding function in monadic form is <tt>return</tt>, which has type
+  <tt>a -> M a</tt>.
+  It takes a value into its corresponding representation in the monad.
+
+<P> Consider the case for constants.
+<pre>
+interp (Con i) _ = return (Num i)
+</pre>
+<p>The expression <tt>(Num i)</tt> has type <tt>Value</tt>, so applying
+  <tt>return</tt> to it yields the corresponding <tt>M Value</tt>, as required
+  to match the type of <tt>interp</tt>.
+
+<p>For the more interesting cases we use the <tt>do</tt> notation.
+  Consider the case for sums.
+<pre>
+  interp (t1 :+: t2) env = do
+    v1 <- interp t1 env
+    v2 <- interp t2 env
+    add v1 v2
+</pre>
+
+<p>This can be read as follows: evaluate <tt>t1</tt>; bind <tt>v1</tt> to the
+  result; evaluate <tt>t2</tt>; bind <tt>v2</tt> to the result;
+  add <tt>v1</tt> to <tt>v2</tt>.
+
+<p> Application is handled similarly; in particular, both the function and its
+  argument are evaluated, so this interpreter is using a call-by-value strategy.
+
+<p> Just as the type Value represents a value, the type M Value can be thought
+  of as representing a computation.
+  The purpose of <tt>return</tt> is to coerce a value into a computation;
+  the purpose of <tt>>>=</tt> is to evaluate a computation, yielding a value.
+
+<p> Informally, <tt>return</tt> gets us into a monad, and <tt>>>=</tt> gets us
+  around the monad.
+  How do we get out of the monad?
+  In general, such operations require a more ad hoc design.
+  For our purposes, it will suffice to provide the following.
+
+<pre>
+showM :: M Value -> String
+</pre>
+This is used in <tt>test</tt>.
+
+<p> By changing the definitions of <tt>M</tt>, <tt>return</tt>, <tt>>>=</tt>,
+  and <tt>showM</tt>, and making other small changes, the interpreter can be
+  made to exhibit a wide variety of behaviours, as will now be demonstrated.
+
+<h2>Variation zero: Standard interpreter</h2>
+To begin, we will use the trivial (<a href="http://hackage.haskell.org/package/base-4.8.0.0/docs/Data-Functor-Identity.html#t:Identity">Control.Monad.Identity</a>) monad.
+
+<pre>
+type M a = Identity a
+showM ma = show (runIdentity ma)
+</pre>
+
+<P> <tt>Identity</tt> encapsulates the identity function on types,
+  <tt>return</tt> is the identity function, <tt>>>=</tt> is postfix
+  application, and <tt>showM</tt> extracts the value and shows it.
+
+Simplifying in the above definition we obtain the standard
+meta-circular interpreter for lambda calculus:
+
+<pre>
+interp :: Term -> Environment -> Value
+interp (Var x) e = lookup x e
+interp (Con i) e = Num i
+interp (u :+: v) e = add (interp u e) (interp v e)
+interp (Lam x v) e = Fun (\ a -> interp v ((x,a):e))
+interp (App t u) e = apply (interp t e) (interp u e)
+</pre>
+
+The other functions in the interpreter simplify similarly.
+
+<p> For this variant of the interpreter, evaluating
+  <tt>test term0</tt> returns the string <tt>"42"</tt>, as we would expect.
+
+<h1> Exercises: Monadic Variations</h1>
+
+<p> For each of the following exercises (variations), copy <tt>var0.hs</tt> as
+  <tt>varn.hs</tt> and update it as the exercise requires.
+
+<div class="exercise">
+  <h2>Variation one: Partial evaluation</h2>
+
+<p> Instead of using the <tt>Wrong</tt> value to record failed evaluations,
+  define <tt>M</tt> as the <tt><a href="http://hackage.haskell.org/package/base-4.9.0.0/docs/Prelude.html#t:Maybe">Maybe</a></tt> monad and use <tt>Nothing</tt> to record failed evaluations.
+
+<p> You need to remove <tt>Wrong</tt> and its aparitions and need to redefine
+  <tt>showM</tt>, and change the definitions of <tt>lookupM</tt>, <tt>add</tt>,
+  and <tt>apply</tt>.
+</div>
+
+<div class="exercise">
+  <h2>Variation two: Error messages</h2>
+<p> To improve the error messages, use the <tt>
+  <a href="http://hackage.haskell.org/package/base-4.9.0.0/docs/Prelude.html#t:Either">Either</a></tt> monad.
+
+<p> The <tt>showM</tt> function must display either the successful result
+  introduced by "Success: ", or the error message introduced by "Error: ".
+
+<p> To modify the interpreter, substitute monad E for monad M, and replace each
+  occurrence of <tt>return Wrong</tt> by a suitable <tt>Left</tt> expression.
+  The only occurrences are in <tt>lookupM</tt>, <tt>add</tt>, and <tt>apply</tt>.
+  No other changes are required.
+
+The error messages should be:
+<ul>
+  <li> unbound variable: < name >
+  <li> should be numbers: < v1 >, < v2 >
+  <li> should be function: < v1 >
+</ul>
+
+
+<p>Evaluating <tt>test term0</tt> should return "Success: 42"; and evaluating
+<pre>
+test (App (Con 7) (Con 2))
+</pre>
+should return "Error: should be function: 7".
+
+<p>In an impure language, this modification could be made using exceptions or continuations to signal an error.
+
+</div>
+
+<div class=exercise>
+  <h2>Variation three: State</h2>
+<p> To illustrate the manipulation of state, the interpreter is must be modified
+  to keep count of the number of reductions that occur in computing the answer.
+  The same technique could be used to deal with other state-dependent
+  constructs, such as extending the interpreted language with reference values
+  and operations that side-effect a heap.
+
+<P>The monad of state transformers is the <a href="http://hackage.haskell.org/package/mtl-2.2.1/docs/Control-Monad-State-Lazy.html#g:2">State</a> monad.
+
+<p> A state transformer takes an initial state and returns a value paired
+  with the new state.
+  The <tt>return</tt> function returns the given value and propagates the state \
+  unchanged.
+  The <tt>>>=</tt> function takes a state transformer <tt>ma :: M a</tt> and
+  a function <tt>k :: a -> M b</tt>.
+  It passes the initial state to the transformer <tt>ma</tt>;
+  this yields a value paired with an intermediate state;
+  function <tt>k</tt> is applied to the value, yielding a state transformer
+  <tt>(k a :: S b)</tt>, which is passed the intermediate state;
+  this yields the result paired with the final state.
+
+<p>To model execution counts, take the state to be an integer.
+<pre>
+type M a = State Integer a
+</pre>
+The <tt>showM</tt> should use the function <tt>runState</tt> with the initial state 0 and should prints the final value and counter.
+
+<p>Evaluating <tt>test term0</tt> should return "Value: 42; Count: 3".
+
+<p>To achieve this, define the computation to increase the counter:
+<pre>
+tickS :: M ()
+</pre>
+and modify functions <tt>add</tt> or <tt>apply</tt> using <tt>tickS</tt>
+to increase the counter for each call to them.
+
+<p>You can either use the <tt>state :: (s -> (a,s)) -> M a</tt> function
+  to embed a simple state action into the monad, or the
+  <tt>modify :: (s -> s) -> M ()</tt> to map an old state to a new state
+  inside the state monad.
+
+<p> A further modification extends the language to allow access to the current
+  execution count.
+
+<p> First, define a function to return the current count.
+<pre>
+fetchS :: S s
+</pre>
+You can either use the <tt>state :: (s -> (a,s)) -> M a</tt> function or the
+<tt>get :: M s</tt> which returns the state from the internals of the monad.
+
+<p> Second, extend the term data type, and add a new term <tt>Count</tt>.
+
+<p> Third, define <tt>interp</tt> for <tt>Count</tt> to fetches the number of
+  execution steps performed so far, and returns it as the (<tt>Num</tt>) value
+  of the term.
+
+For example, applying <tt>test</tt> to
+<pre>
+(Con 1 :+: Con 2) :+: Count
+</pre>
+should return "Value: 4; Count: 2", since only one addition occurs before
+<tt>Count</tt> is evaluated.
+
+<p>In an impure language, these modifications could be made using state
+  to contain the count.
+
+</div>
+
+<div class=exercise>
+<h2>Variation four: Output</h2>
+<p> Next we modify the interpreter to perform output.
+  The state monad seems a natural choice, but it's a poor one: accumulating the
+  output into the final state means no output will be printed until the
+  computation finishes.
+
+<p> Instead, we will use the <a href="http://hackage.haskell.org/package/mtl-2.2.1/docs/Control-Monad-Writer-Lazy.html#g:2">Writer</a> monad.
+
+<pre>
+  type M a = Writer String a
+</pre>
+
+<p>The <tt>Writer</tt> monad behaves as follows.
+  Each value is paired with the output produced while computing that value.
+  The <tt>return</tt> function returns the given value and produces no output.
+  The <tt>>>=</tt> function performs an application and concatenates the output
+  produced by the argument to the output produced by the application.
+
+<p> Modify <tt>showM</tt> function to print the output followed by the value.
+  You can use the <tt>runWriter :: M a -> (a, w)</tt> to extract the value and
+  the output from a computation.
+
+<p> Extend the language an output operation, by adding a new term
+  <tt>Out Term</tt>.
+
+<p> Evaluating <tt>Out u</tt> causes the value of <tt>u</tt> to be sent to the
+  output, and also returned as the value of the term.
+
+<p> For example, applying <tt>test</tt> to
+<pre>
+Out (Con 41) :+: Out (Con 1)
+</pre>
+should return "Output: 41; 1; Value: 42".
+
+<p> In an impure language, this modification could be made using output as a
+  side effect.
+
+</div>
+
+<div class=exercise>
+<h2>Variation five: Non-deterministic choice</h2>
+
+<p> We now modify the interpreter to deal with a non-deterministic language
+  that returns a list of possible answers.
+
+<p> To do so, we will use the monad of lists.
+<pre>
+type M a = [a]
+</pre>
+
+<p> Extend the interpreted language with two new constructs: <tt>Fail</tt> and
+<tt>Amb Term Term</tt>.
+
+<p> Evaluating <tt>Fail</tt> should return no value, while evaluating
+  <tt>Amb u v</tt> should return all values returned by either <tt>u</tt> or
+  <tt>v</tt>.
+  Extend <tt>interp</tt> to achieve this semantics.
+
+<p>For example, applying <tt>test</tt> to
+<pre>
+App (Lam "x" (Var "x" :+: Var "x")) (Amb (Con 1) (Con 2))
+</pre>
+should return "[2,4]".
+
+<p>It is more difficult to see how to make this change in an impure language.
+  Perhaps one might create some form of coroutine facility.
+</div>
+
+<address>Source:
+  <a href="http://homepages.inf.ed.ac.uk/wadler/topics/monads.html#essence">The
+    essence of functional programming</a>
+</address>
+</body>
+</html>

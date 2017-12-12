@@ -1,0 +1,194 @@
+﻿În primul rând, testul valorează 4 p din nota finală la această materie (Din nota finală la tot cursul, nu doar la laborator). 
+Sugestia mea este să vă atârnați serios, din simplul motiv că e foarte probabil acesta să fie cel mai abordabil dintre testele la această materie,
+și o ocazie de acumula ceva puncte (în special pentru cei care nu pretind la o notă mare la această materie).
+Vă rog să vă treceți numele, prenumele și grupa în linkul cu excelul pe care l-am atașat. Dacă cunoașteți colegi din alte grupe care vin la laboratorul nostru,
+dar nu sunt în grupul de facebook, anunțați-i și pe ei.
+
+Fiecare test va fi dat de către maxim 8 studenți, după cum vedeți și în excel-ul atașat (linkul trebuie să vi-l dea laborantul, dacă dorește să facă o astfel de repartizare înainte de test).
+
+*** Cu ce aveți voie să veniți la test:
+  * Materiale scrise, de orice fel
+  * Materiale electronice cum ar fi pdf-uri cu funcții/rezolvări și fișiere cu rezolvări de la laboratoarele precedente (nu e musai să fie rezolvate de voi)
+  * Înainte de test veți avea 5 minute să vă descărcați materialele electronice de pe net, după care vom deconecta interentul.
+  * După expirarea timpului vom conecta internetul și o să-mi trimiteți pe mail rezolvările voastre. 
+    Aveți grijă să nu uitați să faceți asta pentru că după fiecare test vom restarta calculatoarele și orice fișiere se vor șterge din acel calculator.
+
+Important: Pentru cei care se vor înscrie de la 8 - 9, vă rog frumos să veniți cu 5-10 minute înainte de ora 8 ca să ne incadrăm cât de cât în timp; acest timp va fi folosit pentru a va incarca materialele pe calculatoare.
+
+Testul îl vom da săptămâna viitoare, în timpul laboratoarelor în aceeași sală unde facem și laboratorul (321 Mecanică pentru cei de la grupa 342, pentru alte grupe întrebați de laborant)
+Durata testului va fi de 50-60 minute, cel mai probabil vreo 50-55 ca să ne incadrăm, dificultatea va fi ajustată pentru timpul respectiv.
+În principiul testul nu va fi greu, dar nici prea ușor sau trivial.
+
+Important: În afara cazurilor de forță majoră, testul se va da pe calculatoarele din laborator
+
+Testul va conține 4 subiecte nu neapărat independente unul de altul, adică la unele exerciții
+s-ar putea să fie nevoie / să se permită să folosești exercițiile rezolvate anterior(în cadrul testului).
+La fiecare exercițiu va fi specificat ce funcții poți / nu poți folosi, și eventual limita la numărul de simboluri (ca în laboratorul cu map/filter/fold).
+De exemplu la unele se va specifica sa se rezolve DOAR cu ajutorul la list comprehension, sau doar prin recursivitate, sau fara ambele (adica doar cu functii de ordin inalt: map/filter/fold)
+Mai multe detalii am scris în secțiunea cu baremul.
+
+La itemii unde se cere număr limitat de simboluri, un simbol reprezintă o entitate logică, după cum urmează: 
+Un singur simbol se consideră: 
+   + nume de variabilă/parametru/funcție indiferent de lungimea cuvântului (exemplu: map, fst, isUpper, xs - fiecare din ele se consideră a fi un singur simbol)
+   + operatori de orice tip (not, ==, div, /= etc. la fel, fiecare se consideră a fi un singur simbol)
+   + parantezele se numără separat adică paranteza deschisă e un simbol și cea închisă e încă un simbol
+   + daca functia conține mai multe definiții/patern-uri, se numără fiecare dintre ele
+   + numele funcției (căreia îi calculăm numărul de simboluri) și parametrii ei, și semnul ”=” de înainte de implementarea se numără și ele
+   - Signatura funcției NU se ia în considerare la numărarea simbolurilor
+
+Exemplu:
+unequals :: [(Int,Int)] -> [(Int,Int)]
+unequals = filter (\x -> fst x /= snd x)
+    1    1    1   111  1  1  1  1  1  11   = 13 simboluri
+Sub fiecare entitate/caracter am scris 1 cu semnificatia ca se considera un simbol. 
+
+pentru functii de tipul
+productRec []     = 1
+productRec (x:xs) = x * productRec xs
+se numără ambele definiții și se adună. În cazul dat ar fi 4 ([] se consideră un simbol) + 11 = 15 caractere
+
+*** Baremul orientativ(mai poate suferi mici schimbări) de notare a fiecărui item din test va fi de forma dată:
+1) Fiecare item valoareză la fel (adica 2.5 p din nota finală la test)
+
+2) La unele iteme unde rezolvare se pretează a avea niște funcții auxiliare definite de student, se va impărți punctajul între acele funcții:
+
+3) notarea propriu zisă:
+    | 100 % din punctajul itemului = rezolvarea corectă. Se respectă toate restricțiile de implementare, fără a scăpa vreun caz particular.
+    |  75 % din punctaj = ideea rezolvării este corectă. S-a scăpat vreun caz particular pe care e răspuns greșit, sau crapă funcția pe anumite teste (cu condiția că ideea de rezolvare e corectă).
+                        tot aici se includ și subiectele rezolvate corect, dar care nu au respectat numărul maxim de caractere (cu o anumită limită, 
+                        de exemplu cu 1-3 caractere mai mult decât maximul admis pentru 100% din punctaj
+    | 50 % din punctaj = Subiectele rezolvate corect, dar care nu respectă o restricție majoră (de exemplu, la item la care se cere să se rezolve prin map/filter/fold 
+                        dar studentul îl rezolvă prin recursivitate/list comprehension, e valabil și în cazul invers)
+    | 25 % din punctaj = anumite părți (cât de cât integre) dintr-o funcție sunt corecte, pe când restul lipsește sau e total eronat. 
+     (de exemplu funcții cu vreo 3 paternuri, cum ar fi:
+                                              f _ [] = []    -- caz tratat corect
+                                              f [] x = []    -- alt caz tratat corect
+                                              f n xs = -- aici urmeaza ceva gresit, sau e lipsa (aici fiind rezolvarea principala a functiei)
+        O astfel de abordare va fi punctata cu 25% din punctaj
+    | 0 % din punctaj = item lasat necompletat, sau total eronat din toate punctele de vedere.
+
+! Notă: Dacă s-a terminat testul dar un item nu compilează - nu vă panicați. 
+        Faptul că o funcție nu compilează nu o face să nu fie punctată, de exemplu o rezolvare corectă, dar care nu compilează din cauză că un parametru nu s-a 
+        dat ca argument unei funcții din rezolvare, pune itemul în una din situațiile (75% sau 50% din punctaj, în funcție de cât de gravă e greșeala)
+
+*** Nu cred că e cazul, dar totuși am să menționez:
+    * Fraude de genul copiat de la vecin, mesaje prin telefon mobil etc. depunctează nota finală a testului cu 2 puncte la prima avertizare, și anularea lucrării si eliminarea din sala la a doua avertizare.
+
+În principiu pentru a lua nota de trecere la test aveți nevoie de cunosțintele din cursul 2 / laboratorul 2 (recursie si descrieri de liste) si cursul 4 / laboratorul 4 (map, filter, foldr). 
+Bineînțeles, cunostințele de la cursurile si laboratoarele celelalte pot fi foarte utile ca exercițiu și pentru pregătire și cresc șansa obținerii unei note mai mari.
+
+% Dificultatea orientativă a testului:
+    2-3 din exercițiile testului nu vor depăși dificultatea exercițiilor de bază din laboratoarele precedente
+    1-2 din exercițiile testului nu vor depăși dificultatea opționalelor din laboratoarele precedente 
+
+Exemple de subiecte si rezolvari pentru ele puteti consulta aici: https://www.inf.ed.ac.uk/teaching/courses/inf1/fp/exams/
+(prima parte, mid-semester papers).
+
+Mai jos sunt categoriile de funcții ce vor fi permise / interzise pentru anumite exerciții din test, și câte un exemplu de utilizare a lor
+Aceste funcții vor face parte din fișierul cu test pe care-l veți primi, nu e nevoie să vi-l printați / copiați în fișiere separate, dar ar fi bine
+să faceți cunoștință cu ele ca să nu pierdeți timp la test.
+
+Pentru alte întrebări care n-au fost clarificate mai sus, puteți trimite un mail către laborant sau profesorul de curs.
+
+-- Functiile care pot fi folosite
+-- categoria A - functii de baza
+-- categoria B - functii din biblioteci (fara map, filter, fold)
+-- categoria C - map, filter, fold 
+
+{- Catcgoria A. Functii de baza
+div, mod :: Integral a => a -> a -> a
+even, odd :: Integral a => a -> Bool
+(+), (*), (-), (/) :: Num a => a -> a -> a
+(<), (<=), (>), (>=) :: Ord => a -> a -> Bool
+(==), (/=) :: Eq a => a -> a -> Bool
+(&&), (||) :: Bool -> Bool -> Bool
+not :: Bool -> Bool
+max, min :: Ord a => a -> a -> a
+isAlpha, isAlphaNum, isLower, isUpper, isDigit :: Char -> Bool
+toLower, toUpper :: Char -> Char
+digitToInt :: Char -> Int
+ord :: Char -> Int
+chr :: Int -> Char
+Intervale
+[first..], [first,second..], [first..last], [first,second..last]
+-}
+
+{- Categoria B. Functii din biblioteci
+sum, product :: (Num a) => [a] -> a        
+sum [1.0,2.0,3.0] = 6.0                    
+product [1,2,3,4] = 24                     
+
+and, or :: [Bool] -> Bool
+and [True,False,True] = False
+or [True,False,True] = True
+
+maximum, minimum :: (Ord a) => [a] -> a
+maximum [3,1,4,2]  =  4                    
+minimum [3,1,4,2]  =  1
+
+reverse :: [a] -> [a]
+reverse "goodbye" = "eybdoog"
+
+concat :: [[a]] -> [a]                     
+concat ["go","od","bye"]  =  "goodbye"     
+
+(++) :: [a] -> [a] -> [a]
+"good" ++ "bye" = "goodbye"
+
+(!!) :: [a] -> Int -> a                    
+[9,7,5] !! 1  =  7                         
+
+length :: [a] -> Int
+length [9,7,5]  =  3
+
+head :: [a] -> a                           
+head "goodbye" = 'g'                       
+
+tail :: [a] -> [a]
+tail "goodbye" = "oodbye"
+
+init :: [a] -> [a]                         
+init "goodbye" = "goodby"                  
+
+last :: [a] -> a
+last "goodbye" = 'e'
+
+takeWhile :: (a->Bool) -> [a] -> [a]       
+takeWhile isLower "goodBye" = "good"       
+
+take :: Int -> [a] -> [a]
+take 4 "goodbye" = "good"
+
+dropWhile :: (a->Bool) -> [a] -> [a]       
+dropWhile isLower "goodBye" = "Bye"        
+
+drop :: Int -> [a] -> [a]
+drop 4 "goodbye" = "bye"
+
+elem :: (Eq a) => a -> [a] -> Bool         
+elem 'd' "goodbye" = True                  
+
+replicate :: Int -> a -> [a]
+replicate 5 '*' = "*****"
+
+zip :: [a] -> [b] -> [(a,b)]
+zip [1,2,3,4] [1,4,9] = [(1,1),(2,4),(3,9)
+-}
+
+{- Categoria C. Map, Filter, Fold
+map :: (a -> b) -> [a] -> [b]
+map (+3) [1,2] = [4,5]
+
+filter :: (a -> Bool) -> [a] -> [a]
+filter even [1,2,3,4] = [2,4]
+
+foldr :: (a -> b -> b) -> b -> [a] -> b
+foldr max 0 [1,2,3,4] = 4
+
+(.) :: (b -> c) -> (a -> b) -> a -> c
+($) :: (a -> b) -> a -> b
+(*2) . (+3) $ 7 = 20
+
+flip :: (a -> b -> c) -> b -> a -> c
+flip (-) 2 3 = 1
+-}

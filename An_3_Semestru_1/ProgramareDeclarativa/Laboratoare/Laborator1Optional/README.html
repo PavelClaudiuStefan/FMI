@@ -1,0 +1,36 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lab 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="https://www.dropbox.com/s/48bx1xvl42hr5gp/progdecl.css?dl=1">
+  <script type="text/javascript" src="https://www.dropbox.com/s/hk9x49z7vmznfp9/progdecl.js?dl=1"></script> 
+</head>
+<body>
+<h1> Declarative Programming - Lab 1</h1>
+<h3>Extra credit exercise</h3>
+<ol start="11">
+<ol type="a">
+<li> Create a picture <tt>emptyBoard</tt> describing the empty board.
+<pre>
+Prelude> render emptyBoard
+</pre>
+<img src="html/empty.png"/><br/>
+<li>
+Given the description of a chess position in the <a href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">FEN notation</a>, define a picture representing it.  Use the <tt>emptyBoard</tt> picture created above.  For example, the <tt>e4c5Nf3</tt> picture is described by the <b>"rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R"</b> FEN string and it is rendered to:
+<pre>
+Prelude> render e4c5Nf3
+</pre>
+<img src="html/e4c5Nf3.png"/><br/>
+</ol>
+Note.  To solve the exercise above, you can consider using the <tt>clear</tt> picture, which is as large as a square/piece, but it is transparent, so it can be used to put space between pieces.  For example,
+<pre>
+mate = over (above clear (above (beside (repeatH 6 clear) (beside (invert queen) king)) (beside (repeatH 5 clear) (invert king)))) middleBoard
+
+Prelude> render mate
+</pre>
+Creates the following picture:<br/>
+<img src="html/mate.png"/>
+</ol>
+In the coming laboratories we will learn how to write a function which turns any such FEN description into a picture.
+</body>
+</html>

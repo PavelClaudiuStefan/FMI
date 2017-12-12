@@ -1,0 +1,292 @@
+
+<html>
+<head>
+<title>Lab 10</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="https://www.dropbox.com/s/48bx1xvl42hr5gp/progdecl.css?dl=1">
+  <script type="text/javascript" src="https://www.dropbox.com/s/hk9x49z7vmznfp9/progdecl.js?dl=1">
+  </script>
+</head>
+
+<body>
+<h1> Declarative Programming - Lab 10</h1>
+Based on <a href="http://book.realworldhaskell.org/"> Real Word Haskell </a>, Chapter 5 and Chapter 6
+
+
+<h1>Working with JSON data in Haskell</h1>
+
+
+Turtle commands can be represented in Haskell using an algebraic data type:
+JSON  is a simple language for storing and transmiting structured data. You can recall the basics on 
+<a href="https://www.json.org/">https://www.json.org/</a>.  In this laboratory we implement JSON data in Haskell. 
+
+<!-- working with JSON: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON -->
+ 
+
+<p>The following algebraic data type is defined in <tt>SimpleJSON.hs</tt>: 
+<pre>
+data JValue = JString String
+            | JNumber Integer
+            | JBool Bool
+            | JNull
+            | JObject [(String, JValue)]
+            | JArray [JValue]
+              deriving (Eq, Ord, Show)
+</pre>
+</p>
+
+<h2> Exercise 1.</h2> In <tt>SimpleJSON.hs</tt> define the following:
+<ol>
+<li>  accessor functions for each constructor of a <tt> JValue </tt> as in the following example:
+<pre>
+getInteger :: JValue -> Either String Integer
+getInteger (JNumber n) = Right n
+getInteger _ = Left "Not a JNumber"
+</pre> 
+
+try these in <tt>ghci</tt> and see what happens:
+<pre>
+getInt (JNumber 3)
+getInt (JString "a")
+</pre>
+</li>
+<li> <tt>isNull</tt> as a predicate that asserts that its argument is <tt>JNull</tt>. </li>
+</ol>
+<p> Read more about <a href="https://hackage.haskell.org/package/base-4.10.0.0/docs/Data-Either.html" target="blank">
+<tt>Data.Either</tt></a>.</p>
+
+
+<h2> Exercise 2.</h2>
+<ol>
+<li> See how <tt> show</tt> works on <tt> JValue</tt> data. </li>
+<li> In <tt>lab10.hs</tt> write a function 
+<pre>
+renderJValue :: JValue -> String
+</pre>
+that renders <tt> JValue </tt> data as follows: 
+<pre>
+renderJValue (JObject [("foo", JNumber 1), ("bar", JBool False)])
+"{foo: 1, bar: false}"
+</pre> 
+<br>
+<pre>
+result2 = JObject [
+  ("query", JString "awkward squad haskell"),
+  ("estimatedCount", JNumber 3920),
+  ("moreResults", JBool True),
+  ("results", JArray [
+     JObject [
+      ("title", JString "Simon Peyton Jones: papers"),
+      ("snippet", JString "Tackling the awkward ..."),
+      ("url", JString "http://.../marktoberdorf/")
+     ]])
+  ]
+renderJValue result2
+"{query: awkward squad haskell, estimatedCount: 3920, moreResults: true, results: [{title: Simon Peyton Jones: papers, snippet: Tackling the awkward ..., url: http://.../marktoberdorf/}]}"
+</pre>
+</li> 
+</ol>
+
+<h2>Exercise 3 </h2>
+Try these in <tt>ghci</tt> and see what happens:
+<pre>
+[("a",  2), ("a",  "2")]
+JObject [("a", JNumber 2), ("a", JString "2")]
+renderJValue $ JObject [("a", JNumber 2), ("a", JString "2")]
+</pre>
+
+We have lists and objects with values of different types by wrapping them with 
+corresponding <tt>JValue</tt> constructors. This means that we have to use a different
+constructor for each type: <tt>JNumber</tt> for <tt>Integer</tt>, <tt>JString</tt> for <tt>String</tt>, etc.
+
+<p> Using classes we can have only one construction for all types. In <tt>lab10.hs</tt> we defined</p>
+
+<pre>
+type JSONError = String
+
+class JSON a where
+    toJValue :: a -> JValue
+    fromJValue :: JValue -> Either JSONError a
+
+</pre>  
+
+Before going further, check again <a href="https://hackage.haskell.org/package/base-4.10.0.0/docs/Data-Either.html" target="blank">
+<tt>Data.Either</tt></a> and, especially, the definitions of <tt>fromRight</tt> and <tt>fromLeft</tt>. 
+
+<ol>
+<li> Make <tt> JValue</tt> an instance of <tt> JSON </tt>. <br>
+
+
+In <tt>ghci</tt> try 
+<pre>
+toJValue result1
+fromRight JNull (fromJValue result1)
+</pre>
+</li> 
+
+<li> We make <tt>Bool</tt> an instance of <tt> JSON </tt> as follows: <br>
+
+<pre>
+instance JSON Bool where
+    toJValue = JBool
+    fromJValue (JBool b) = Right b
+    fromJValue _ = Left "not a JSON boolean"
+    </pre>
+In <tt>ghci</tt> try 
+<pre>
+> toJValue True  
+JBool True
+> fromRight True $ fromJValue  (JBool False)
+False
+> fromJValue  (JBool False) :: Either JSONError Bool
+Right False
+> (fromJValue (JNumber 2)) :: Either JSONError Bool
+Left "not a JSON boolean"
+</pre>
+
+<b>Atentie!</b> Pentru a testa  <tt>fromJValue</tt> trebuie precizat tipul rezultatului.  <br><br>
+</li> 
+
+<li> Make <tt>Integer</tt> an instance of <tt> JSON </tt>. You will need to use <tt>toInteger</tt> in order to
+ convert a numeric value to <tt>Integer</tt>.<br>
+
+
+In <tt>ghci</tt> try 
+<pre>
+toJValue 10
+fromRight 1 $ fromJValue  (JNumber 10)
+</pre>
+</li> 
+<li> Make <tt>String</tt> an instance of <tt> JSON </tt> and load the file in <tt>ghci</tt>.
+Remember that <tt>String</tt> is a type synonyme for <tt>[Char]</tt>. Note that it is legal to write
+an instance for <tt>[a]</tt>, but not for  <tt>[Char]</tt>, i.e. we are not allowed to use a type in place of 
+a type parameter when we write an instance of a class (<a href="https://downloads.haskell.org/~ghc/7.0.1/docs/html/users_guide/type-class-extensions.html">
+read more about these rules</a>). 
+
+<p> To overcome this problem we can use <a href="https://wiki.haskell.org/Language_extensions">language extensions</a>.
+At the beginning of the file <tt>lab10.hs</tt> uncomment the line <br>
+
+
+{-# LANGUAGE FlexibleInstances, TypeSynonymInstances #-}<br>
+
+Now the instance of <tt>String</tt> is legal. In <tt>ghci</tt> try 
+<pre>
+toJValue "string"
+fromRight "" $ fromJValue  (JString "string")
+</pre>
+</li> 
+
+</ol>
+
+
+<h2>Exercise 4 </h2> 
+
+<li> Make <tt>String</tt> an instance of <tt> JSON </tt> and load the file in <tt>ghci</tt>.
+Remember that <tt>String</tt> is a type synonyme for <tt>[Char]</tt>. Note that it is legal to write
+an instance for <tt>[a]</tt>, but not for  <tt>[Char]</tt>, i.e. we are not allowed to use a type in place of 
+a type parameter when we write an instance of a class. 
+
+<p> To overcome this problem we can use <a href="https://wiki.haskell.org/Language_extensions">language extensions</a>.
+At the beginning of the file <tt>lab10.hs</tt> uncomment the line <br>
+
+
+{-# LANGUAGE FlexibleInstances, TypeSynonymInstances #-}<br>
+
+Now the instance of <tt>String</tt> is legal. In <tt>ghci</tt> try 
+<pre>
+toJValue "string"
+fromRight "" $ fromJValue  (JString "string")
+</pre>
+</li> 
+</ol> 
+
+<h2>Exercise 5</h2> 
+We further have to add instances of <tt>JSON </tt> for <tt>[a]</tt> and <tt>[(String,a)]</tt>, i.e.
+<pre>
+instance (JSON a) => JSON [a] where
+    toJValue = ...
+    fromJValue = ...
+
+instance (JSON a) => JSON [(String, a)] where
+    toJValue = ...
+    fromJValue = ... 
+</pre>  
+For the moment, set <tt>toJValue</tt> and <tt>fromJValue</tt> to <tt>undefined</tt> and load the file. 
+Now try <tt> toJValue [("label","value")]</tt> and see what happens!  
+
+<p>Remember that we are not allowed to make two different instances of the same class for a type. 
+In the sequel we overcome this problem using <tt> newtype</tt> . </p>
+
+<p>From now on, we work in the file <tt>JSONClassNew.hs</tt>.</p>
+
+<h2>Exercise 6</h2>
+In the file <tt>JSONClassNew.hs</tt> you will find the following definitions: 
+<pre>
+newtype JObj a = JObj {
+      fromJObj :: [(String, a)]
+    } deriving (Eq, Ord, Show)
+    
+data JValue = JString String
+            | JNumber Integer
+            | JBool Bool
+            | JNull
+            | JObject (JObj JValue)   -- was [(String, JValue)]
+              deriving (Eq, Ord, Show)    
+</pre>
+We use constructor <tt> JObj</tt> to identify those lists that are used to construct JObjects.
+<ol>
+<li> Note the difference:
+<pre>
+:t JObj [("a", 1),("b",2)]
+:t JObj [("a", JString "a"), ("b", JNumber 2)]
+:t JObject (JObj [("a", JString "a"), ("b", JNumber 2)])
+</pre>
+</li>
+<li>  Add the definition  <tt>newtype JAry a</tt> to identify  those lists that are used to construct
+ JArrays. Complete the definition of <tt>JValue</tt> with  <tt> JArray</tt> and try some examples in <tt> ghci</tt>.
+ </li>
+ 
+ <li> Uncomment the definitions of <tt> result1</tt> and <tt> result2</tt> and complete them according to 
+ the new definition of <tt> JValue</tt>. 
+ </li>
+ 
+ <li> Modify the definition of  <tt>renderJValue</tt> according to the new definition of <tt> JValue</tt>.
+</ol>
+
+<h2>Exercise 7</h2>
+We define the class 
+<pre>
+class JSON a where
+    toJValue :: a -> JValue
+ </pre>
+
+ For simplicity, we required only the function <tt>toJValue</tt>. 
+ <ol>
+ <li>Define the instances for <tt> JValue, Bool, Integer, String</tt> as before. </li>
+<li> If <tt> a</tt> is an instance of <tt> JSON </tt>, write the instances for <tt>JAry a</tt> and 
+ <tt> JObj a</tt> </li>.
+ </ol>
+ 
+ 
+
+
+
+<h2>Extra credit exercises </h2> 
+We work with the file <tt> JSONClassNew.hs</tt>.
+<ol>
+<li>Add a <tt>newtype</tt> declaration for <tt>Strings</tt>, modify the  <tt>JValue</tt> declaration and 
+make all the necessary instances of the <tt> JSON</tt> class such that all the language extensions can be removed. 
+</li>
+<li> Add <tt> fromJValue</tt> to the definition of the class <tt>JSON</tt>
+<pre>
+type JSONError = String
+
+class JSON a where
+    toJValue :: a -> JValue
+    fromJValue :: JValue -> Either JSONError a
+</pre>
+ and define the corresponding instances. 
+</li>
+</ol>
+</body>
+</html>
