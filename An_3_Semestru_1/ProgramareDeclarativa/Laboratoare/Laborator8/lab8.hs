@@ -7,7 +7,7 @@ import System.Random
 
 -- Importing the keymap module
 
-import KeymapList
+import KeymapTree
 
 
 -- Type declarations
@@ -35,28 +35,35 @@ testDB = fromList [
 -- Exercise 1
 
 longestProductLen :: [(Barcode, Item)] -> Int
-longestProductLen = undefined
+longestProductLen list = maximum [length product | (_, (product, _)) <- list]
+
+dots :: Int -> String
+dots nr = concat $ replicate (nr+3) "."
 
 formatLine :: Int -> (Barcode, Item) -> String
-formatLine = undefined
+formatLine nr (barcode, (product, unit)) = barcode ++ "..." ++ product ++ dots (nr - length product) ++ unit
 
 showCatalogue :: Catalogue -> String
-showCatalogue = undefined
-     
+showCatalogue catalogue = concat [(formatLine nr x) ++ "\n" | x <- toList catalogue, let nr = longestProductLen $ toList catalogue]
+
 -- Exercise 2
 maybeToList :: Maybe a -> [a]
-maybeToList = undefined
+maybeToList Nothing  = []
+maybeToList (Just a) = [a]
 
 listToMaybe :: [a] -> Maybe a
-listToMaybe = undefined
+listToMaybe []  = Nothing
+listToMaybe list = Just (head list)
 
 catMaybes :: [Maybe a] -> [a]
-catMaybes = undefined
+catMaybes []           = []
+catMaybes ((Nothing):xs) = catMaybes xs
+catMaybes ((Just x):xs)  = x : catMaybes xs
 
 -- Exercise 3
 
 getItems :: [Barcode] -> Catalogue -> [Item]
-getItems = undefined
+getItems barcodes catalogue = [item | (barcode, item) <- toList catalogue, elem barcode barcodes]
 
 
 

@@ -2,7 +2,7 @@
 -- Laboratory 10
 -- Based on Real World Haskell, Chapter 5 and Chapter 6
 
---{-# LANGUAGE FlexibleInstances, TypeSynonymInstances #-}
+{-# LANGUAGE FlexibleInstances, TypeSynonymInstances #-}
 -- read more about LANGUAGE Extensions https://wiki.haskell.org/Language_extensions
 
 import SimpleJSON
@@ -30,11 +30,26 @@ result2 = JObject [
 
   
 renderJValue :: JValue -> String
-renderJValue = undefined
+renderJValue (JNumber x) = show x
+renderJValue (JString x) = x
+renderJValue (JObject x) = "{" ++ renderJObject x ++ "}"
+renderJValue (JArray x)  = "[" ++ renderJArray x ++ "]"
+renderJValue (JBool x)   = show x
+renderJValue JNull       = ""
 
+renderJObject :: [(String, JValue)] -> String
+renderJObject []                = ""
+renderJObject ((k, v):xs) 
+    | not(renderJObject xs == "") = k ++ ": " ++ renderJValue v ++ ", " ++ renderJObject xs
+    | otherwise                   = k ++ ": " ++ renderJValue v
+
+renderJArray :: [JValue] -> String
+renderJArray []                = ""
+renderJArray (x:xs)
+    | not(renderJArray xs == "") = renderJValue x ++ ", " ++ renderJArray xs
+    | otherwise                  = renderJValue x
 
         
-
 
 type JSONError = String
 
@@ -43,41 +58,34 @@ class JSON a where
     fromJValue :: JValue -> Either JSONError a 
 
 instance JSON JValue where
-    toJValue = undefined
-    fromJValue = undefined
+    toJValue v = v
+    fromJValue v = Right v
+    --fromJValue _ = Left "not a JSON value"
     
-    
+
     
 instance JSON Bool where
     toJValue = JBool
     fromJValue (JBool b) = Right b
     fromJValue _ = Left "not a JSON boolean"
     
-
-
-
     
 instance JSON Integer where
+    toJValue = JNumber
+    fromJValue (JNumber a) = Right a
+    fromJValue _ = Left "not a JSON integer"
+
+    
+instance JSON String where
+    toJValue = JString
+    fromJValue (JString a) = Right a
+    fromJValue _ = Left "not a JSON string"
+
+
+instance (JSON a) => JSON [a] where
     toJValue = undefined
     fromJValue = undefined
 
-
-
-
-    
---instance JSON String where
---    toJValue    = undefined
---   fromJValue  = undefined  
-
-
---instance (JSON a) => JSON [a] where
---    toJValue = undefined
---    fromJValue = undefined
-
--- instance (JSON a) => JSON [(String, a)] where
---    toJValue = undefined
---    fromJValue = undefined  
-
-   
-    
-   
+instance (JSON a) => JSON [(String, a)] where
+    toJValue = undefined
+    fromJValue = undefined  

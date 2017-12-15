@@ -30,24 +30,27 @@ getInteger  _ = Left "Not a JNumber"
 
 
 -- define accessor functions using the above example
-
-getString    = undefined
-
-
-getBool  = undefined
+getString :: JValue -> Either String String
+getString (JString n) = Right n
+getString  _ = Left "Not a JString"
 
 
+getBool :: JValue -> Either String Bool
+getBool (JBool n) = Right n
+getBool  _ = Left "Not a JBool"
 
-getObject  = undefined
+
+getObject :: JValue -> Either String [(String, JValue)]
+getObject (JObject n) = Right n
+getObject  _ = Left "Not a JObject"
 
 
-
-getArray  = undefined
+getArray :: JValue -> Either String [JValue]
+getArray (JArray n) = Right n
+getArray  _ = Left "Not a JArray"
 
 
 -- define isNull as a predicate that asserts that its argument is JNull 
-isNull = undefined
-
-
-
-
+isNull :: JValue -> Bool
+isNull JNull = True
+isNull _ = False
