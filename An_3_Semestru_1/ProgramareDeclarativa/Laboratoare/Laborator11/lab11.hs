@@ -9,7 +9,12 @@ exemplu :: Dom Int
 exemplu = (((Ran 1 3) :|: (Ran 2 4)) :&: ((Ran 3 5) :&: Empty))
 
 
---instance (Ord a) => Eq (Dom a) where
+instance (Ord a) => Eq (Dom a) where
+	Empty == Empty         = True
+	Full == Full           = True
+	(Ran x y) == (Ran x y) = True
+	(Ran x y) == (Ran y x) = True
+	-- etc.
 
   
 
