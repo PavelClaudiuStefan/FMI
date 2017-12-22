@@ -1,0 +1,6377 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE FSynsetsDoc SYSTEM "fsynsets.dtd">
+
+<FSynsetsDoc pos="noun">
+   <synset offset="4123">
+      <synset_en>
+         <gloss>a human being; "there was too much for one person to do"</gloss>
+         <word>person</word>
+         <word>individual</word>
+         <word>someone</word>
+         <word>somebody</word>
+         <word>mortal</word>
+         <word>human</word>
+         <word>soul</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>person</eword>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>ins</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>person</eword>
+            <word>persoana</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>individual</eword>
+            <word>persoana</word>
+            <word>individ</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>someone</eword>
+            <word>cineva</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>somebody</eword>
+            <word>cineva</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>soul</eword>
+            <word>suflet</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>human</eword>
+            <word>muritor</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>mortal</eword>
+            <word>muritor</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>ins</word>
+            <word>cineva</word>
+            <word>muritor</word>
+            <word>suflet</word>
+         </fsynset>
+         <fsynset>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>cineva</word>
+            <word>muritor</word>
+            <word>suflet</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10572">
+      <synset_en>
+         <gloss>that which has mass and occupies space; "an atom is the smallest indivisible unit of matter"</gloss>
+         <word>substance</word>
+         <word>matter</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>substance</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>matter</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>matter</eword>
+            <word>fond</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>substance</eword>
+            <word>esenta</word>
+            <word>fond</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>chestiune</word>
+            <word>problema</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>subiect</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>materie</word>
+            <word>substanta</word>
+         </fsynset>
+         <fsynset>
+            <word>materie</word>
+            <word>substanta</word>
+            <word>fond</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="17487">
+      <synset_en>
+         <gloss>something that people do or cause to happen</gloss>
+         <word>act</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>act</eword>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>act</eword>
+            <word>act</word>
+            <word>titlu</word>
+            <word>document</word>
+         </e-set>
+         <e-set score="0.16666667">
+            <eword>act</eword>
+            <word>act</word>
+            <word>lege</word>
+            <word>edict</word>
+            <word>decret</word>
+            <word>hotarare</word>
+            <word>rezolutie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="18916">
+      <synset_en>
+         <gloss>an abstraction belonging to or characteristic of two entities or parts together</gloss>
+         <word>relation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>relation</eword>
+            <word>relatie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>relation</eword>
+            <word>raport</word>
+            <word>legatura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>relation</eword>
+            <word>ruda</word>
+            <word>rubedenie</word>
+            <word>neam</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>relatie</word>
+         </fsynset>
+         <fsynset>
+            <word>raport</word>
+            <word>legatura</word>
+         </fsynset>
+         <fsynset>
+            <word>ruda</word>
+            <word>rubedenie</word>
+            <word>neam</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="24107">
+      <synset_en>
+         <gloss>(usually plural) mutual dealings or connections among persons or groups: "international relations"</gloss>
+         <word>relation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>relation</eword>
+            <word>relatie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>relation</eword>
+            <word>raport</word>
+            <word>legatura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>relation</eword>
+            <word>ruda</word>
+            <word>rubedenie</word>
+            <word>neam</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>relatie</word>
+         </fsynset>
+         <fsynset>
+            <word>raport</word>
+            <word>legatura</word>
+         </fsynset>
+         <fsynset>
+            <word>ruda</word>
+            <word>rubedenie</word>
+            <word>neam</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="133315">
+      <synset_en>
+         <gloss>the act of rejecting something; "his proposals were met with rejection"</gloss>
+         <word>rejection</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rejection</eword>
+            <word>respingere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rejection</eword>
+            <word>rebutare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>respingere</word>
+         </fsynset>
+         <fsynset>
+            <word>rebutare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="135310">
+      <synset_en>
+         <gloss>a group's refusal to have commercial dealings with some organization in protest against its policies</gloss>
+         <word>boycott</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>boycott</eword>
+            <word>boicot</word>
+            <word>boicotare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>boicot</word>
+            <word>boicotare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="135464">
+      <synset_en>
+         <gloss>the act of banishing someone</gloss>
+         <word>banishment</word>
+         <word>proscription</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>proscription</eword>
+            <word>surghiunire</word>
+            <word>exilare</word>
+         </e-set>
+         <e-set score="0.8333333">
+            <eword>banishment</eword>
+            <word>exilare</word>
+            <word>surghiunire</word>
+            <word>exil</word>
+            <word>surghiun</word>
+            <word>expulzare</word>
+            <word>ostracizare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>exilare</word>
+            <word>surghiunire</word>
+            <word>exil</word>
+            <word>surghiun</word>
+            <word>expulzare</word>
+            <word>ostracizare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="135765">
+      <synset_en>
+         <gloss>the act of expelling someone</gloss>
+         <word>ejection</word>
+         <word>exclusion</word>
+         <word>expulsion</word>
+         <word>riddance</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>exclusion</eword>
+            <word>excludere</word>
+         </e-set>
+         <e-set score="0.8">
+            <eword>expulsion</eword>
+            <word>expulzare</word>
+            <word>alungare</word>
+            <word>izgonire</word>
+            <word>eliminare</word>
+            <word>exmatriculare</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>riddance</eword>
+            <word>scapare</word>
+            <word>descotorosire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>excludere</word>
+            <word>expulzare</word>
+            <word>alungare</word>
+            <word>izgonire</word>
+            <word>eliminare</word>
+            <word>exmatriculare</word>
+            <word>scapare</word>
+            <word>descotorosire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="135937">
+      <synset_en>
+         <gloss>the act of excluding someone from society by general consent</gloss>
+         <word>ostracism</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>ostracism</eword>
+            <word>ostracism</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>ostracism</eword>
+            <word>ostracizare</word>
+            <word>surghiunire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>ostracism</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="136174">
+      <synset_en>
+         <gloss>the act of expelling a person from their native land</gloss>
+         <word>exile</word>
+         <word>deportation</word>
+         <word>expatriation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>exile</eword>
+            <word>surghiun</word>
+            <word>exil</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>exile</eword>
+            <word>exilat</word>
+            <word>surghiunit</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>deportation</eword>
+            <word>expulzare</word>
+            <word>deportare</word>
+            <word>exilare</word>
+            <word>surghiun</word>
+            <word>surghiunire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>expatriation</eword>
+            <word>expatriere</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>exile</eword>
+            <word>surghiunire</word>
+            <word>izgonire</word>
+            <word>exilare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>surghiun</word>
+            <word>exil</word>
+            <word>expulzare</word>
+            <word>deportare</word>
+            <word>exilare</word>
+            <word>surghiunire</word>
+            <word>expatriere</word>
+         </fsynset>
+         <fsynset>
+            <word>exilat</word>
+            <word>surghiunit</word>
+            <word>expulzare</word>
+            <word>deportare</word>
+            <word>exilare</word>
+            <word>surghiun</word>
+            <word>surghiunire</word>
+            <word>expatriere</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="136307">
+      <synset_en>
+         <gloss>the act of banishing a member of the Church from the communion of believers and the privileges of the Church</gloss>
+         <word>excommunication</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>excommunication</eword>
+            <word>excomunicare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>excomunicare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="137092">
+      <synset_en>
+         <gloss>a vote that blocks a decision</gloss>
+         <word>veto</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>veto</eword>
+            <word>veto</word>
+            <word>opozitie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>veto</word>
+            <word>opozitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="153747">
+      <synset_en>
+         <gloss>starting something for the first time</gloss>
+         <word>initiation</word>
+         <word>founding</word>
+         <word>foundation</word>
+         <word>institution</word>
+         <word>origination</word>
+         <word>creation</word>
+         <word>instauration</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="4.0">
+            <eword>institution</eword>
+            <word>creare</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>founding</eword>
+            <word>fondare</word>
+            <word>intemeiere</word>
+            <word>infiintare</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>origination</eword>
+            <word>initiere</word>
+            <word>creare</word>
+         </e-set>
+         <e-set score="2.6666667">
+            <eword>foundation</eword>
+            <word>intemeiere</word>
+            <word>infiintare</word>
+            <word>fondare</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>institution</eword>
+            <word>fondare</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>instauration</eword>
+            <word>instaurare</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>foundation</eword>
+            <word>fundatie</word>
+            <word>ctitorie</word>
+            <word>asezamant</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>creation</eword>
+            <word>creare</word>
+            <word>faurire</word>
+            <word>zamislire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>baza</word>
+            <word>temei</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>institution</eword>
+            <word>institutie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatie</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>initiation</eword>
+            <word>initiere</word>
+            <word>primire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>initiere</word>
+            <word>primire</word>
+            <word>fondare</word>
+            <word>intemeiere</word>
+            <word>infiintare</word>
+            <word>creare</word>
+            <word>faurire</word>
+            <word>zamislire</word>
+            <word>instaurare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="215081">
+      <synset_en>
+         <gloss>motion of hands or body to emphasize or help to express a thought or feeling</gloss>
+         <word>gesture</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>gesture</eword>
+            <word>gest</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>gesture</eword>
+            <word>gest</word>
+            <word>atitudine</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>gest</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="402994">
+      <synset_en>
+         <gloss>the profession of designing buildings and environments with consideration for their esthetic effect</gloss>
+         <word>architecture</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>architecture</eword>
+            <word>arhitectura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>arhitectura</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="403152">
+      <synset_en>
+         <gloss>the learned profession that is mastered by graduate study in a law school and that is responsible for the judicial system; "he studied law at Yale"</gloss>
+         <word>law</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>lege</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>drept</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>justitie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>lege</word>
+         </fsynset>
+         <fsynset>
+            <word>drept</word>
+         </fsynset>
+         <fsynset>
+            <word>justitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="466218">
+      <synset_en>
+         <gloss>a position on a basketball team of the player who participates in the center jump to start the game</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="467671">
+      <synset_en>
+         <gloss>the position of the player on the line of scrimmage who puts the ball in play; "it is a center's responsibility to get the football to the quarterback"</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="468555">
+      <synset_en>
+         <gloss>the position on a hockey team of the player who participates in the face off at the beginning of the game</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="561164">
+      <synset_en>
+         <gloss>drawing a figure satisfying certain conditions as part of solving a problem or proving a theorem; "the assignment was to make a construction that could be used in proving the Pythagorean theorem"</gloss>
+         <word>construction</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>construction</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>construction</eword>
+            <word>constructie</word>
+            <word>cladire</word>
+            <word>zidire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>construction</eword>
+            <word>construire</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>construction</eword>
+            <word>cladire</word>
+            <word>constructie</word>
+            <word>structura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="583085">
+      <synset_en>
+         <gloss>the human act of creating</gloss>
+         <word>creation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>creation</eword>
+            <word>creare</word>
+            <word>faurire</word>
+            <word>zamislire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>creatiune</word>
+         </fsynset>
+         <fsynset>
+            <word>creatie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="597790">
+      <synset_en>
+         <gloss>the human embodiment of something; "the soul of honor"</gloss>
+         <word>soul</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>soul</eword>
+            <word>suflet</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>suflet</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="597895">
+      <synset_en>
+         <gloss>the act of attributing human characteristics to abstract ideas etc.</gloss>
+         <word>personification</word>
+         <word>incarnation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>incarnation</eword>
+            <word>personificare</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>incarnation</eword>
+            <word>incarnare</word>
+            <word>intruchipare</word>
+            <word>intrupare</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>personification</eword>
+            <word>personificare</word>
+            <word>intruchipare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>personificare</word>
+            <word>intruchipare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="598038">
+      <synset_en>
+         <gloss>the creation of beautiful or significant things; "he was a patron of art"</gloss>
+         <word>art</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>art</eword>
+            <word>arta</word>
+         </e-set>
+         <e-set score="0.8">
+            <eword>art</eword>
+            <word>arta</word>
+            <word>maiestrie</word>
+            <word>abilitate</word>
+            <word>indemanare</word>
+            <word>mestesug</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>art</eword>
+            <word>meserie</word>
+            <word>mestesug</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>arta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="606214">
+      <synset_en>
+         <gloss>excessive use of drugs</gloss>
+         <word>habit</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>habit</eword>
+            <word>obicei</word>
+            <word>obisnuinta</word>
+            <word>deprindere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>obicei</word>
+            <word>obisnuinta</word>
+            <word>deprindere</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="666912">
+      <synset_en>
+         <gloss>a service conducted in a church; "don't be late for church"</gloss>
+         <word>church</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>church</eword>
+            <word>biserica</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>biserica</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="764310">
+      <synset_en>
+         <gloss>a willful disobedience to or disrespect for the authority of a court or legislative body</gloss>
+         <word>contempt</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>contempt</eword>
+            <word>dispret</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>dispret</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="774435">
+      <synset_en>
+         <gloss>a wrongful dispossession</gloss>
+         <word>ouster</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="796865">
+      <synset_en>
+         <gloss>something done as an indication of intention; "a political gesture" or "a gesture of defiance"</gloss>
+         <word>gesture</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>gesture</eword>
+            <word>gest</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>gesture</eword>
+            <word>gest</word>
+            <word>atitudine</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>gest</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="819088">
+      <synset_en>
+         <gloss>something that thrills; "the thrills of space travel"</gloss>
+         <word>thrill</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>thrill</eword>
+            <word>cutremur</word>
+            <word>fior</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>cutremur</word>
+            <word>fior</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2206447">
+      <synset_en>
+         <gloss>an architectural product or work</gloss>
+         <word>architecture</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>architecture</eword>
+            <word>arhitectura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>arhitectura</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2213100">
+      <synset_en>
+         <gloss>the products of human creativity; works of art collectively</gloss>
+         <word>art</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>art</eword>
+            <word>arta</word>
+         </e-set>
+         <e-set score="0.8">
+            <eword>art</eword>
+            <word>arta</word>
+            <word>maiestrie</word>
+            <word>abilitate</word>
+            <word>indemanare</word>
+            <word>mestesug</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>art</eword>
+            <word>meserie</word>
+            <word>mestesug</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>arta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2438778">
+      <synset_en>
+         <gloss>for public (especially Christian) worship; "the church was empty"</gloss>
+         <word>church</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>church</eword>
+            <word>biserica</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>biserica</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2501030">
+      <synset_en>
+         <gloss>a rod of magnetic material (as soft iron) that passes through a coil and serves to increase the inductance of the coil</gloss>
+         <word>core</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>core</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </e-set>
+         <e-set score="0.4">
+            <eword>core</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>substanta</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2501218">
+      <synset_en>
+         <gloss>the region of a nuclear reactor containing the fissile material where the reaction takes place</gloss>
+         <word>core</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>core</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </e-set>
+         <e-set score="0.4">
+            <eword>core</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>substanta</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2518101">
+      <synset_en>
+         <gloss>something that has been brought into existence by someone</gloss>
+         <word>creation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>creation</eword>
+            <word>creare</word>
+            <word>faurire</word>
+            <word>zamislire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>creatiune</word>
+         </fsynset>
+         <fsynset>
+            <word>creatie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2522012">
+      <synset_en>
+         <gloss>a long staff with one end being hook shaped</gloss>
+         <word>crook</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="2669309">
+      <synset_en>
+         <gloss>an article of merchandise that is displayed or advertised more than other articles</gloss>
+         <word>feature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>feature</eword>
+            <word>insusire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>feature</eword>
+            <word>particularitate</word>
+            <word>caracteristica</word>
+            <word>trasatura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>insusire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2717320">
+      <synset_en>
+         <gloss>a woman's undergarment worn to give shape to the contours of the body</gloss>
+         <word>foundation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>baza</word>
+            <word>temei</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>foundation</eword>
+            <word>intemeiere</word>
+            <word>infiintare</word>
+            <word>fondare</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>foundation</eword>
+            <word>fundatie</word>
+            <word>ctitorie</word>
+            <word>asezamant</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </fsynset>
+         <fsynset>
+            <word>baza</word>
+            <word>temei</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2783002">
+      <synset_en>
+         <gloss>a distinctive attire (as the costume of a religious order)</gloss>
+         <word>habit</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>habit</eword>
+            <word>obicei</word>
+            <word>obisnuinta</word>
+            <word>deprindere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>obicei</word>
+            <word>obisnuinta</word>
+            <word>deprindere</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2810457">
+      <synset_en>
+         <gloss>a playing card in the major suit of hearts; "he led the queen of hearts"</gloss>
+         <word>heart</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>inima</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>suflet</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>cupa</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>heart</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>inima</word>
+         </fsynset>
+         <fsynset>
+            <word>suflet</word>
+         </fsynset>
+         <fsynset>
+            <word>cupa</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2859290">
+      <synset_en>
+         <gloss>a building or complex of buildings where an organization for the promotion of some cause is situated</gloss>
+         <word>institution</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>institution</eword>
+            <word>institutie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>institutie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3197728">
+      <synset_en>
+         <gloss>a case for holding arrows</gloss>
+         <word>quiver</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.33333334">
+            <eword>quiver</eword>
+            <word>tremur</word>
+            <word>tremurat</word>
+            <word>tremuratura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>tremur</word>
+            <word>tremurat</word>
+            <word>tremuratura</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3431817">
+      <synset_en>
+         <gloss>a thing constructed; a complex construction or entity; "the structure consisted of a series of arches"; "she wore her hair in an amazing construction of whirls and ribbons"</gloss>
+         <word>structure</word>
+         <word>construction</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>structure</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>construction</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="2.3333333">
+            <eword>construction</eword>
+            <word>cladire</word>
+            <word>constructie</word>
+            <word>structura</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>construction</eword>
+            <word>constructie</word>
+            <word>cladire</word>
+            <word>zidire</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>construction</eword>
+            <word>edificiu</word>
+         </e-set>
+         <e-set score="1.5">
+            <eword>construction</eword>
+            <word>construire</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>structure</eword>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3634739">
+      <synset_en>
+         <gloss>the remains of something that has been wrecked; "they searched the wreckage for signs of survivors"</gloss>
+         <word>wreckage</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="3646057">
+      <synset_en>
+         <gloss>preoccupation with what concerns human inner nature esp ethical or ideological values: "Socrates' inwardness, integrity, and inquisitiveness"- H.R.Finch</gloss>
+         <word>inwardness</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="3647591">
+      <synset_en>
+         <gloss>the complex of emotional and intellectual attributes that determine a person's characteristic actions and reactions: "it is his nature to help others"</gloss>
+         <word>nature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>natura</word>
+         </fsynset>
+         <fsynset>
+            <word>fire</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>caracter</word>
+         </fsynset>
+         <fsynset>
+            <word>natura</word>
+            <word>fire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3651847">
+      <synset_en>
+         <gloss>absence of emotion</gloss>
+         <word>unemotionality</word>
+         <word>emotionlessness</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="3716446">
+      <synset_en>
+         <gloss>the essential qualities or characteristics by which something is recognized; "it is the nature of fire to burn"</gloss>
+         <word>nature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>natura</word>
+         </fsynset>
+         <fsynset>
+            <word>fire</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>caracter</word>
+         </fsynset>
+         <fsynset>
+            <word>natura</word>
+            <word>fire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3798428">
+      <synset_en>
+         <gloss>concern with the distinction between good and evil or right and wrong; right or good conduct</gloss>
+         <word>morality</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>morality</eword>
+            <word>moralitate</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>moralitate</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="2810457">
+      <synset_en>
+         <gloss>a playing card in the major suit of hearts; "he led the queen of hearts"</gloss>
+         <word>heart</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>inima</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>suflet</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>cupa</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>heart</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>inima</word>
+         </fsynset>
+         <fsynset>
+            <word>suflet</word>
+         </fsynset>
+         <fsynset>
+            <word>cupa</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3858780">
+      <synset_en>
+         <gloss>the manner of construction of something and the disposition of its parts; "artists must study the structure of the human body"; "the architecture of a computer's system software"</gloss>
+         <word>structure</word>
+         <word>architecture</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>architecture</eword>
+            <word>structura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>architecture</eword>
+            <word>arhitectura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>architecture</eword>
+            <word>constructie</word>
+            <word>construire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </fsynset>
+         <fsynset>
+            <word>constructie</word>
+            <word>structura</word>
+         </fsynset>
+         <fsynset>
+            <word>edificiu</word>
+            <word>cladire</word>
+            <word>structura</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3919533">
+      <synset_en>
+         <gloss>light from nonthermal sources</gloss>
+         <word>luminescence</word>
+         <word>glow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>glow</eword>
+            <word>luminescenta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>glow</eword>
+            <word>dogoare</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>glow</eword>
+            <word>foc</word>
+            <word>roseata</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>glow</eword>
+            <word>foc</word>
+            <word>vapaie</word>
+            <word>valvataie</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>luminescence</eword>
+            <word>luminescenta</word>
+            <word>fosforescenta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>glow</eword>
+            <word>ignitie</word>
+            <word>incandescenta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>glow</eword>
+            <word>roseata</word>
+            <word>imbujorare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>luminescenta</word>
+            <word>fosforescenta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3964247">
+      <synset_en>
+         <gloss>the quality or state of being inward or internal: "the inwardness of the body's organs"</gloss>
+         <word>inwardness</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="3197728">
+      <synset_en>
+         <gloss>a case for holding arrows</gloss>
+         <word>quiver</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.33333334">
+            <eword>quiver</eword>
+            <word>tremur</word>
+            <word>tremurat</word>
+            <word>tremuratura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>tremur</word>
+            <word>tremurat</word>
+            <word>tremuratura</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4026286">
+      <synset_en>
+         <gloss>(used with negation) having consequence; "they were friends and it was no matter who won the games"</gloss>
+         <word>matter</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>fond</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>chestiune</word>
+            <word>problema</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>subiect</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>materie</word>
+            <word>substanta</word>
+         </fsynset>
+         <fsynset>
+            <word>fond</word>
+         </fsynset>
+         <fsynset>
+            <word>chestiune</word>
+            <word>problema</word>
+         </fsynset>
+         <fsynset>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </fsynset>
+         <fsynset>
+            <word>subiect</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4046763">
+      <synset_en>
+         <gloss>the power or right to prohibit or reject a proposed or intended act esp the power of a chief executive to reject a bill passed by the legislature</gloss>
+         <word>veto</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>veto</eword>
+            <word>veto</word>
+            <word>opozitie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>veto</word>
+            <word>opozitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4056183">
+      <synset_en>
+         <gloss>a person's body (usually including their clothing); "a weapon was hidden on his person"</gloss>
+         <word>person</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>person</eword>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>ins</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>person</eword>
+            <word>persoana</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>ins</word>
+         </fsynset>
+         <fsynset>
+            <word>persoana</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4062157">
+      <synset_en>
+         <gloss>a particular complex anatomical structure; "he has good bone structure"</gloss>
+         <word>structure</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </fsynset>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+         <fsynset>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4102587">
+      <synset_en>
+         <gloss>the fatty network of connective tissue that fills the cavities of bones</gloss>
+         <word>marrow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>marrow</eword>
+            <word>maduva</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>marrow</eword>
+            <word>esenta</word>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>maduva</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4381416">
+      <synset_en>
+         <gloss>something regarded as a normative example; "the convention of not naming the main character"; "violence is the rule not the exception"; "his formula for impressing visitors"</gloss>
+         <word>convention</word>
+         <word>normal</word>
+         <word>pattern</word>
+         <word>rule</word>
+         <word>formula</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>rule</eword>
+            <word>formula</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>pattern</eword>
+            <word>model</word>
+            <word>exemplu</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>pattern</eword>
+            <word>sablon</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>formula</eword>
+            <word>formula</word>
+         </e-set>
+         <e-set score="0.8">
+            <eword>convention</eword>
+            <word>regula</word>
+            <word>practica</word>
+            <word>forma</word>
+            <word>tipic</word>
+            <word>traditie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>convention</eword>
+            <word>adunare</word>
+            <word>intrunire</word>
+            <word>congres</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="0.42857143">
+            <eword>convention</eword>
+            <word>conventie</word>
+            <word>acord</word>
+            <word>contract</word>
+            <word>invoiala</word>
+            <word>intelegere</word>
+            <word>pact</word>
+            <word>tratat</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>convention</eword>
+            <word>obicei</word>
+            <word>uzanta</word>
+            <word>conventie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>regula</word>
+            <word>practica</word>
+            <word>forma</word>
+            <word>tipic</word>
+            <word>traditie</word>
+            <word>model</word>
+            <word>exemplu</word>
+            <word>formula</word>
+         </fsynset>
+         <fsynset>
+            <word>regula</word>
+            <word>practica</word>
+            <word>forma</word>
+            <word>tipic</word>
+            <word>traditie</word>
+            <word>sablon</word>
+            <word>formula</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4382647">
+      <synset_en>
+         <gloss>a custom that for a long time has been an important feature of some group or society; "the institution of marriage"; "he had become an institution in the theater"</gloss>
+         <word>institution</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>institution</eword>
+            <word>institutie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>institutie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4395253">
+      <synset_en>
+         <gloss>a problem; "is anything the matter?"</gloss>
+         <word>matter</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>fond</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>chestiune</word>
+            <word>problema</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>subiect</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>materie</word>
+            <word>substanta</word>
+         </fsynset>
+         <fsynset>
+            <word>fond</word>
+         </fsynset>
+         <fsynset>
+            <word>chestiune</word>
+            <word>problema</word>
+         </fsynset>
+         <fsynset>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </fsynset>
+         <fsynset>
+            <word>subiect</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4423204">
+      <synset_en>
+         <gloss>the complex composition of knowledge as elements and their combinations; "his lectures have no structure"</gloss>
+         <word>structure</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </fsynset>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+         <fsynset>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4451335">
+      <synset_en>
+         <gloss>the creation of a construct; the process of combining ideas into a congruous object of thought</gloss>
+         <word>construction</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>construction</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>construction</eword>
+            <word>constructie</word>
+            <word>cladire</word>
+            <word>zidire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>construction</eword>
+            <word>construire</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>construction</eword>
+            <word>cladire</word>
+            <word>constructie</word>
+            <word>structura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4459423">
+      <synset_en>
+         <gloss>the process of forming and relating ideas</gloss>
+         <word>ideation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>ideation</eword>
+            <word>ideatie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>ideatie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4460806">
+      <synset_en>
+         <gloss>preoccupation especially with one's attitudes and ethical or ideological values: "the sensitiveness of James's characters, their seeming inwardness"; "Socrates' inwardness, integrity, and inquisitiveness"</gloss>
+         <word>inwardness</word>
+      </synset_en>
+      <fsynsets></fsynsets>
+   </synset>
+   <synset offset="4476782">
+      <synset_en>
+         <gloss>an inherited pattern of thought or action</gloss>
+         <word>tradition</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>tradition</eword>
+            <word>traditie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>tradition</eword>
+            <word>traditie</word>
+            <word>datina</word>
+            <word>obicei</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>traditie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4478296">
+      <synset_en>
+         <gloss>the object upon which interest and attention focuses; "his stories made him the center of the party"</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4479581">
+      <synset_en>
+         <gloss>everything stated or assumed in a given discussion</gloss>
+         <word>universe</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>universe</eword>
+            <word>univers</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>universe</eword>
+            <word>cosmos</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>univers</word>
+         </fsynset>
+         <fsynset>
+            <word>cosmos</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4479710">
+      <synset_en>
+         <gloss>some situation or event that is thought about; "he kept drifting off the topic"; "he had been thinking about the subject for several years"; "it is a matter for the police"</gloss>
+         <word>topic</word>
+         <word>subject</word>
+         <word>issue</word>
+         <word>matter</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="5.0">
+            <eword>subject</eword>
+            <word>subiect</word>
+         </e-set>
+         <e-set score="5.0">
+            <eword>matter</eword>
+            <word>subiect</word>
+         </e-set>
+         <e-set score="4.0">
+            <eword>topic</eword>
+            <word>tema</word>
+            <word>subiect</word>
+         </e-set>
+         <e-set score="4.0">
+            <eword>subject</eword>
+            <word>subiect</word>
+            <word>tema</word>
+         </e-set>
+         <e-set score="4.0">
+            <eword>matter</eword>
+            <word>chestiune</word>
+            <word>problema</word>
+         </e-set>
+         <e-set score="2.5">
+            <eword>subject</eword>
+            <word>obiect</word>
+            <word>materie</word>
+         </e-set>
+         <e-set score="1.6666666">
+            <eword>subject</eword>
+            <word>subiect</word>
+            <word>om</word>
+            <word>individ</word>
+         </e-set>
+         <e-set score="1.6666666">
+            <eword>matter</eword>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>subject</eword>
+            <word>supus</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>iesire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>rezultat</word>
+            <word>deznodamant</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>editie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>fond</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>tema</word>
+            <word>subiect</word>
+            <word>iesire</word>
+         </fsynset>
+         <fsynset>
+            <word>tema</word>
+            <word>subiect</word>
+            <word>rezultat</word>
+            <word>deznodamant</word>
+         </fsynset>
+         <fsynset>
+            <word>tema</word>
+            <word>subiect</word>
+            <word>editie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4479997">
+      <synset_en>
+         <gloss>an important question that is in dispute and must be settled; "the issue could be settled by requiring public education for everyone"; "politicians never discuss the real issues"</gloss>
+         <word>issue</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>iesire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>rezultat</word>
+            <word>deznodamant</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>editie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>iesire</word>
+         </fsynset>
+         <fsynset>
+            <word>rezultat</word>
+            <word>deznodamant</word>
+         </fsynset>
+         <fsynset>
+            <word>editie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4495746">
+      <synset_en>
+         <gloss>a personal view; "he has an idea that we don't like him"</gloss>
+         <word>idea</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>idea</eword>
+            <word>idee</word>
+            <word>gandire</word>
+            <word>cugetare</word>
+            <word>gand</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>idea</eword>
+            <word>idee</word>
+            <word>notiune</word>
+            <word>concept</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>idea</eword>
+            <word>opinie</word>
+            <word>parere</word>
+            <word>impresie</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>idea</eword>
+            <word>idee</word>
+            <word>plan</word>
+            <word>proiect</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>idee</word>
+            <word>gandire</word>
+            <word>cugetare</word>
+            <word>gand</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="3716446">
+      <synset_en>
+         <gloss>the essential qualities or characteristics by which something is recognized; "it is the nature of fire to burn"</gloss>
+         <word>nature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>natura</word>
+         </fsynset>
+         <fsynset>
+            <word>fire</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>caracter</word>
+         </fsynset>
+         <fsynset>
+            <word>natura</word>
+            <word>fire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4502282">
+      <synset_en>
+         <gloss>(mathematics) a standard procedure for solving a class of problems; "he determined the upper bound with Descartes' rule of signs"; "he gave us a general formula for attacking polynomials"</gloss>
+         <word>rule</word>
+         <word>formula</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>rule</eword>
+            <word>formula</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>formula</eword>
+            <word>formula</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>formula</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4517355">
+      <synset_en>
+         <gloss>a rule or body of rules of conduct inherent in human nature and essential to or binding upon human society</gloss>
+         <word>law</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>lege</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>drept</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>justitie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>lege</word>
+         </fsynset>
+         <fsynset>
+            <word>drept</word>
+         </fsynset>
+         <fsynset>
+            <word>justitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4518763">
+      <synset_en>
+         <gloss>a basic truth or law or assumption: "the principles of democracy"</gloss>
+         <word>principle</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>principle</eword>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4519159">
+      <synset_en>
+         <gloss>a generalization based on recurring facts or events (in science or mathematics etc): "the laws of thermodynamics</gloss>
+         <word>law</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>lege</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>drept</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>justitie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>lege</word>
+         </fsynset>
+         <fsynset>
+            <word>drept</word>
+         </fsynset>
+         <fsynset>
+            <word>justitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4519930">
+      <synset_en>
+         <gloss>a rule or law concerning a natural phenomenon or the function of a mechanical system: "the principle of the conservation of mass"; "the principle of jet propulsion"; "the right-hand rule for inductive fields"</gloss>
+         <word>principle</word>
+         <word>rule</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.5">
+            <eword>principle</eword>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4543461">
+      <synset_en>
+         <gloss>a basic generalization that is accepted as true and that can be used as a basis for reasoning or conduct; "their principles of composition characterized all their works"</gloss>
+         <word>principle</word>
+         <word>rule</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.5">
+            <eword>principle</eword>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4560561">
+      <synset_en>
+         <gloss>a model considered worthy of imitation; "the American constitution has provided a pattern for many republics"</gloss>
+         <word>pattern</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>pattern</eword>
+            <word>model</word>
+            <word>exemplu</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>pattern</eword>
+            <word>sablon</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>model</word>
+            <word>exemplu</word>
+         </fsynset>
+         <fsynset>
+            <word>sablon</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4569663">
+      <synset_en>
+         <gloss>a belief that can guide behavior; "the architect has a theory that more is less"; "they killed him on the theory that dead men tell no tales"</gloss>
+         <word>theory</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>theory</eword>
+            <word>teorie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>theory</eword>
+            <word>speculatie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>teorie</word>
+         </fsynset>
+         <fsynset>
+            <word>speculatie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4570773">
+      <synset_en>
+         <gloss>a rule or standard especially of good behavior: "a man of principle"; "he will not violate his principles"</gloss>
+         <word>principle</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>principle</eword>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4572869">
+      <synset_en>
+         <gloss>the doctrine of an absolute being</gloss>
+         <word>absolutism</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>absolutism</eword>
+            <word>absolutism</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>absolutism</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4592375">
+      <synset_en>
+         <gloss>an organized system of accepted knowledge that applies in a variety of circumstances to explain a specific set of phenomena; "true in fact and theory"</gloss>
+         <word>theory</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>theory</eword>
+            <word>teorie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>theory</eword>
+            <word>speculatie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>teorie</word>
+         </fsynset>
+         <fsynset>
+            <word>speculatie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4395253">
+      <synset_en>
+         <gloss>a problem; "is anything the matter?"</gloss>
+         <word>matter</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>fond</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>chestiune</word>
+            <word>problema</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>matter</eword>
+            <word>subiect</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>materie</word>
+            <word>substanta</word>
+         </fsynset>
+         <fsynset>
+            <word>fond</word>
+         </fsynset>
+         <fsynset>
+            <word>chestiune</word>
+            <word>problema</word>
+         </fsynset>
+         <fsynset>
+            <word>lucru</word>
+            <word>fapt</word>
+            <word>obiect</word>
+         </fsynset>
+         <fsynset>
+            <word>subiect</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4612819">
+      <synset_en>
+         <gloss>(statistics) the entire aggregation of items from which samples can be drawn; "it is an estimate of the mean of the population"</gloss>
+         <word>population</word>
+         <word>universe</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>universe</eword>
+            <word>univers</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>universe</eword>
+            <word>cosmos</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populare</word>
+            <word>colonizare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>populatie</word>
+            <word>locuitori</word>
+            <word>univers</word>
+         </fsynset>
+         <fsynset>
+            <word>populatie</word>
+            <word>locuitori</word>
+            <word>cosmos</word>
+         </fsynset>
+         <fsynset>
+            <word>populare</word>
+            <word>colonizare</word>
+            <word>univers</word>
+         </fsynset>
+         <fsynset>
+            <word>populare</word>
+            <word>colonizare</word>
+            <word>cosmos</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4659700">
+      <synset_en>
+         <gloss>the discipline dealing with the principles of design and construction and ornamentation of fine buildings; "architecture and eloquence are mixed arts whose end is sometimes beauty and sometimes use"</gloss>
+         <word>architecture</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>architecture</eword>
+            <word>arhitectura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>arhitectura</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4729537">
+      <synset_en>
+         <gloss>a communication (usually brief) that is written or spoken or signaled; "he sent a three-word message"</gloss>
+         <word>message</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.33333334">
+            <eword>message</eword>
+            <word>prezicere</word>
+            <word>proorocire</word>
+            <word>mesaj</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>prezicere</word>
+            <word>proorocire</word>
+            <word>mesaj</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4739626">
+      <synset_en>
+         <gloss>a special or prominent article in a newspaper or magazine; "they ran a feature on retirement planning"</gloss>
+         <word>feature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>feature</eword>
+            <word>insusire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>feature</eword>
+            <word>particularitate</word>
+            <word>caracteristica</word>
+            <word>trasatura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>insusire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4761687">
+      <synset_en>
+         <gloss>(linguistics) the grammatical constituent about which something is predicated in a sentence</gloss>
+         <word>subject</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>subject</eword>
+            <word>supus</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>subject</eword>
+            <word>subiect</word>
+            <word>tema</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>subject</eword>
+            <word>subiect</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>subject</eword>
+            <word>obiect</word>
+            <word>materie</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>subject</eword>
+            <word>subiect</word>
+            <word>om</word>
+            <word>individ</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>supus</word>
+         </fsynset>
+         <fsynset>
+            <word>subiect</word>
+            <word>tema</word>
+         </fsynset>
+         <fsynset>
+            <word>subiect</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4774665">
+      <synset_en>
+         <gloss>a grammatical category of pronouns and verb forms; "stop talking about yourself in the third person"</gloss>
+         <word>person</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>person</eword>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>ins</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>person</eword>
+            <word>persoana</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>persoana</word>
+            <word>individ</word>
+            <word>ins</word>
+         </fsynset>
+         <fsynset>
+            <word>persoana</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4803894">
+      <synset_en>
+         <gloss>a traditional story accepted as history; serves to explain the world view of a people</gloss>
+         <word>myth</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>myth</eword>
+            <word>mit</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>myth</eword>
+            <word>legenda</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>mit</word>
+         </fsynset>
+         <fsynset>
+            <word>legenda</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4904589">
+      <synset_en>
+         <gloss>one of a set of rules governing a particular activity or a legal document setting forth such a rule; "there is a law against kidnapping"</gloss>
+         <word>law</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>lege</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>drept</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>law</eword>
+            <word>justitie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>lege</word>
+         </fsynset>
+         <fsynset>
+            <word>drept</word>
+         </fsynset>
+         <fsynset>
+            <word>justitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4910954">
+      <synset_en>
+         <gloss>a law forbidding the sale of alcoholic beverages; "in 1920 the 18th amendment to the Constitution established prohibition in the US"</gloss>
+         <word>prohibition</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>oprire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>prohibitie</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>prohibition</eword>
+            <word>interzicere</word>
+            <word>prohibire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>oprire</word>
+         </fsynset>
+         <fsynset>
+            <word>prohibitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4102587">
+      <synset_en>
+         <gloss>the fatty network of connective tissue that fills the cavities of bones</gloss>
+         <word>marrow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>marrow</eword>
+            <word>maduva</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>marrow</eword>
+            <word>esenta</word>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>maduva</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4911144">
+      <synset_en>
+         <gloss>a decree that prohibits something</gloss>
+         <word>prohibition</word>
+         <word>ban</word>
+         <word>interdiction</word>
+         <word>proscription</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="5.0">
+            <eword>prohibition</eword>
+            <word>oprire</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>ban</eword>
+            <word>interzicere</word>
+            <word>opreliste</word>
+            <word>interdictie</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>interdiction</eword>
+            <word>interdictie</word>
+         </e-set>
+         <e-set score="1.5">
+            <eword>prohibition</eword>
+            <word>interzicere</word>
+            <word>prohibire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>prohibitie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>ban</eword>
+            <word>ban</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>interdiction</eword>
+            <word>interdict</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>interdiction</eword>
+            <word>interzicere</word>
+            <word>nepermitere</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>ban</eword>
+            <word>anatema</word>
+            <word>blestem</word>
+            <word>excomunicare</word>
+            <word>afurisenie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>oprire</word>
+            <word>interzicere</word>
+            <word>opreliste</word>
+            <word>interdictie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4961534">
+      <synset_en>
+         <gloss>the principal (full-length) film in a program at a movie theater; "the feature tonight is `Casablanca'"</gloss>
+         <word>feature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>feature</eword>
+            <word>insusire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>feature</eword>
+            <word>particularitate</word>
+            <word>caracteristica</word>
+            <word>trasatura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>insusire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4988375">
+      <synset_en>
+         <gloss>a systematic body of regulations defining the way of life of members of a religious order; "the rule of St. Dominic"</gloss>
+         <word>rule</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>rigla</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4991006">
+      <synset_en>
+         <gloss>rule of personal conduct</gloss>
+         <word>principle</word>
+         <word>precept</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.5">
+            <eword>precept</eword>
+            <word>precept</word>
+            <word>regula</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>principle</eword>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>principiu</word>
+            <word>regula</word>
+            <word>lege</word>
+            <word>axioma</word>
+            <word>precept</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5046657">
+      <synset_en>
+         <gloss>a conventionalized statement expressing some fundamental principle</gloss>
+         <word>formula</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>formula</eword>
+            <word>formula</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>formula</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5075369">
+      <synset_en>
+         <gloss>(diplomacy) an international agreement</gloss>
+         <word>convention</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.6666667">
+            <eword>convention</eword>
+            <word>adunare</word>
+            <word>intrunire</word>
+            <word>congres</word>
+         </e-set>
+         <e-set score="0.42857143">
+            <eword>convention</eword>
+            <word>conventie</word>
+            <word>acord</word>
+            <word>contract</word>
+            <word>invoiala</word>
+            <word>intelegere</word>
+            <word>pact</word>
+            <word>tratat</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>convention</eword>
+            <word>obicei</word>
+            <word>uzanta</word>
+            <word>conventie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>adunare</word>
+            <word>intrunire</word>
+            <word>congres</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5084634">
+      <synset_en>
+         <gloss>directions that define the way a game or sport is to be conducted; "he knew the rules of chess"</gloss>
+         <word>rule</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>rigla</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5093861">
+      <synset_en>
+         <gloss>an indication of the approach of something or someone</gloss>
+         <word>harbinger</word>
+         <word>forerunner</word>
+         <word>herald</word>
+         <word>precursor</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="4.0">
+            <eword>herald</eword>
+            <word>inaintas</word>
+            <word>premergator</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>forerunner</eword>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>forerunner</eword>
+            <word>prevestitor</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>precursor</eword>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+         </e-set>
+         <e-set score="2.75">
+            <eword>harbinger</eword>
+            <word>mesager</word>
+            <word>sol</word>
+            <word>vestitor</word>
+            <word>prevestitor</word>
+         </e-set>
+         <e-set score="1.6">
+            <eword>herald</eword>
+            <word>crainic</word>
+            <word>pristav</word>
+            <word>vestitor</word>
+            <word>mesager</word>
+            <word>trimis</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>mesager</word>
+            <word>sol</word>
+            <word>vestitor</word>
+            <word>prevestitor</word>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5105747">
+      <synset_en>
+         <gloss>a representation of a substance using symbols for its constituent elements</gloss>
+         <word>formula</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>formula</eword>
+            <word>formula</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>formula</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5258426">
+      <synset_en>
+         <gloss>a subdivision of a play or opera or ballet</gloss>
+         <word>act</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>act</eword>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>act</eword>
+            <word>act</word>
+            <word>titlu</word>
+            <word>document</word>
+         </e-set>
+         <e-set score="0.16666667">
+            <eword>act</eword>
+            <word>act</word>
+            <word>lege</word>
+            <word>edict</word>
+            <word>decret</word>
+            <word>hotarare</word>
+            <word>rezolutie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5261742">
+      <synset_en>
+         <gloss>a manifestation of insincerity; "he put on quite an act for her benefit"</gloss>
+         <word>act</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>act</eword>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>act</eword>
+            <word>act</word>
+            <word>titlu</word>
+            <word>document</word>
+         </e-set>
+         <e-set score="0.16666667">
+            <eword>act</eword>
+            <word>act</word>
+            <word>lege</word>
+            <word>edict</word>
+            <word>decret</word>
+            <word>hotarare</word>
+            <word>rezolutie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5355066">
+      <synset_en>
+         <gloss>the act of making a proposal; "they listened to her proposal"</gloss>
+         <word>proposal</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>proposal</eword>
+            <word>propunere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>proposal</eword>
+            <word>oferta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>proposal</eword>
+            <word>oferta</word>
+            <word>cerere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>propunere</word>
+         </fsynset>
+         <fsynset>
+            <word>oferta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5355200">
+      <synset_en>
+         <gloss>an offer of marriage</gloss>
+         <word>proposal</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>proposal</eword>
+            <word>propunere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>proposal</eword>
+            <word>oferta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>proposal</eword>
+            <word>oferta</word>
+            <word>cerere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>propunere</word>
+         </fsynset>
+         <fsynset>
+            <word>oferta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5355488">
+      <synset_en>
+         <gloss>something proposed (as a plan)</gloss>
+         <word>proposal</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>proposal</eword>
+            <word>propunere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>proposal</eword>
+            <word>oferta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>proposal</eword>
+            <word>oferta</word>
+            <word>cerere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>propunere</word>
+         </fsynset>
+         <fsynset>
+            <word>oferta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5382699">
+      <synset_en>
+         <gloss>an assertion that something alleged is not true</gloss>
+         <word>denial</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>denial</eword>
+            <word>negare</word>
+            <word>tagaduire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>denial</eword>
+            <word>dezmintire</word>
+            <word>negare</word>
+            <word>contrazicere</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>denial</eword>
+            <word>renegare</word>
+            <word>dezicere</word>
+            <word>nerecunoastere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>negare</word>
+            <word>tagaduire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5382817">
+      <synset_en>
+         <gloss>the act of refusing a request; "it resulted in a complete denial of his privileges"</gloss>
+         <word>denial</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>denial</eword>
+            <word>negare</word>
+            <word>tagaduire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>denial</eword>
+            <word>dezmintire</word>
+            <word>negare</word>
+            <word>contrazicere</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>denial</eword>
+            <word>renegare</word>
+            <word>dezicere</word>
+            <word>nerecunoastere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>negare</word>
+            <word>tagaduire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5384844">
+      <synset_en>
+         <gloss>the speech act of rejecting</gloss>
+         <word>rejection</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rejection</eword>
+            <word>respingere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rejection</eword>
+            <word>rebutare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>respingere</word>
+         </fsynset>
+         <fsynset>
+            <word>rebutare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5414688">
+      <synset_en>
+         <gloss>refusal to approve or assent to</gloss>
+         <word>prohibition</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>oprire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>prohibitie</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>prohibition</eword>
+            <word>interzicere</word>
+            <word>prohibire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>oprire</word>
+         </fsynset>
+         <fsynset>
+            <word>prohibitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5414813">
+      <synset_en>
+         <gloss>authoritative prohibition</gloss>
+         <word>interdiction</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>interdiction</eword>
+            <word>interdictie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>interdiction</eword>
+            <word>interdict</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>interdiction</eword>
+            <word>interzicere</word>
+            <word>nepermitere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>interdictie</word>
+         </fsynset>
+         <fsynset>
+            <word>interdict</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5418414">
+      <synset_en>
+         <gloss>a rule describing (or prescribing) a linguistic practice</gloss>
+         <word>rule</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>rigla</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="4451335">
+      <synset_en>
+         <gloss>the creation of a construct; the process of combining ideas into a congruous object of thought</gloss>
+         <word>construction</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>construction</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>construction</eword>
+            <word>constructie</word>
+            <word>cladire</word>
+            <word>zidire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>construction</eword>
+            <word>construire</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>construction</eword>
+            <word>cladire</word>
+            <word>constructie</word>
+            <word>structura</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5414897">
+      <synset_en>
+         <gloss>an official prohibition</gloss>
+         <word>ban</word>
+         <word>banning</word>
+         <word>forbiddance</word>
+         <word>forbidding</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.6666666">
+            <eword>ban</eword>
+            <word>interzicere</word>
+            <word>opreliste</word>
+            <word>interdictie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>ban</eword>
+            <word>ban</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>banning</eword>
+            <word>interzicere</word>
+            <word>oprire</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>ban</eword>
+            <word>anatema</word>
+            <word>blestem</word>
+            <word>excomunicare</word>
+            <word>afurisenie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>interzicere</word>
+            <word>opreliste</word>
+            <word>interdictie</word>
+            <word>oprire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5425814">
+      <synset_en>
+         <gloss>(computer science) a graphic symbol (usually a simple picture) that denotes a program or a command or a data file or a concept in a graphical user interface</gloss>
+         <word>icon</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>icon</eword>
+            <word>icoana</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>icoana</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5462231">
+      <synset_en>
+         <gloss>an event (or course of events) that will inevitably happen in the future</gloss>
+         <word>destiny</word>
+         <word>fate</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>destiny</eword>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>fate</eword>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5561259">
+      <synset_en>
+         <gloss>a feeling of considerable warmth; "the glow of new love"; "a glow of regret"</gloss>
+         <word>glow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>glow</eword>
+            <word>dogoare</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>glow</eword>
+            <word>foc</word>
+            <word>roseata</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>glow</eword>
+            <word>foc</word>
+            <word>vapaie</word>
+            <word>valvataie</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>glow</eword>
+            <word>ignitie</word>
+            <word>incandescenta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>glow</eword>
+            <word>roseata</word>
+            <word>imbujorare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>dogoare</word>
+         </fsynset>
+         <fsynset>
+            <word>foc</word>
+            <word>roseata</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5563581">
+      <synset_en>
+         <gloss>an absence of emotion or enthusiasm</gloss>
+         <word>apathy</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>apathy</eword>
+            <word>apatie</word>
+            <word>nepasare</word>
+            <word>indiferenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>apatie</word>
+            <word>nepasare</word>
+            <word>indiferenta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5579322">
+      <synset_en>
+         <gloss>unbiased impartial unconcern</gloss>
+         <word>indifference</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>indifference</eword>
+            <word>indiferenta</word>
+            <word>nepasare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>indiferenta</word>
+            <word>nepasare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5694720">
+      <synset_en>
+         <gloss>the flesh of animals (including fishes and birds and snails) used as food</gloss>
+         <word>meat</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>meat</eword>
+            <word>carne</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>carne</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5696348">
+      <synset_en>
+         <gloss>a firm rather dry variety meat (usually beef or veal); "a five-pound beef heart will serve six"</gloss>
+         <word>heart</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>inima</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>suflet</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>cupa</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>heart</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>inima</word>
+         </fsynset>
+         <fsynset>
+            <word>suflet</word>
+         </fsynset>
+         <fsynset>
+            <word>cupa</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5754753">
+      <synset_en>
+         <gloss>large elongated squash with creamy to deep green skins</gloss>
+         <word>marrow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>marrow</eword>
+            <word>maduva</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>marrow</eword>
+            <word>esenta</word>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>maduva</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5876439">
+      <synset_en>
+         <gloss>a liquid food for infants</gloss>
+         <word>formula</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>formula</eword>
+            <word>formula</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>formula</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5900756">
+      <synset_en>
+         <gloss>very tender and very nutritious tissue from marrowbones</gloss>
+         <word>marrow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>marrow</eword>
+            <word>maduva</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>marrow</eword>
+            <word>esenta</word>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>maduva</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5968150">
+      <synset_en>
+         <gloss>the final aggregate; "the sum of all our troubles did not equal the misery they suffered"</gloss>
+         <word>sum</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.33333334">
+            <eword>sum</eword>
+            <word>suma</word>
+            <word>total</word>
+            <word>rezultat</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>suma</word>
+            <word>total</word>
+            <word>rezultat</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6079663">
+      <synset_en>
+         <gloss>a group of organisms of the same species populating a given area; "they hired hunters to keep down the deer population"</gloss>
+         <word>population</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populare</word>
+            <word>colonizare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </fsynset>
+         <fsynset>
+            <word>populare</word>
+            <word>colonizare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6080139">
+      <synset_en>
+         <gloss>the people who inhabit a territory or state; "the population seemd to be well fed and clothed"</gloss>
+         <word>population</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populare</word>
+            <word>colonizare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </fsynset>
+         <fsynset>
+            <word>populare</word>
+            <word>colonizare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6126401">
+      <synset_en>
+         <gloss>a formal or official social gathering or ceremony; "it was a black-tie function"</gloss>
+         <word>function</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+            <word>functiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+            <word>activitate</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>functie</word>
+            <word>functiune</word>
+         </fsynset>
+         <fsynset>
+            <word>functie</word>
+            <word>activitate</word>
+         </fsynset>
+         <fsynset>
+            <word>functie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6141801">
+      <synset_en>
+         <gloss>the whole collection of existing things</gloss>
+         <word>universe</word>
+         <word>cosmos</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>universe</eword>
+            <word>univers</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>universe</eword>
+            <word>cosmos</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>cosmos</eword>
+            <word>cosmos</word>
+            <word>univers</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>cosmos</eword>
+            <word>lume</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>univers</word>
+            <word>cosmos</word>
+         </fsynset>
+         <fsynset>
+            <word>univers</word>
+            <word>lume</word>
+         </fsynset>
+         <fsynset>
+            <word>cosmos</word>
+            <word>lume</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6199619">
+      <synset_en>
+         <gloss>the people in a society considered as a system organized by a characteristic pattern of relationships; "the social organization of England and America is very different"; "sociologists have studied the changing structure of the family"</gloss>
+         <word>structure</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>constructie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>structure</eword>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>structura</word>
+            <word>constructie</word>
+            <word>textura</word>
+            <word>compozitie</word>
+            <word>organizare</word>
+            <word>alcatuire</word>
+         </fsynset>
+         <fsynset>
+            <word>constructie</word>
+         </fsynset>
+         <fsynset>
+            <word>edificiu</word>
+            <word>cladire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6200584">
+      <synset_en>
+         <gloss>a social system that provides separate facilities for minority groups</gloss>
+         <word>segregation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>segregation</eword>
+            <word>segregare</word>
+            <word>segregatie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>segregation</eword>
+            <word>segregatie</word>
+            <word>segregare</word>
+            <word>discriminare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>segregare</word>
+            <word>segregatie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6216338">
+      <synset_en>
+         <gloss>an institution supported by an endowment</gloss>
+         <word>foundation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>baza</word>
+            <word>temei</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>foundation</eword>
+            <word>intemeiere</word>
+            <word>infiintare</word>
+            <word>fondare</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>foundation</eword>
+            <word>fundatie</word>
+            <word>ctitorie</word>
+            <word>asezamant</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </fsynset>
+         <fsynset>
+            <word>baza</word>
+            <word>temei</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6223906">
+      <synset_en>
+         <gloss>politically moderate persons; centrists</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6240467">
+      <synset_en>
+         <gloss>a large formal assembly; "political convention"</gloss>
+         <word>convention</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.6666667">
+            <eword>convention</eword>
+            <word>adunare</word>
+            <word>intrunire</word>
+            <word>congres</word>
+         </e-set>
+         <e-set score="0.42857143">
+            <eword>convention</eword>
+            <word>conventie</word>
+            <word>acord</word>
+            <word>contract</word>
+            <word>invoiala</word>
+            <word>intelegere</word>
+            <word>pact</word>
+            <word>tratat</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>convention</eword>
+            <word>obicei</word>
+            <word>uzanta</word>
+            <word>conventie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>adunare</word>
+            <word>intrunire</word>
+            <word>congres</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6260976">
+      <synset_en>
+         <gloss>the middle of a military or naval formation; "they had to reinforce the center"</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6265498">
+      <synset_en>
+         <gloss>the path that is prescribed for an airplane that is preparing to land at an airport; "the traffic patterns around O'Hare are very crowded"; "they stayed in the pattern until the fog lifted"</gloss>
+         <word>pattern</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>pattern</eword>
+            <word>model</word>
+            <word>exemplu</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>pattern</eword>
+            <word>sablon</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>model</word>
+            <word>exemplu</word>
+         </fsynset>
+         <fsynset>
+            <word>sablon</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6295554">
+      <synset_en>
+         <gloss>an English town that forms the constituency of a member of Parliament</gloss>
+         <word>borough</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>borough</eword>
+            <word>orasel</word>
+            <word>targ</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>borough</eword>
+            <word>targ</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>orasel</word>
+            <word>targ</word>
+         </fsynset>
+         <fsynset>
+            <word>targ</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6296070">
+      <synset_en>
+         <gloss>one of the administrative divisions of a large city</gloss>
+         <word>borough</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>borough</eword>
+            <word>orasel</word>
+            <word>targ</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>borough</eword>
+            <word>targ</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>orasel</word>
+            <word>targ</word>
+         </fsynset>
+         <fsynset>
+            <word>targ</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6298384">
+      <synset_en>
+         <gloss>the center of an object; "do not eat the apple core"</gloss>
+         <word>core</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>core</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </e-set>
+         <e-set score="0.4">
+            <eword>core</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>substanta</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="5261742">
+      <synset_en>
+         <gloss>a manifestation of insincerity; "he put on quite an act for her benefit"</gloss>
+         <word>act</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>act</eword>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>act</eword>
+            <word>act</word>
+            <word>titlu</word>
+            <word>document</word>
+         </e-set>
+         <e-set score="0.16666667">
+            <eword>act</eword>
+            <word>act</word>
+            <word>lege</word>
+            <word>edict</word>
+            <word>decret</word>
+            <word>hotarare</word>
+            <word>rezolutie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>fapta</word>
+            <word>fapt</word>
+            <word>act</word>
+            <word>actiune</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6385742">
+      <synset_en>
+         <gloss>a parcel of land having fixed boundaries; "he bought a lot on the lake"</gloss>
+         <word>lot</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>lot</eword>
+            <word>parte</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>lot</eword>
+            <word>lot</word>
+            <word>parcela</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>lot</eword>
+            <word>gramada</word>
+            <word>droaie</word>
+            <word>grup</word>
+            <word>ceata</word>
+            <word>banda</word>
+            <word>gasca</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>lot</eword>
+            <word>gramada</word>
+            <word>puzderie</word>
+            <word>multime</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>lot</eword>
+            <word>noroc</word>
+            <word>soarta</word>
+            <word>ursita</word>
+            <word>destin</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>parte</word>
+         </fsynset>
+         <fsynset>
+            <word>lot</word>
+            <word>parcela</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6671498">
+      <synset_en>
+         <gloss>a cylindrical sample of soil or rock obtained with a hollow drill</gloss>
+         <word>core</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>core</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </e-set>
+         <e-set score="0.4">
+            <eword>core</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>substanta</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6684818">
+      <synset_en>
+         <gloss>a part of the earth that can be considered separately; "the outdoor world"; "the world of insects"</gloss>
+         <word>world</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>world</eword>
+            <word>lume</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>world</eword>
+            <word>univers</word>
+            <word>cosmos</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>lume</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6691078">
+      <synset_en>
+         <gloss>everything that exists anywhere; "they study the evolution of the universe"; "the biggest tree in existence"</gloss>
+         <word>universe</word>
+         <word>existence</word>
+         <word>nature</word>
+         <word>creation</word>
+         <word>world</word>
+         <word>cosmos</word>
+         <word>macrocosm</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="7.0">
+            <eword>world</eword>
+            <word>lume</word>
+         </e-set>
+         <e-set score="7.0">
+            <eword>cosmos</eword>
+            <word>lume</word>
+         </e-set>
+         <e-set score="5.3333335">
+            <eword>creation</eword>
+            <word>lume</word>
+            <word>univers</word>
+            <word>natura</word>
+         </e-set>
+         <e-set score="5.0">
+            <eword>universe</eword>
+            <word>univers</word>
+         </e-set>
+         <e-set score="4.5">
+            <eword>world</eword>
+            <word>univers</word>
+            <word>cosmos</word>
+         </e-set>
+         <e-set score="4.0">
+            <eword>cosmos</eword>
+            <word>cosmos</word>
+            <word>univers</word>
+         </e-set>
+         <e-set score="3.5">
+            <eword>macrocosm</eword>
+            <word>macrocosm</word>
+            <word>univers</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>universe</eword>
+            <word>cosmos</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.3333334">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>creation</eword>
+            <word>creatie</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>existence</eword>
+            <word>existenta</word>
+            <word>fiintare</word>
+            <word>vietuire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>creation</eword>
+            <word>creare</word>
+            <word>faurire</word>
+            <word>zamislire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>existence</eword>
+            <word>prezenta</word>
+            <word>existenta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>existence</eword>
+            <word>fiinta</word>
+            <word>vietuitoare</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>univers</word>
+            <word>existenta</word>
+            <word>fiintare</word>
+            <word>vietuire</word>
+            <word>fire</word>
+            <word>lume</word>
+            <word>natura</word>
+            <word>macrocosm</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6779937">
+      <synset_en>
+         <gloss>the central part of the earth</gloss>
+         <word>core</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>core</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </e-set>
+         <e-set score="0.4">
+            <eword>core</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>substanta</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>inima</word>
+            <word>interior</word>
+            <word>strafund</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6859873">
+      <synset_en>
+         <gloss>a being (usually female) imagined to have special powers derived from the devil</gloss>
+         <word>witch</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>witch</eword>
+            <word>vrajitoare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>vrajitoare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6860237">
+      <synset_en>
+         <gloss>a causal agent creating and controlling things in the universe; "nature has seen to it that men are stronger than women"</gloss>
+         <word>nature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>natura</word>
+         </fsynset>
+         <fsynset>
+            <word>fire</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>caracter</word>
+         </fsynset>
+         <fsynset>
+            <word>natura</word>
+            <word>fire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="6953813">
+      <synset_en>
+         <gloss>a person who goes before or announces the coming of another</gloss>
+         <word>precursor</word>
+         <word>forerunner</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>precursor</eword>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>forerunner</eword>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>forerunner</eword>
+            <word>prevestitor</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+         </fsynset>
+         <fsynset>
+            <word>precursor</word>
+            <word>premergator</word>
+            <word>inaintas</word>
+            <word>prevestitor</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7764306">
+      <synset_en>
+         <gloss>all non-artificial phenomena</gloss>
+         <word>nature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>natura</word>
+         </fsynset>
+         <fsynset>
+            <word>fire</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>caracter</word>
+         </fsynset>
+         <fsynset>
+            <word>natura</word>
+            <word>fire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7065692">
+      <synset_en>
+         <gloss>a person who pleads for a cause or idea</gloss>
+         <word>advocate</word>
+         <word>proponent</word>
+         <word>exponent</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>advocate</eword>
+            <word>avocat</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>exponent</eword>
+            <word>exponent</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>proponent</eword>
+            <word>sustinator</word>
+            <word>partizan</word>
+            <word>adept</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>advocate</eword>
+            <word>aderent</word>
+            <word>adept</word>
+            <word>partizan</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>exponent</eword>
+            <word>interpret</word>
+            <word>indrumator</word>
+            <word>talmacitor</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>exponent</eword>
+            <word>exponent</word>
+            <word>factor</word>
+            <word>reprezentant</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>avocat</word>
+            <word>sustinator</word>
+            <word>partizan</word>
+            <word>adept</word>
+            <word>exponent</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7073019">
+      <synset_en>
+         <gloss>an informal representative; "an ambassador of good will"</gloss>
+         <word>ambassador</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>ambassador</eword>
+            <word>ambasador</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>ambasador</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7077004">
+      <synset_en>
+         <gloss>reads news, commercials on radio or television</gloss>
+         <word>announcer</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>announcer</eword>
+            <word>vestitor</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>announcer</eword>
+            <word>crainic</word>
+            <word>spicher</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>vestitor</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7077535">
+      <synset_en>
+         <gloss>someone who proclaims a message publicly</gloss>
+         <word>announcer</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>announcer</eword>
+            <word>vestitor</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>announcer</eword>
+            <word>crainic</word>
+            <word>spicher</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>vestitor</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7146075">
+      <synset_en>
+         <gloss>(football) the person who plays center on the line of scrimmage; "the center fumbled the handoff"</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7146225">
+      <synset_en>
+         <gloss>(basketball) the person who plays center</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7146318">
+      <synset_en>
+         <gloss>(ice_hockey) the person who plays center</gloss>
+         <word>center</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>center</eword>
+            <word>centru</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>center</eword>
+            <word>oras</word>
+            <word>centru</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>centru</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7157546">
+      <synset_en>
+         <gloss>a native or naturalized member of a state or other political community</gloss>
+         <word>citizen</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>citizen</eword>
+            <word>cetatean</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>cetatean</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7167670">
+      <synset_en>
+         <gloss>a journalist who writes editorials</gloss>
+         <word>columnist</word>
+         <word>editorialist</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.33333334">
+            <eword>columnist</eword>
+            <word>comentator</word>
+            <word>foiletonist</word>
+            <word>redactor</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>comentator</word>
+            <word>foiletonist</word>
+            <word>redactor</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7187176">
+      <synset_en>
+         <gloss>someone who has supervisory duties at a summer camp</gloss>
+         <word>counselor</word>
+         <word>counsellor</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>counselor</eword>
+            <word>sfatuitor</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>counselor</eword>
+            <word>consilier</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>counselor</eword>
+            <word>sfetnic</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>counsellor</eword>
+            <word>sfatuitor</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>counsellor</eword>
+            <word>consilier</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>counsellor</eword>
+            <word>sfetnic</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>sfatuitor</word>
+         </fsynset>
+         <fsynset>
+            <word>sfatuitor</word>
+            <word>consilier</word>
+         </fsynset>
+         <fsynset>
+            <word>sfatuitor</word>
+            <word>sfetnic</word>
+         </fsynset>
+         <fsynset>
+            <word>consilier</word>
+         </fsynset>
+         <fsynset>
+            <word>consilier</word>
+            <word>sfetnic</word>
+         </fsynset>
+         <fsynset>
+            <word>sfetnic</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7316863">
+      <synset_en>
+         <gloss>(formal) a person who announces important news; "the chieftain had a herald who announced his arrival with a trumpet"</gloss>
+         <word>herald</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.4">
+            <eword>herald</eword>
+            <word>crainic</word>
+            <word>pristav</word>
+            <word>vestitor</word>
+            <word>mesager</word>
+            <word>trimis</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>crainic</word>
+            <word>pristav</word>
+            <word>vestitor</word>
+            <word>mesager</word>
+            <word>trimis</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7337458">
+      <synset_en>
+         <gloss>a single organism</gloss>
+         <word>individual</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>individual</eword>
+            <word>persoana</word>
+            <word>individ</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>persoana</word>
+            <word>individ</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7470093">
+      <synset_en>
+         <gloss>one who personifies an abstract quality</gloss>
+         <word>personification</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>personification</eword>
+            <word>personificare</word>
+            <word>intruchipare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>personificare</word>
+            <word>intruchipare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7506902">
+      <synset_en>
+         <gloss>someone who speaks by divine inspiration; someone who is an interpreter of the will of God</gloss>
+         <word>prophet</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>prophet</eword>
+            <word>profet</word>
+            <word>proroc</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>profet</word>
+            <word>proroc</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7550283">
+      <synset_en>
+         <gloss>a student who holds a scholarship</gloss>
+         <word>scholar</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>scholar</eword>
+            <word>savant</word>
+            <word>erudit</word>
+            <word>carturar</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>scholar</eword>
+            <word>elev</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>scholar</eword>
+            <word>bursier</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>savant</word>
+            <word>erudit</word>
+            <word>carturar</word>
+         </fsynset>
+         <fsynset>
+            <word>elev</word>
+         </fsynset>
+         <fsynset>
+            <word>bursier</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7691800">
+      <synset_en>
+         <gloss>not very intelligent or interested in culture</gloss>
+         <word>yokel</word>
+         <word>rube</word>
+         <word>hick</word>
+         <word>yahoo</word>
+         <word>hayseed</word>
+         <word>bumpkin</word>
+         <word>chawbacon</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.6666667">
+            <eword>yahoo</eword>
+            <word>neghiob</word>
+            <word>tont</word>
+            <word>prost</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>bumpkin</eword>
+            <word>badaran</word>
+            <word>toparlan</word>
+            <word>necioplit</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>neghiob</word>
+            <word>tont</word>
+            <word>prost</word>
+            <word>badaran</word>
+            <word>toparlan</word>
+            <word>necioplit</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7764306">
+      <synset_en>
+         <gloss>all non-artificial phenomena</gloss>
+         <word>nature</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>fire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>esenta</word>
+            <word>caracter</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>nature</eword>
+            <word>caracter</word>
+            <word>temperament</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>nature</eword>
+            <word>natura</word>
+            <word>specie</word>
+            <word>fel</word>
+            <word>gen</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>natura</word>
+         </fsynset>
+         <fsynset>
+            <word>fire</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>caracter</word>
+         </fsynset>
+         <fsynset>
+            <word>natura</word>
+            <word>fire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7770258">
+      <synset_en>
+         <gloss>an unknown and unpredictable phenomenon that leads to a favorable outcome; "it was my good luck to be there"; "they say luck is a lady"; "it was as if fortune guided his hand"</gloss>
+         <word>luck</word>
+         <word>fortune</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>luck</eword>
+            <word>noroc</word>
+            <word>sansa</word>
+         </e-set>
+         <e-set score="1.75">
+            <eword>fortune</eword>
+            <word>noroc</word>
+            <word>succes</word>
+            <word>sansa</word>
+            <word>reusita</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>fortune</eword>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>luck</eword>
+            <word>destin</word>
+            <word>soarta</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>fortune</eword>
+            <word>bogatie</word>
+            <word>avere</word>
+            <word>prosperitate</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>noroc</word>
+            <word>sansa</word>
+            <word>succes</word>
+            <word>reusita</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="7813148">
+      <synset_en>
+         <gloss>light not due to incandescence; occurs at low temperatures</gloss>
+         <word>luminescence</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>luminescence</eword>
+            <word>luminescenta</word>
+            <word>fosforescenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>luminescenta</word>
+            <word>fosforescenta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="8265717">
+      <synset_en>
+         <gloss>any of various mostly Mexican herbs of the genus Cosmos having radiate heads of variously colored flowers and pinnate leaves; popular fall-blooming annuals</gloss>
+         <word>cosmos</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>cosmos</eword>
+            <word>cosmos</word>
+            <word>univers</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>cosmos</eword>
+            <word>lume</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>cosmos</word>
+            <word>univers</word>
+         </fsynset>
+         <fsynset>
+            <word>lume</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="8462946">
+      <synset_en>
+         <gloss>a single whole grain of a cereal: "a kernel of corn"</gloss>
+         <word>kernel</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>kernel</eword>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>kernel</eword>
+            <word>nucleu</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>kernel</eword>
+            <word>graunte</word>
+            <word>sambure</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>kernel</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>sambure</word>
+         </fsynset>
+         <fsynset>
+            <word>nucleu</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="8465444">
+      <synset_en>
+         <gloss>any of various squash plants grown for their elongated fruit with smooth dark green skin and whitish flesh</gloss>
+         <word>marrow</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>marrow</eword>
+            <word>maduva</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>marrow</eword>
+            <word>esenta</word>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>maduva</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9388702">
+      <synset_en>
+         <gloss>soft spongelike central cylinder of the stems of most flowering plants</gloss>
+         <word>pith</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>pith</eword>
+            <word>maduva</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>maduva</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9425258">
+      <synset_en>
+         <gloss>the inner and usually edible part of a seed or grain or nut or fruit stone: "black walnut kernels are difficult to get out of the shell"</gloss>
+         <word>kernel</word>
+         <word>meat</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="2.0">
+            <eword>meat</eword>
+            <word>miez</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>kernel</eword>
+            <word>miez</word>
+            <word>sambure</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>kernel</eword>
+            <word>nucleu</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>meat</eword>
+            <word>carne</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>meat</eword>
+            <word>miez</word>
+            <word>esenta</word>
+            <word>esential</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>kernel</eword>
+            <word>graunte</word>
+            <word>sambure</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>kernel</eword>
+            <word>fond</word>
+            <word>miez</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>miez</word>
+            <word>sambure</word>
+         </fsynset>
+         <fsynset>
+            <word>nucleu</word>
+            <word>miez</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9626162">
+      <synset_en>
+         <gloss>supplies (as food or clothing or ammunition) issued by the government</gloss>
+         <word>issue</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>iesire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>rezultat</word>
+            <word>deznodamant</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>issue</eword>
+            <word>editie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>iesire</word>
+         </fsynset>
+         <fsynset>
+            <word>rezultat</word>
+            <word>deznodamant</word>
+         </fsynset>
+         <fsynset>
+            <word>editie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9628697">
+      <synset_en>
+         <gloss>a large amount of wealth or prosperity</gloss>
+         <word>fortune</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.33333334">
+            <eword>fortune</eword>
+            <word>bogatie</word>
+            <word>avere</word>
+            <word>prosperitate</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>fortune</eword>
+            <word>noroc</word>
+            <word>succes</word>
+            <word>sansa</word>
+            <word>reusita</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>bogatie</word>
+            <word>avere</word>
+            <word>prosperitate</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9722543">
+      <synset_en>
+         <gloss>a defense mechanism that denies painful thoughts</gloss>
+         <word>denial</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>denial</eword>
+            <word>negare</word>
+            <word>tagaduire</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>denial</eword>
+            <word>dezmintire</word>
+            <word>negare</word>
+            <word>contrazicere</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>denial</eword>
+            <word>renegare</word>
+            <word>dezicere</word>
+            <word>nerecunoastere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>negare</word>
+            <word>tagaduire</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9848050">
+      <synset_en>
+         <gloss>100 bani equal 1 leu</gloss>
+         <word>ban</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>ban</eword>
+            <word>ban</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>ban</eword>
+            <word>interzicere</word>
+            <word>opreliste</word>
+            <word>interdictie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>ban</eword>
+            <word>anatema</word>
+            <word>blestem</word>
+            <word>excomunicare</word>
+            <word>afurisenie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>ban</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9924436">
+      <synset_en>
+         <gloss>the number of inhabitants in a given place (country or city etc.); "people come and go, but the population of this town has remained approximately constant for the past decade"</gloss>
+         <word>population</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>population</eword>
+            <word>populare</word>
+            <word>colonizare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>populatie</word>
+            <word>locuitori</word>
+         </fsynset>
+         <fsynset>
+            <word>populare</word>
+            <word>colonizare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9925412">
+      <synset_en>
+         <gloss>a relation such that one thing is dependent on another; "height is a function of age"; "price is a function of supply and demand"</gloss>
+         <word>function</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+            <word>functiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+            <word>activitate</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>functie</word>
+            <word>functiune</word>
+         </fsynset>
+         <fsynset>
+            <word>functie</word>
+            <word>activitate</word>
+         </fsynset>
+         <fsynset>
+            <word>functie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9926856">
+      <synset_en>
+         <gloss>a mathematical relation such that each element of one set is associated with at least one element of another set</gloss>
+         <word>function</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+            <word>functiune</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+            <word>activitate</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>function</eword>
+            <word>functie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>functie</word>
+            <word>functiune</word>
+         </fsynset>
+         <fsynset>
+            <word>functie</word>
+            <word>activitate</word>
+         </fsynset>
+         <fsynset>
+            <word>functie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9927401">
+      <synset_en>
+         <gloss>a function that changes the position or direction of the axes of a coordinate system</gloss>
+         <word>transformation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>transformation</eword>
+            <word>transformare</word>
+            <word>schimbare</word>
+            <word>prefacere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>transformation</eword>
+            <word>transformare</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>transformation</eword>
+            <word>metamorfoza</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>transformare</word>
+            <word>schimbare</word>
+            <word>prefacere</word>
+         </fsynset>
+         <fsynset>
+            <word>transformare</word>
+         </fsynset>
+         <fsynset>
+            <word>metamorfoza</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9930416">
+      <synset_en>
+         <gloss>the basis on which something is grounded; "there is little foundation for his objections"</gloss>
+         <word>foundation</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>foundation</eword>
+            <word>baza</word>
+            <word>temei</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>foundation</eword>
+            <word>intemeiere</word>
+            <word>infiintare</word>
+            <word>fondare</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>foundation</eword>
+            <word>fundatie</word>
+            <word>ctitorie</word>
+            <word>asezamant</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>temelie</word>
+            <word>baza</word>
+            <word>fundament</word>
+         </fsynset>
+         <fsynset>
+            <word>baza</word>
+            <word>temei</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9947198">
+      <synset_en>
+         <gloss>the stuff of which an object consists</gloss>
+         <word>substance</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>substance</eword>
+            <word>materie</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>substance</eword>
+            <word>esenta</word>
+            <word>fond</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>materie</word>
+            <word>substanta</word>
+         </fsynset>
+         <fsynset>
+            <word>esenta</word>
+            <word>fond</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="9989452">
+      <synset_en>
+         <gloss>a plane figure with rounded sides curving inward at the top and intersecting at the bottom; conventionally used on playing cards and valentines; "he drew a heart and called it a valentine"</gloss>
+         <word>heart</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>inima</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>suflet</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>heart</eword>
+            <word>cupa</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>heart</eword>
+            <word>miez</word>
+            <word>inima</word>
+            <word>esenta</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>inima</word>
+         </fsynset>
+         <fsynset>
+            <word>suflet</word>
+         </fsynset>
+         <fsynset>
+            <word>cupa</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10012556">
+      <synset_en>
+         <gloss>a small lump or protuberance</gloss>
+         <word>nub</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="0.5">
+            <eword>nub</eword>
+            <word>poanta</word>
+            <word>sare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>poanta</word>
+            <word>sare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10041308">
+      <synset_en>
+         <gloss>the state of being excluded</gloss>
+         <word>exclusion</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>exclusion</eword>
+            <word>excludere</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>excludere</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10042821">
+      <synset_en>
+         <gloss>the state of being rejected</gloss>
+         <word>rejection</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rejection</eword>
+            <word>respingere</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>rejection</eword>
+            <word>rebutare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>respingere</word>
+         </fsynset>
+         <fsynset>
+            <word>rebutare</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10342735">
+      <synset_en>
+         <gloss>the state of being excommunicated</gloss>
+         <word>excommunication</word>
+         <word>exclusion</word>
+         <word>censure</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>excommunication</eword>
+            <word>excomunicare</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>exclusion</eword>
+            <word>excludere</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>censure</eword>
+            <word>criticare</word>
+            <word>condamnare</word>
+            <word>blam</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>excomunicare</word>
+            <word>excludere</word>
+            <word>criticare</word>
+            <word>condamnare</word>
+            <word>blam</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10351464">
+      <synset_en>
+         <gloss>the state of being banished or ostracized (excluded from society by general consent)</gloss>
+         <word>banishment</word>
+         <word>ostracism</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="3.0">
+            <eword>ostracism</eword>
+            <word>ostracism</word>
+         </e-set>
+         <e-set score="2.5">
+            <eword>ostracism</eword>
+            <word>ostracizare</word>
+            <word>surghiunire</word>
+         </e-set>
+         <e-set score="1.1666666">
+            <eword>banishment</eword>
+            <word>exilare</word>
+            <word>surghiunire</word>
+            <word>exil</word>
+            <word>surghiun</word>
+            <word>expulzare</word>
+            <word>ostracizare</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>exilare</word>
+            <word>surghiunire</word>
+            <word>exil</word>
+            <word>surghiun</word>
+            <word>expulzare</word>
+            <word>ostracizare</word>
+            <word>ostracism</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10363554">
+      <synset_en>
+         <gloss>dominance through threat of punishment and violence</gloss>
+         <word>absolutism</word>
+         <word>tyranny</word>
+         <word>despotism</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="5.0">
+            <eword>despotism</eword>
+            <word>despotism</word>
+         </e-set>
+         <e-set score="3.0">
+            <eword>tyranny</eword>
+            <word>tiranie</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>absolutism</eword>
+            <word>absolutism</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>absolutism</word>
+            <word>tiranie</word>
+            <word>despotism</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10381983">
+      <synset_en>
+         <gloss>your overall circumstances or condition in life (including everything that happens to you): "whatever my fortune may be"; "deserved a better fate"; "has a happy lot"; "the luck of the Irish"; "a victim of circumstances"; "success that was her portion"</gloss>
+         <word>fortune</word>
+         <word>destiny</word>
+         <word>fate</word>
+         <word>luck</word>
+         <word>lot</word>
+         <word>circumstances</word>
+         <word>portion</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="6.0">
+            <eword>portion</eword>
+            <word>soarta</word>
+            <word>destin</word>
+         </e-set>
+         <e-set score="5.5">
+            <eword>luck</eword>
+            <word>destin</word>
+            <word>soarta</word>
+         </e-set>
+         <e-set score="5.3333335">
+            <eword>fortune</eword>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </e-set>
+         <e-set score="5.0">
+            <eword>lot</eword>
+            <word>parte</word>
+         </e-set>
+         <e-set score="4.75">
+            <eword>lot</eword>
+            <word>noroc</word>
+            <word>soarta</word>
+            <word>ursita</word>
+            <word>destin</word>
+         </e-set>
+         <e-set score="4.3333335">
+            <eword>destiny</eword>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </e-set>
+         <e-set score="4.3333335">
+            <eword>fate</eword>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+         </e-set>
+         <e-set score="3.5">
+            <eword>portion</eword>
+            <word>parte</word>
+            <word>portiune</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>luck</eword>
+            <word>noroc</word>
+            <word>sansa</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>luck</eword>
+            <word>intamplare</word>
+         </e-set>
+         <e-set score="2.0">
+            <eword>lot</eword>
+            <word>lot</word>
+            <word>parcela</word>
+         </e-set>
+         <e-set score="1.75">
+            <eword>fortune</eword>
+            <word>noroc</word>
+            <word>succes</word>
+            <word>sansa</word>
+            <word>reusita</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>circumstances</eword>
+            <word>imprejurari</word>
+            <word>circumstante</word>
+            <word>conditii</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>portion</eword>
+            <word>zestre</word>
+            <word>dota</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>fortune</eword>
+            <word>bogatie</word>
+            <word>avere</word>
+            <word>prosperitate</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>lot</eword>
+            <word>gramada</word>
+            <word>droaie</word>
+            <word>grup</word>
+            <word>ceata</word>
+            <word>banda</word>
+            <word>gasca</word>
+         </e-set>
+         <e-set score="0.33333334">
+            <eword>lot</eword>
+            <word>gramada</word>
+            <word>puzderie</word>
+            <word>multime</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>destin</word>
+            <word>soarta</word>
+            <word>ursita</word>
+            <word>parte</word>
+            <word>imprejurari</word>
+            <word>circumstante</word>
+            <word>conditii</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10396321">
+      <synset_en>
+         <gloss>the state (usually personal) with regard to wealth; "each person was helped according to his circumstances"</gloss>
+         <word>circumstances</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>circumstances</eword>
+            <word>imprejurari</word>
+            <word>circumstante</word>
+            <word>conditii</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>imprejurari</word>
+            <word>circumstante</word>
+            <word>conditii</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10842002">
+      <synset_en>
+         <gloss>any substance possessing to a high degree the predominant properties of a plant or drug or other natural product from which it is extracted</gloss>
+         <word>essence</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>essence</eword>
+            <word>esenta</word>
+            <word>fiinta</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>essence</eword>
+            <word>miez</word>
+            <word>substanta</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>essence</eword>
+            <word>esenta</word>
+            <word>fire</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>essence</eword>
+            <word>esenta</word>
+            <word>extract</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>esenta</word>
+            <word>fiinta</word>
+         </fsynset>
+         <fsynset>
+            <word>miez</word>
+            <word>substanta</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10986610">
+      <synset_en>
+         <gloss>the period from 1920 to 1933 when the sale of alcoholic beverages was prohibited in the United States by a constitutional amendment</gloss>
+         <word>prohibition</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>oprire</word>
+         </e-set>
+         <e-set score="1.0">
+            <eword>prohibition</eword>
+            <word>prohibitie</word>
+         </e-set>
+         <e-set score="0.5">
+            <eword>prohibition</eword>
+            <word>interzicere</word>
+            <word>prohibire</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>oprire</word>
+         </fsynset>
+         <fsynset>
+            <word>prohibitie</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+   <synset offset="10987385">
+      <synset_en>
+         <gloss>the duration of a monarch's or government's power; "during the rule of Elizabeth"</gloss>
+         <word>rule</word>
+      </synset_en>
+      <e-sets>
+         <e-set score="1.0">
+            <eword>rule</eword>
+            <word>rigla</word>
+         </e-set>
+         <e-set score="0.6666667">
+            <eword>rule</eword>
+            <word>regula</word>
+            <word>norma</word>
+            <word>prescriptie</word>
+         </e-set>
+         <e-set score="0.25">
+            <eword>rule</eword>
+            <word>conducere</word>
+            <word>autoritate</word>
+            <word>stapanire</word>
+            <word>domnie</word>
+         </e-set>
+      </e-sets>
+      <fsynsets>
+         <fsynset>
+            <word>rigla</word>
+         </fsynset>
+      </fsynsets>
+   </synset>
+</FSynsetsDoc>

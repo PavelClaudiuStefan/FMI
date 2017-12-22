@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<bands>
+  <band ID="1" year="1972">
+    <name>ABBA</name>
+    <genre>Pop</genre>
+    <members>
+      <member>
+        Agnetha Fältskog
+      </member>
+      <member>
+        Björn Ulvaeus
+      </member>
+      <member>
+        Benny Andersson
+      </member>
+      <member>
+        Anni-Frid Lyngstad
+      </member>
+    </members>
+  </band>
+  <band ID="2" year="1947">
+    <name>Iggy Pop</name>
+    <genre>Protopunk</genre>
+    <members>
+      <member>
+        James Newell Osterberg
+      </member>
+    </members>
+  </band>
+  <band ID="3" year="1960">
+    <name>Beatles</name>
+    <genre>Pop</genre>
+    <members>
+      <member>
+        John Lennon 
+      </member>
+      <member>
+        Paul McCartney
+      </member>
+      <member>
+        George Harrison
+      </member>
+      <member>
+        Ringo Starr
+      </member>
+    </members>
+  </band>
+  <band ID="4" year="2001">
+    <name>3rei Sud Est</name>
+    <genre>Dance</genre>
+    <members>
+      <member>
+        Laurențiu Duță 
+      </member>
+      <member>
+        Viorel Şipoş
+      </member>
+      <member>
+        Mihai Budeanu
+      </member>
+    </members>
+  </band>
+</bands>

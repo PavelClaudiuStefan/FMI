@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!ELEMENT FSynsetsDoc (synset)+>
+<!ATTLIST FSynsetsDoc pos CDATA #REQUIRED>
+<!ELEMENT synset (synset_en, e-sets?, fsynsets)>
+<!ATTLIST synset offset CDATA #REQUIRED>
+<!ELEMENT synset_en (gloss, word+)>
+<!ELEMENT e-sets (e-set)+>
+<!ELEMENT e-set (eword, word+)>
+<!ATTLIST e-set score CDATA #REQUIRED>
+<!ELEMENT fsynsets (fsynset)*>
+<!ELEMENT fsynset (word)+>
+<!ELEMENT word (#PCDATA)>
+<!ELEMENT eword (#PCDATA)>
+<!ELEMENT gloss (#PCDATA)>

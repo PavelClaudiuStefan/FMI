@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bookstore xmlns:bk="urn:samples">
+<book genre="novel" publicationdate="1997" bk:ISBN="1-861001-57-6">
+	<title>Pride And Prejudice</title>
+	<price>24.95</price>
+</book>
+<book genre="novel" publicationdate="1992" bk:ISBN="1-861001-45-3">
+    <title>The New Dawn</title>    
+    <price>29.95</price>    
+</book>
+<book genre="novel" publicationdate="1991" bk:ISBN="1-861001-57-8">
+    <title>Blue Smoke</title>
+    <price>19.95</price>
+</book>
+</bookstore>
+

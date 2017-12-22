@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <system.web>
+    <webServices>
+      <protocols>
+        <add name="HttpGet"/>
+      </protocols>
+    </webServices>
+    <compilation debug="true" targetFramework="4.0"/>
+  </system.web>
+</configuration>
