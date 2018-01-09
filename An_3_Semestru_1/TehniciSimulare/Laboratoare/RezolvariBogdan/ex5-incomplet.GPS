@@ -1,0 +1,39 @@
+       SIMULATE
+*
+*      GPSS/H Block Section
+*
+date	table R1,10,10,5
+robo qtable robot,10,10,5
+mi1  qtable masina1,10,10,5
+mi2  qtable masina2,10,10,5
+	generate (rvexpo(1,150))
+	seize robot
+	advance 8,1
+	advance 6
+	advance 8,1
+	release robot
+	seize masina1
+	advance (rvnorm(1,60,10))
+	release masina1
+	seize robot
+	advance 8,1
+	advance 7
+	advance 8,1
+	release robot
+	seize masina2
+	ADVANCE rvexpo(1,100)
+	release masina2
+	seize robot
+	advance 8,1
+	advance 5
+	advance 8,1
+	release robot
+	tabulate date
+	terminate 1
+	   
+*
+*      GPSS/H Control Statements
+*
+       START       75         Terminate simulation after 100 bundles
+       END
+

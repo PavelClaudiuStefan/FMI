@@ -1,0 +1,42 @@
+       SIMULATE
+*
+*      GPSS/H Block Section
+*
+myfun function RN1,D6
+10,0.5/14,0.13/21,0.16/32,0.22/38,0.29/45,0.15
+tab table M1,10,10,5
+	  generate (rvexpo(1,30))
+pra1	  seize proc1
+	  assign 1,fn$myfun
+	  advance P1
+	  release proc1
+	  advance 2
+	  transfer .2,,nepr1
+	  
+pra2	  seize proc2
+	  advance 15,6
+	  release proc2
+	  advance 2
+	  transfer .15,,nepr2
+	  
+pra3	  seize proc3
+	  advance rvnorm(1,24,4)
+	  release proc3
+	  advance 2
+	  transfer .05,,nepr3
+	  tabulate tab
+	  terminate 1
+	  
+nepr1 transfer .4,,pra1
+	  terminate
+nepr2 transfer .4,,pra2
+	  terminate
+nepr3 transfer .4,,pra3
+	  terminate
+	  
+*
+*      GPSS/H Control Statements
+*
+       START       100         Terminate simulation after 100 bundles
+       END
+

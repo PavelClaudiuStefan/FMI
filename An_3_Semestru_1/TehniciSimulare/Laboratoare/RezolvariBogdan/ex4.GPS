@@ -1,0 +1,42 @@
+       SIMULATE
+*
+*      GPSS/H Block Section
+*
+rev qtable revizie,10,10,20
+scu qtable scurt,10,10,20
+lun qtable lung,10,10,20
+ang qtable angajat,10,10,20
+	
+	generate 2400,480,,,1
+	seize revizie
+	seize angajat
+	advance 600,60
+	release angajat
+	release revizie
+	terminate
+	
+	generate 90,10,,,3
+	seize scurt
+	preempt angajat,pr
+	advance 15,5
+	return angajat
+	release scurt
+	terminate
+	
+	generate 300,60,,,2
+	seize lung
+	preempt angajat,pr
+	advance 120,30
+	return angajat
+	release lung
+	terminate
+	
+	generate 1
+	terminate 1
+	   
+*
+*      GPSS/H Control Statements
+*
+       START       72000         Terminate simulation after 100 bundles
+       END
+
