@@ -1,0 +1,45 @@
+histo_timp_livr TABLE M1,.015,.015,20
+histo_nr_ceasuri TABLE X1,100,100,20
+
+cant_ceasuri FUNCTION RN1,D8
+0,0/0.10,6/0.35,12/0.65,18/0.8,24/0.92,30/0.96,36/1,48
+
+timp_impachetare VARIABLE 0.0334+p1#0.0028
+niv_depozit EQU 1000
+depozit STORAGE 4000
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+GENERATE (Exponential(1,0,0.25))
+ASSIGN 1,1,cant_ceasuri
+TEST GE S$depozit,p1,stocindisp
+LEAVE depozit,p1
+QUEUE qimpachetare
+SEIZE masina
+DEPART qimpachetare
+ADVANCE V$timp_impachetare
+RELEASE masina
+SAVEVALUE 1+,p1
+TABULATE histo_timp_livr
+TERMINATE 
+
+stocindisp TERMINATE
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+GENERATE 0.75,0.08334,1
+ENTER depozit 60
+TERMINATE
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+GENERATE 8
+SAVEVALUE 1,0
+TABULATE histo_nr_ceasuri
+TERMINATE 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+GENERATE ,,,1,5
+ENTER depozit niv_depozit
+TERMINATE

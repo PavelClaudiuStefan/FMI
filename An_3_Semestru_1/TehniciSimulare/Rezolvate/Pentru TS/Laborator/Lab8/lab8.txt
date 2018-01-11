@@ -1,0 +1,59 @@
+storage1 STORAGE 5
+storage2 STORAGE 40
+storage3 STORAGE 8
+
+INITIAL X$initialdep1,50
+INITIAL X$initialdep2,25
+INITIAL X$initialdep3,25
+
+depozit1 TABLE X$initialdep1,20,20,20
+depozit2 TABLE X$initialdep2,20,20,20
+depozit3 TABLE X$initialdep3,20,20,20
+
+GENERATE 0.334
+QUEUE dep1
+ENTER storage1
+DEPART dep1
+ADVANCE 0.6333
+LEAVE storage1
+SAVEVALUE initialdep1+,1
+
+QUEUE dep2
+ENTER storage2
+DEPART dep2
+ADVANCE 5.334
+LEAVE storage2
+
+ADVANCE 0.05
+SAVEVALUE initialdep1-,1
+SAVEVALUE initialdep2+,1
+
+QUEUE dep3
+ENTER storage3
+DEPART dep3
+ADVANCE 1.066
+LEAVE storage3
+
+ADVANCE 0.05
+SAVEVALUE initialdep2-,1
+SAVEVALUE initialdep3+,1
+TERMINATE 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+GENERATE 8
+TABULATE depozit1
+TABULATE depozit2
+TABULATE depozit3
+TERMINATE 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+GENERATE 16
+TEST GE X$initialdep3,50 nuscot
+SAVEVALUE initialdep3-,50
+TERMINATE
+
+nuscot TERMINATE
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;

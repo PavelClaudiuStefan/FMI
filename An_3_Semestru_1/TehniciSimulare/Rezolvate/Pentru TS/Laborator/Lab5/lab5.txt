@@ -1,0 +1,43 @@
+histo TABLE m1,100,100,20 
+robot STORAGE 2
+
+GENERATE (Exponential(1,0,50))
+
+QUEUE componente1
+ENTER robot
+DEPART componente1
+ADVANCE 8,1
+ADVANCE 6
+ADVANCE 8,1
+LEAVE robot
+
+QUEUE prima_masina_q
+SEIZE prima_masina
+DEPART prima_masina_q
+ADVANCE (Normal(1,60,10))
+RELEASE prima_masina
+
+QUEUE componente2
+ENTER robot
+DEPART componente2
+ADVANCE 8,1
+ADVANCE 7
+ADVANCE 8,1
+LEAVE robot
+
+QUEUE a_doua_masina_q
+SEIZE a_doua_masina
+DEPART a_doua_masina_q
+ADVANCE (Exponential(1,0,100))
+RELEASE a_doua_masina
+
+QUEUE componente3
+ENTER robot
+DEPART componente3
+ADVANCE 8,1
+ADVANCE 5
+ADVANCE 8,1
+LEAVE robot
+
+TABULATE histo
+TERMINATE 1

@@ -1,0 +1,37 @@
+histo_revizie QTABLE coada_revizie,10,10,20
+histo_reparatie_scurta QTABLE coada_reparatie_scurta,10,10,20
+histo_reparatie_lunga QTABLE coada_reparatie_lunga,10,10,20
+histo_toti QTABLE coada_toti,10,10,20
+
+GENERATE 2400,480,,,1
+QUEUE coada_revizie
+QUEUE coada_toti
+SEIZE angajat
+DEPART coada_revizie
+DEPART coada_toti
+ADVANCE 600,60
+RELEASE angajat
+TERMINATE 
+
+GENERATE 90,10,,,3
+QUEUE coada_reparatie_scurta
+QUEUE coada_toti
+PREEMPT angajat,PR
+DEPART coada_reparatie_scurta
+DEPART coada_toti
+ADVANCE 15,5
+RETURN angajat
+TERMINATE
+
+GENERATE 300,60,,,2
+QUEUE coada_reparatie_lunga
+QUEUE coada_toti
+PREEMPT angajat,PR
+DEPART coada_reparatie_lunga
+DEPART coada_toti
+ADVANCE 120,30
+RETURN angajat
+TERMINATE
+
+GENERATE 480
+TERMINATE 1
