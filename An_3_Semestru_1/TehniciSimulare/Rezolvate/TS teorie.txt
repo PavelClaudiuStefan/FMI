@@ -1,4 +1,4 @@
-GENERATE
+﻿GENERATE
  creeaza tranzactii care vor parcurge modelul;
  are forma generala:
 GENERATE A,B,C,D,E
