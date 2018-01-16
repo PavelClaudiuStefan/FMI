@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Exam</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <header>
+            <asp:HyperLink ID="linkHome" runat="server" Text="Home" NavigateUrl="Smartphones.aspx" CssClass="link"/>
+
+            <asp:HyperLink ID="linkDelete" runat="server" Text="Add new smartphone" NavigateUrl="AddSmartphone.aspx" CssClass="link"/>
+
+            <asp:Panel ID="Panel1" runat="server" CssClass="search_panel">
+                <asp:TextBox ID="textboxDenumire" runat="server" placeholder="Denumire"></asp:TextBox>
+                <asp:TextBox ID="textboxProducator" runat="server" placeholder="Producator"></asp:TextBox>
+                <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="onSearch"/>
+            </asp:Panel>
+
+        </header>
+
+        <div class="smartphones">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>
