@@ -1,0 +1,168 @@
+<!--suppress ALL -->
+
+<svg version="1.1" baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     id="canvas" width="800" height="600" viewBox="0 0 800 600"
+     stroke="black" stroke-width="0.5px"
+     onmousemove="mouseMove(evt)"
+     onmouseout="revert(evt)">
+
+
+    <symbol id="background-first-half" width="800" height="600">
+        <polygon id="mountain1" points="0,600 100,210 200,600" fill="gray" stroke="lime" stroke-width="1" >
+            <!--<animate attributeName="points" from="0,600 100,210 200,600" to="-200,600 -100,250 0,600"-->
+            <!--dur="4" repeatCount="indefinite"></animate>-->
+        </polygon>
+
+        <polygon id="mountain2" points="100,600 200,300 300,600" fill="gray" stroke="lime" stroke-width="1" >
+            <animate attributeName="points" from="100,600 200,300 300,600" to="-200,600 -100,340 0,600"
+                     dur="4" repeatCount="indefinite"></animate>
+        </polygon>
+
+        <polygon id="mountain3" points="300,600 400,150 500,600" fill="gray" stroke="lime" stroke-width="1" >
+            <animate attributeName="points" from="300,600 400,150 500,600" to="-200,600 -100,190 0,600"
+                     dur="4" repeatCount="indefinite"></animate>
+        </polygon>
+    </symbol>
+
+
+
+    <svg width="120" height="140">
+        <!-- symbol definition  NEVER draw -->
+        <symbol id="sym01" viewBox="0 0 150 110">
+              <circle cx="50" cy="50" r="40" stroke-width="8"
+                      stroke="red" fill="red"/>
+              <circle cx="90" cy="60" r="40" stroke-width="8"
+                      stroke="green" fill="white"/>
+        </symbol>
+
+        <!-- actual drawing by "use" element -->
+        <use href="#sym01"
+                  x="0" y="0" width="100" height="50"/>
+        <use href="#sym01"
+                  x="0" y="50" width="75" height="38"/>
+        <use href="#sym01"
+                  x="0" y="100" width="50" height="25"/>
+    </svg>
+
+
+    <use href="background-first-half" x="0" y="0" width="100" height="50"/>
+
+
+    <rect width="100%" height="100%" stroke="red" stroke-width="2" fill="white"></rect>
+    <text id="posX" x="20" y="15" fill="red">X: -- px </text>
+    <text id="posY" x="20" y="40" fill="red">Y: -- px </text>
+
+
+
+
+   <!--  <polygon id="mountain1" points="0,600 100,210 200,600" fill="gray" stroke="lime" stroke-width="1" >
+        <animate attributeName="points" from="0,600 100,210 200,600" to="-200,600 -100,250 0,600"
+        dur="4" repeatCount="indefinite"></animate>
+    </polygon> -->
+
+   
+
+
+
+
+
+        <symbol id="background-second-half" width="800" height="600">
+            <polygon points="800,600 900,210 1000,600" fill="gray" stroke="lime" stroke-width="1" >
+                <animate attributeName="points" from="800,600 900,210 1000,600" to="0,600 100,210 200,600"
+                         dur="4" repeatCount="indefinite"></animate>
+            </polygon>
+
+            <polygon points="900,600 1000,300 1100,600" fill="gray" stroke="lime" stroke-width="1" >
+                <animate attributeName="points" from="900,600 1000,300 1100,600" to="100,600 200,300 300,600"
+                         dur="4" repeatCount="indefinite"></animate>
+            </polygon>
+
+            <polygon points="1100,600 1200,150 1300,600" fill="gray" stroke="lime" stroke-width="1" >
+                <animate attributeName="points" from="1100,600 1200,150 1300,600" to="300,600 400,150 500,600"
+                         dur="4" repeatCount="indefinite"></animate>
+            </polygon>
+
+        </symbol>
+
+
+
+    <!--     <image id="superman" href="superman.png" x="100" y="300" width="300" height="200" fill="black">
+            <animate id="animate-up" attributeName="y" from="20" to="0"
+                     begin="click" dur="500ms" repeatCount="1"></animate>
+            <!--<animate id="animate-down" attributeName="y" from='0' to="20"-->
+                     <!--begin="animate-up.end" dur="600ms" repeatCount="1"></animate>-->
+        </image> -->
+        <polygon id="laser1" points="0,0 160,210" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <polygon id="laser2" points="0,0 160,210" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+
+    <script>
+      var up=true;
+      setInterval(() => {
+        // document.getElementById('laser1').setAttribute('points', up?'271,340 ':'271,320 ' + dx + ',' + dy );
+        // document.getElementById('laser2').setAttribute('y', up?300:320);
+
+
+        var graphAnimation = document.getElementById('superman').getElementsByTagName('animate')[0];
+        graphAnimation.setAttribute('to', up?300:320);
+        graphAnimation.setAttribute('from', up?320:300);
+        graphAnimation.beginElement();
+
+        console.log(up + ' ' + document.getElementById('superman').getAttribute('y'));
+        up = !up;
+      },500);
+
+      // <![CDATA[
+      function mouseMove(evt){
+
+        // Get the mouse location:
+        var mousex = evt.clientX;
+        var mousey = evt.clientY;
+        var dx=mousex-8;
+        var dy=mousey-8;
+
+        document.getElementById('posX').textContent = 'X: ' + dx + 'px';
+        document.getElementById('posY').textContent = 'Y: ' + dy + 'px';
+
+        // var left=document.getElementById("LeftPupil");
+        // left.setAttributeNS(null, "cx", dx+105);
+        // left.setAttributeNS(null, "cy", dy+105);
+
+        // var mountain;
+        // for (var i = 1; i <= 3; i++){
+        //   mountain = document.getElementById("mountain" + i);
+        //   mountain.setAttributeNS(null, "fill", "red");
+        //
+        //   mountain = document.getElementById("mountain" + i + i);
+        //   mountain.setAttributeNS(null, "fill", "red");
+        // }
+
+        // document.getElementById('mountain1').setAttribute( 'transform','translate(' + dx + ',' + dy + ')' );
+        // document.getElementById('mountain1').setAttribute( 'points','300,600 100,210 200,600' );
+        // document.getElementById('mountain1').setAttribute( 'x', dx );
+        // document.getElementById('mountain1').setAttribute( 'y', dy );
+
+        document.getElementById('laser1').setAttribute( 'points','271,340 ' + dx + ',' + dy );
+        document.getElementById('laser2').setAttribute( 'points','271,345 ' + dx + ',' + dy );
+
+      }
+
+      function revert(evt){
+        document.getElementById('posX').textContent = 'X: -- px';
+        document.getElementById('posY').textContent = 'Y: -- px';
+
+        var mountain;
+        for (var i = 1; i <= 3; i++){
+          mountain = document.getElementById("mountain" + i);
+          mountain.setAttributeNS(null, "fill", "gray");
+
+          mountain = document.getElementById("mountain" + i + i);
+          mountain.setAttributeNS(null, "fill", "gray");
+        }
+      }
+
+      // ]]>
+    </script>
+
+</svg>
