@@ -1,5 +1,33 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
+<head>
+  <title>ex 1</title>
+
+  <!-- 
+  Total - 24 elements: 
+    - Car:
+      + Body:
+        * Main shape: path
+        * Windows: path
+        * Logo: text
+      + Axle: rect x2
+      + Wheels:
+        * Tires : rect x2
+        * Wheel covers: circle x2
+    - Obstacles:
+      + Small tree: polygon
+      + Bigger tree: polygon
+      + Penguin:
+        * Body: ellipse
+        * Belly: path
+        * Wings: path x2
+        * Legs: path x2
+        * Eyes: circle x4, ellipse x2
+        * Nose: path
+  -->
+
+</head>
 
 <body>
 
@@ -98,7 +126,8 @@
               L -500 205
               "/>
     </g>
-      <g>
+
+    <g>
       <!-- Axle -->
       <rect x="265" y="530" height="50" width="10" fill="grey" stroke="black" stroke-width="5">
         <!-- Obstacle #1 - Up -->
@@ -182,6 +211,8 @@
           L 470 510
           Q 400 520 320 500
           Z"/>
+
+        <!-- Logo -->
         <text x="350" y="550" fill="black" font-size="40">Ferrari</text>
 
         <!-- Avoid obstacle #1 -->
