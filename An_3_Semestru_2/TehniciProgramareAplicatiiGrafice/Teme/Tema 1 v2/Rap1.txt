@@ -1,0 +1,20 @@
+Total - 24 elements: 
+    - Car:
+      + Body:
+        * Main shape: path
+        * Windows: path
+        * Logo: text
+      + Axle: rect x2
+      + Wheels:
+        * Tires : rect x2
+        * Wheel covers: circle x2
+    - Obstacles:
+      + Small tree: polygon
+      + Bigger tree: polygon
+      + Penguin:
+        * Body: ellipse
+        * Belly: path
+        * Wings: path x2
+        * Legs: path x2
+        * Eyes: circle x4, ellipse x2
+        * Nose: path

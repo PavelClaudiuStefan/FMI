@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+
+	<svg height="500" width="1000">
+
+  		<path stroke="blue" stroke-width="3" fill="cyan"
+  			d="M 10 10 
+  			   L 210 210
+  			   L 225 210
+  			   Q 350 300 400 210
+  			   Q 500 100 500 210
+  			   "/>
+
+  		<path stroke="blue" stroke-width="3" fill="cyan"
+  			d="M 450 310
+  			   L 450 400
+  			   L 550 400
+  			   L 550 310
+  			   Q 500 400 450 310"/>
+
+  		<text x="480" y="340" fill="Black" opacity="0">Ouch!
+  			<animate attributeType="CSS" attributeName="opacity" from="0" to="1"
+  				dur="1s" begin="3.3s" fill="freeze"/>
+  			<animateTransform attributeName="transform" type="rotate"
+  				dur="1s" from="0 495 340" to="360 495 340" begin="3.7s"/>
+  		</text>
+
+  		<rect width="10" height="10" stroke="red" stroke-width="2" fill="orange">
+  			<animateMotion dur="1s" fill="freeze"
+  				path="M 20 10 
+  					  L 210 200
+  					  "/>
+  			<animateTransform attributeName="transform" type="rotate" dur="1s" 
+  				from="0 5 5" to="360 5 5"/>
+  		</rect>
+
+  		<circle cx="225" cy="205" r="5" stroke="red" stroke-width="2" fill="orange">
+  			<animateMotion dur="2s" fill="freeze" begin="1s"
+  				path="M 0 0 
+  					  Q 125 90 175 0
+  					  Q 275 -110 275 0
+  					  "/>
+  			<animateMotion dur="0.25s" fill="freeze" begin="3s"
+  				path="M 275 0
+  					  L 275 145
+  					  ">
+  		</rect>
+
+	</svg> 
+
+</body>
+</html> 

@@ -1,7 +1,0 @@
-Tema 1. (15p, termen sapt 3; 07.03.2018 / sapt 4; 14.03.2018) 
-
-(i) (5p) Creati un fisier SVG cu o scena 2D in care sa utilizati cel putin 10 elemente distincte. Intocmiti un scurt raport.
-
-(ii) (5p) Reprezentati in SVG o curba cunoscuta. Intocmiti o scurta documentatie.
-
-(iii) (5p) Generati o figura folosind curbe Bezier si curbe spline, in care sa apara explicit racordul curbelor Bezier (de diverse tipuri). Intocmiti o scurta documentatie, in care sa detaliati calculele facute pentru alegerea punctelor.

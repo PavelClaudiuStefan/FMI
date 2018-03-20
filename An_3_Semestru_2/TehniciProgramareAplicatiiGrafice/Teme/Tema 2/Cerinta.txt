@@ -1,0 +1,7 @@
+Tema 2. (15p, termen sapt 5; 21.03.2018 / sapt 6; 28.03.2018)
+
+(i) (10p) Utilizati functionalitati de baza ale GIMP pentru procesarea unei imagini. 
+
+(ii) (5p) Folositi / implementati tehnici de procesare a imaginilor de la curs in GIMP pentru procesarea unei imagini.
+
+Intocmiti o scurta documentatie pentru ambele cerinte. La (ii) explicate legatura cu suportul teoretic.

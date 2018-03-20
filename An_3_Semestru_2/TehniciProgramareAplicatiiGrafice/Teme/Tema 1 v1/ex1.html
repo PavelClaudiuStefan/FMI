@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ex 1</title>
+
+  <!-- 
+  Total - 24 elements: 
+    - Car:
+      + Body:
+        * Main shape: path
+        * Windows: path
+        * Logo: text
+      + Axle: rect x2
+      + Wheels:
+        * Tires : rect x2
+        * Wheel covers: circle x2
+    - Obstacles:
+      + Small tree: polygon
+      + Bigger tree: polygon
+      + Penguin:
+        * Body: ellipse
+        * Belly: path
+        * Wings: path x2
+        * Legs: path x2
+        * Eyes: circle x4, ellipse x2
+        * Nose: path
+  -->
+
+</head>
+
+<body>
+
+	<svg height="600" width="1350" style="border:1px solid black;">
+
+    <!-- Obstacles -->
+    <!-- Obstacle #1 - Small Tree -->
+    <polygon fill="lime" stroke="green" stroke-width="2"
+      points="1410,600 1440,600 1440,570 1470,580 1440,530 1460,540 1440,490 1460,500 1425,460 1390,500 1410,490 1390,540 1410,530 1380,580 1410,570">
+      <animateMotion dur="5s"
+          path="M 0 0 
+              L -1500 0
+              "/>
+    </polygon>
+
+    <!-- Obstacle #2 - Big Tree -->
+    <polygon fill="red" stroke="green" stroke-width="2"
+      points="1410,600 1440,600 1440,570 1490,580 1440,540 1480,550 1440,510 1470,520 1440,480 1460,490 1440,450 1450,450 1425,420 1400,450 1410,450 1390,490 1410,480 1380,520 1410,510 1370,550 1410,540 1360,580 1410,570 Z">
+      <animateMotion dur="5s" begin="5s"
+          path="M 0 0 
+              L -1500 0
+              "/>
+    </polygon>
+
+
+    <!-- Obstacle #3 - Penguin-->
+    <g opacity="0">
+      <!-- Wings -->
+      <path fill="black" stroke="black" stroke-width="2"
+        d="M 233 280
+        Q 210 330 240 380
+        Q 245 380 255 370
+        "
+      />
+      <path fill="black" stroke="black" stroke-width="2"
+        d="M 367 280
+        Q 390 330 360 380
+        Q 355 380 345 370
+        "
+      />
+
+      <!-- Legs -->
+      <path fill="black" stroke="black" stroke-width="2"
+        d="M 260 380
+        Q 250 380 220 395
+        Q 275 400 280 395
+        "
+      />
+      <path fill="black" stroke="black" stroke-width="2"
+        d="M 340 380
+        Q 350 380 380 395
+        Q 325 400 320 395
+        "
+      />
+
+      <!-- Body -->
+      <ellipse fill="black" stroke="black" stroke-width="2"
+        cx="300" cy="300" rx="70" ry="100"
+      />
+
+      <!-- Belly -->
+      <path fill="white" stroke="black" stroke-width="1"
+        d="M 255 360
+        Q 300 420 345 360
+        Q 300 250 255 360
+        Z"
+      />
+
+      <!-- Eyes -->
+      <circle fill="cyan" stroke="black" stroke-width="2"
+        cx="275" cy="250" r="22" />
+      <circle fill="black" stroke="black" stroke-width="2"
+        cx="273" cy="250" r="12" />
+      <ellipse fill="white" stroke="black" stroke-width="1"
+        cx="270" cy="249" rx="4" ry="6"/>
+
+      <circle fill="cyan" stroke="black" stroke-width="2"
+        cx="325" cy="250" r="22" />
+      <circle fill="black" stroke="black" stroke-width="2"
+        cx="323" cy="250" r="12" />
+      <ellipse fill="white" stroke="black" stroke-width="1"
+        cx="320" cy="249" rx="4" ry="6"/>
+
+      <!-- Nose -->
+      <path fill="orange" stroke="black" stroke-width="2"
+        d="M 300 320
+        L 320 290
+        Q 300 250 280 290
+        L 300 320
+        Z"
+      />
+      <animate attributeType="CSS" attributeName="opacity" from="0" to="1"
+          dur="0.1s" begin="10s" fill="freeze"/>
+      <animateMotion dur="5s" begin="10s" fill="freeze"
+          path="M 1270 205 
+              L -500 205
+              "/>
+    </g>
+
+    <g>
+      <!-- Axle -->
+      <rect x="265" y="530" height="50" width="10" fill="grey" stroke="black" stroke-width="5">
+        <!-- Obstacle #1 - Up -->
+        <animate attributeName="y" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="530" to="365" /> 
+        <animate attributeName="height" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="50" to="200" /> 
+        <!-- Obstacle #1 - Down -->
+        <animate attributeName="y" attributeType="XML" begin="4.2s" dur="1s" fill="freeze" from="365" to="530" /> 
+        <animate attributeName="height" attributeType="XML" begin="4.2s" dur="1s" fill="freeze" from="200" to="50" />
+
+        <!-- Obstacle #2 - Up -->
+        <animate attributeName="y" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="530" to="330" /> 
+        <animate attributeName="height" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="50" to="250" /> 
+        <!-- Obstacle #2 - Down -->
+        <animate attributeName="y" attributeType="XML" begin="9.2s" dur="1s" fill="freeze" from="330" to="530" /> 
+        <animate attributeName="height" attributeType="XML" begin="9.2s" dur="1s" fill="freeze" from="250" to="50" />
+
+        <!-- Obstacle #3 - Up -->
+        <animate attributeName="y" attributeType="XML" begin="12s" dur="1s" fill="freeze" from="530" to="330" /> 
+        <animate attributeName="height" attributeType="XML" begin="12s" dur="1s" fill="freeze" from="50" to="250" /> 
+        <!-- Obstacle #3 - Down -->
+        <animate attributeName="y" attributeType="XML" begin="14s" dur="1s" fill="freeze" from="330" to="530" /> 
+        <animate attributeName="height" attributeType="XML" begin="14s" dur="1s" fill="freeze" from="250" to="50" />
+      </rect>
+
+      <rect x="545" y="530" height="50" width="10" fill="grey" stroke="black" stroke-width="5">
+        <!-- Obstacle #1 - Up -->
+        <animate attributeName="y" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="530" to="365" /> 
+        <animate attributeName="height" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="50" to="200" />
+        <!-- Obstacle #1 - Down -->
+        <animate attributeName="y" attributeType="XML" begin="4.2s" dur="1s" fill="freeze" from="365" to="530" /> 
+        <animate attributeName="height" attributeType="XML" begin="4.2s" dur="1s" fill="freeze" from="200" to="50" />
+
+        <!-- Obstacle #2 - Up -->
+        <animate attributeName="y" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="530" to="330" /> 
+        <animate attributeName="height" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="50" to="250" />
+        <!-- Obstacle #2 - Down -->
+        <animate attributeName="y" attributeType="XML" begin="9.2s" dur="1s" fill="freeze" from="330" to="530" /> 
+        <animate attributeName="height" attributeType="XML" begin="9.2s" dur="1s" fill="freeze" from="250" to="50" /> 
+
+        <!-- Obstacle #3 - Up -->
+        <animate attributeName="y" attributeType="XML" begin="12s" dur="1s" fill="freeze" from="530" to="330" /> 
+        <animate attributeName="height" attributeType="XML" begin="12s" dur="1s" fill="freeze" from="50" to="250" />
+        <!-- Obstacle #3 - Down -->
+        <animate attributeName="y" attributeType="XML" begin="14s" dur="1s" fill="freeze" from="330" to="530" /> 
+        <animate attributeName="height" attributeType="XML" begin="14s" dur="1s" fill="freeze" from="250" to="50" /> 
+
+      </rect>
+
+
+      <!-- Wheels -->
+      <rect x="255" y="565" height="30" width="30" fill="grey" stroke="black" stroke-width="10">
+        <animateTransform attributeName="transform" type="rotate"
+            dur="0.5s" from="0 270 580" to="360 270 580" begin="0s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="535" y="565" height="30" width="30" fill="grey" stroke="black" stroke-width="10">
+        <animateTransform attributeName="transform" type="rotate"
+            dur="0.5s" from="0 550 580" to="360 550 580" begin="0s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="270" cy="580" r="15" fill="grey" stroke="black" stroke-width="10"></circle>
+      <circle cx="550" cy="580" r="15" fill="grey" stroke="black" stroke-width="10"></circle>
+
+
+      <!-- Car body -->
+      <g>
+        <path  fill="red" stroke="black" stroke-width="2"
+        d="M 200 520
+        Q 280 480 440 480
+        L 490 510
+        Q 580 500 640 540
+        Q 620 560 580 580
+        Q 550 520 520 580
+        L 300 580
+        Q 270 520 240 580
+        Q 200 550 200 520
+        Z"/>
+
+        <!-- Windows -->
+        <path fill="cyan" stroke="black" stroke-width="2"
+          d="M 320 500
+          Q 400 490 430 490
+          L 470 510
+          Q 400 520 320 500
+          Z"/>
+
+        <!-- Logo -->
+        <text x="350" y="550" fill="black" font-size="40">Ferrari</text>
+
+        <!-- Avoid obstacle #1 -->
+        <animateMotion dur="1s" fill="freeze" begin="2s"
+            path="M 0 0 
+                  L 0 -150"
+        />
+        <animateMotion dur="1s" fill="freeze" begin="4.2s"
+            path="M 0 -150 
+                  L 0 0"
+        />
+
+        <!-- Avoid obstacle #2 -->
+        <animateMotion dur="1s" fill="freeze" begin="7s"
+            path="M 0 0 
+                  L 0 -200"
+        />
+        <animateMotion dur="1s" fill="freeze" begin="9.2s"
+            path="M 0 -200 
+                  L 0 0"
+        />
+
+        <!-- Avoid obstacle #3 -->
+        <animateMotion dur="1s" fill="freeze" begin="12s"
+            path="M 0 0 
+                  L 0 -200"
+        />
+        <animateMotion dur="1s" fill="freeze" begin="14s"
+            path="M 0 -200 
+                  L 0 0"
+        />
+
+      </g>
+      <!-- Back and forth -->
+      <animateMotion dur="2s" fill="freeze" begin="0s"
+            path="M -100 0 
+                L 100 0Z"
+      />
+      <animateMotion dur="2s" fill="freeze" begin="5s"
+            path="M -100 0 
+                L 100 0Z"
+      />
+      <animateMotion dur="2s" fill="freeze" begin="10s"
+            path="M -100 0 
+                L 100 0Z"
+      />
+    </g>
+
+	</svg> 
+
+</body>
+</html> 

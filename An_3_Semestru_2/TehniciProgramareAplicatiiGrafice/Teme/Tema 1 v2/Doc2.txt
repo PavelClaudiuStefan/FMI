@@ -1,0 +1,24 @@
+Curba Bezier cubica cu punctele:
+
+P1(0, 100)
+P2(100, 0)
+P3(300, 200)
+P4(400, 100)
+
+
+Cod matlab:
+
+t = [0:0.1:1];
+x = zeros(1, length(t));
+y = zeros(1, length(t));
+for i=1:11
+    x(i) = (1-t(i)).^3*0 + 3.*t(i).*(1-t(i)).^2*100 + 3.*(t(i)).^2*(1-t(i)).*300 + t(i).^3.*400;
+    x(i) = round(x(i));
+    y(i) = (1-t(i)).^3*100 + 3.*t(i).*(1-t(i)).^2*100 + 3.*(t(i)).^2*(1-t(i)).*200 + t(i).^3.*100;
+    y(i) = round(y(i));
+end
+disp(x)
+disp(y)
+
+Linie neagra - Curba Bezier realizata cu svg
+Linie portocalie - Curba Bezier realizata cu linii intre punctele calculate in matlab
