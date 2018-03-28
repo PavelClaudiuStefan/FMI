@@ -11,9 +11,9 @@ c = z > 15;
 imgfftshift = fftshift(fft2(img));
 fftShow(imgfftshift, 3);
 
-procimg = imgfftshift.*c;
+filteredimg = imgfftshift.*c;
 
-fftShow(procimg, 4);
+fftShow(filteredimg, 4);
 
-invimg = ifft2(procimg);
+invimg = ifft2(filteredimg);
 ifftShow(invimg, 5);

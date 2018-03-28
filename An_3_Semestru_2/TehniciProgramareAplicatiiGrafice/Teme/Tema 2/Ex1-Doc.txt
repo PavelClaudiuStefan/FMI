@@ -1,4 +1,0 @@
-- Made an approximate selection of the dragon
-- Copied the dragon onto a separate layer
-- On the first layer: applied Filters -> Blur -> Motion Blur
-- On the dragon layer: Used the smudge tool on the edges
