@@ -1,0 +1,14 @@
+S -> NP VP | NP VP PP
+NP -> Det Nominal | ProperNoun | Adj ProperNoun
+Nominal -> Noun | PreNominal Nominal | Nominal PostNominal
+PreNominal -> Adj
+PostNominal -> PP
+VP -> Verb | Verb NP | Aux | Aux NP | Aux Adj | Verb PP | Aux PP | Verb Adj
+PP -> Prep NP
+Det -> some | the | a | an
+Noun -> lamb | lambs | flower | flowers | moon | garden | park | dog | dogs | cat | cats | lake | lakes | chair | chairs | watch
+ProperNoun -> Mary | Richard
+Verb -> had | play | plays | see | sees | smell | smells | watch
+Aux -> is | are
+Prep -> beside | on-top-of | on | in | with | between
+Adj -> little | green | mean | nice | dirty | old

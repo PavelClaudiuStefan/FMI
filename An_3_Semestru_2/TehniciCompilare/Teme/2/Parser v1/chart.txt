@@ -1,0 +1,13 @@
+Earley chart for = (a a a b b b)
+CHART==============0
+@ ->. S                              [0,0]   0    []                Dummy Start State
+S ->. P                              [0,0]   1    []                Predictor
+P ->. A B                            [0,0]   2    []                Predictor
+A ->. a A                            [0,0]   3    []                Predictor
+A ->. a                              [0,0]   4    []                Predictor
+CHART==============1
+CHART==============2
+CHART==============3
+CHART==============4
+CHART==============5
+CHART==============6
